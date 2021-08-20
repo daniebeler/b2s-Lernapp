@@ -1,0 +1,12 @@
+{
+    "questions": [
+        {
+            "question" : "Wie gehts weiter?",
+            "answer1" : "garnicht",
+            "answer2" : "so",
+            "answer3" : "garnicht",
+            "answer4" : "garnicht",
+            "correctAnswer" : 2
+        }
+    ]
+}

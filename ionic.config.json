@@ -1,0 +1,7 @@
+{
+  "name": "Lernapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

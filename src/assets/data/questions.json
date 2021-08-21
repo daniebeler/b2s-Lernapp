@@ -6,10 +6,7 @@
             "answer2" : "so",
             "answer3" : "garnicht",
             "answer4" : "garnicht",
-            "correctAnswer1" : false,
-            "correctAnswer2" : true,
-            "correctAnswer3" : false,
-            "correctAnswer4" : false
+            "correctAnswer" : [false,true,false,false]
         },
         {
             "question" : "frage 2",

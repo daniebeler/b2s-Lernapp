@@ -14,6 +14,7 @@ export class QuestionsPage implements OnInit {
   answer2 = '';
   answer3 = '';
   answer4 = '';
+  answerBool = [false, false, false, false];
 
   constructor(private httpClient: HttpClient) {
 
@@ -35,4 +36,11 @@ export class QuestionsPage implements OnInit {
     this.answer4 = this.data.questions[0].answer4;
   }
 
+  check() {
+    for (let i = 0; i < this.answerBool.length; i++) {
+      if (this.answerBool[i] === this.data.questions[0].correctAnswer[i]) {
+        console.log('perfect');
+      }
+    }
+  }
 }

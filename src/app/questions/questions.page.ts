@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-questions',
@@ -9,17 +9,21 @@ import { Http } from '@angular/http';
 export class QuestionsPage implements OnInit {
 
   question = 'wer bin ich';
-  data: any;
+  data: any = [];
 
-  constructor(
-    private http: Http
-  ) {
-   // this.http.get('assets/data/questions.json').map(res => res.json()).subscribe(data => {
-      //this.data = data;
-    //});
+  constructor(private httpClient: HttpClient) {
+
    }
 
   ngOnInit() {
+    this.httpClient.get('./assets/data/questions.json').subscribe(data =>{
+      this.data = data;
+      this.datareader();
+    });
+  }
+
+  datareader() {
+    this.question = this.data.questions[1].question;
   }
 
 }

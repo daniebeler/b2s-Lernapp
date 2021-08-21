@@ -8,8 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class QuestionsPage implements OnInit {
 
-  question = 'wer bin ich';
+  question = '';
   data: any = [];
+  answer1 = '';
+  answer2 = '';
+  answer3 = '';
+  answer4 = '';
 
   constructor(private httpClient: HttpClient) {
 
@@ -23,7 +27,12 @@ export class QuestionsPage implements OnInit {
   }
 
   datareader() {
-    this.question = this.data.questions[1].question;
+    this.question = this.data.questions[0].question;
+
+    this.answer1 = this.data.questions[0].answer1;
+    this.answer2 = this.data.questions[0].answer2;
+    this.answer3 = this.data.questions[0].answer3;
+    this.answer4 = this.data.questions[0].answer4;
   }
 
 }

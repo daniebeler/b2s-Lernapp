@@ -15,6 +15,7 @@ export class QuestionsPage implements OnInit {
   answer3 = '';
   answer4 = '';
   answerBool = [false, false, false, false];
+  fields = ['--field1', '--field2','--field3','--field4'];
 
   constructor(private httpClient: HttpClient) {
 
@@ -39,7 +40,10 @@ export class QuestionsPage implements OnInit {
   check() {
     for (let i = 0; i < this.answerBool.length; i++) {
       if (this.answerBool[i] === this.data.questions[0].correctAnswer[i]) {
-        console.log('perfect');
+        document.documentElement.style.setProperty(this.fields[i], '#00ff003f');
+      }
+      else {
+        document.documentElement.style.setProperty(this.fields[i], '#ff00003f');
       }
     }
   }

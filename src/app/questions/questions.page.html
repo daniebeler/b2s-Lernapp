@@ -4,31 +4,45 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-
-  <ion-text class="frage">
-    {{question}}
-  </ion-text>
+  <ion-text class="frage"> {{question}} </ion-text>
 
   <ion-item class="answerField1">
     <ion-label>{{answer1}}</ion-label>
-    <ion-checkbox color="primary" slot="start" [(ngModel)] = answerBool[0]></ion-checkbox>
+    <ion-checkbox
+      color="primary"
+      slot="start"
+      [(ngModel)]="answerBool[0]"
+    ></ion-checkbox>
   </ion-item>
   <ion-item class="answerField2">
     <ion-label>{{answer2}}</ion-label>
-    <ion-checkbox color="primary" slot="start" [(ngModel)] = answerBool[1]></ion-checkbox>
+    <ion-checkbox
+      color="primary"
+      slot="start"
+      [(ngModel)]="answerBool[1]"
+    ></ion-checkbox>
   </ion-item>
   <ion-item class="answerField3">
     <ion-label>{{answer3}}</ion-label>
-    <ion-checkbox color="primary" slot="start" [(ngModel)] = answerBool[2]></ion-checkbox>
+    <ion-checkbox
+      color="primary"
+      slot="start"
+      [(ngModel)]="answerBool[2]"
+    ></ion-checkbox>
   </ion-item>
   <ion-item class="answerField4">
     <ion-label>{{answer4}}</ion-label>
-    <ion-checkbox color="primary" slot="start" [(ngModel)] = answerBool[3]></ion-checkbox>
+    <ion-checkbox
+      color="primary"
+      slot="start"
+      [(ngModel)]="answerBool[3]"
+    ></ion-checkbox>
   </ion-item>
 
   <div id="container" class="ion-padding">
-    <ion-button color="primary" (click) = "check()">{{checkButtonText}}</ion-button>
+    <ion-button color="primary" (click)="check()"
+      >{{checkButtonText}}</ion-button
+    >
   </div>
 </ion-content>

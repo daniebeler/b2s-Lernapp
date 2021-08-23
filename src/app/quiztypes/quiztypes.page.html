@@ -1,13 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>A-Schein</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div id="container" class="ion-padding">
-    <ion-button expand="block" (click) = "navigate('questions/')">Alle Fragen</ion-button>
-    <ion-button expand="block" (click) = "navigate('themen/')">Themen</ion-button>
-    <ion-button expand="block" (click) = "navigate('questions/')">Quiz</ion-button>
+    <ion-button expand="block" (click)="navigate('questions/')"
+      >Alle Fragen</ion-button
+    >
+    <ion-button expand="block" (click)="navigate('themen/')">Themen</ion-button>
+    <ion-button expand="block" (click)="navigate('questions/')"
+      >Quiz</ion-button
+    >
   </div>
 </ion-content>

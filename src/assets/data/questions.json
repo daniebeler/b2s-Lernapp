@@ -31,19 +31,6 @@
                                 true,
                                 false
                             ]
-                        },
-                        {
-                            "question": "frage 3",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "richtig",
-                            "answer4": "falsch",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                true,
-                                false
-                            ]
                         }
                     ]
                 },

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-questions',
@@ -22,7 +23,10 @@ export class QuestionsPage implements OnInit {
 
   checkButtonText = 'check';
 
-  constructor(private httpClient: HttpClient) {
+  constructor(
+    private httpClient: HttpClient,
+    private router: Router
+    ) {
 
   }
 
@@ -63,7 +67,7 @@ export class QuestionsPage implements OnInit {
 //next Question or next Thema or fertig
       if (Object.keys(this.data.scheine[0].Thema[this.themaindex].questions).length === this.questionindex + 1) {
         if (Object.keys(this.data.scheine[0].Thema).length === this.themaindex + 1) {
-          alert('fertig');
+          this.router.navigate(['result/2']);
         }
         else {
           this.themaindex++;

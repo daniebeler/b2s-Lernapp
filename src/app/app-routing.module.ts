@@ -10,13 +10,18 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  },  {
+  },
+  {
     path: 'questions',
     loadChildren: () => import('./questions/questions.module').then( m => m.QuestionsPageModule)
   },
   {
     path: 'quiztypes',
     loadChildren: () => import('./quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
+  },
+  {
+    path: 'result/:result',
+    loadChildren: () => import('./result/result.module').then( m => m.ResultPageModule)
   },
 
 ];

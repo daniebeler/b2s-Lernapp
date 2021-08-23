@@ -17,6 +17,8 @@ export class QuestionsPage implements OnInit {
   answerBool = [false, false, false, false];
   fields = ['--field1', '--field2', '--field3', '--field4'];
   questionindex = 0;
+  themaindex = 0;
+  test = 'Thema2';
 
   checkButtonText = 'check';
 
@@ -31,19 +33,24 @@ export class QuestionsPage implements OnInit {
     });
   }
 
-  datareader() {
-    this.question = this.data.ASchein[this.questionindex].question;
 
-    this.answer1 = this.data.ASchein[this.questionindex].answer1;
-    this.answer2 = this.data.ASchein[this.questionindex].answer2;
-    this.answer3 = this.data.ASchein[this.questionindex].answer3;
-    this.answer4 = this.data.ASchein[this.questionindex].answer4;
+
+  datareader() {
+    //frage und antworte wieder auslesen
+    this.question = this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].question;
+
+    this.answer1 = this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].answer1;
+    this.answer2 = this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].answer2;
+    this.answer3 = this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].answer3;
+    this.answer4 = this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].answer4;
   }
 
+
   check() {
+    //change color if is true or false
     if (this.checkButtonText === 'check') {
       for (let i = 0; i < this.answerBool.length; i++) {
-        if (this.answerBool[i] === this.data.ASchein[this.questionindex].correctAnswer[i]) {
+        if (this.answerBool[i] === this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].correctAnswer[i]) {
           document.documentElement.style.setProperty(this.fields[i], '#00ff003f');
         }
         else {
@@ -53,7 +60,19 @@ export class QuestionsPage implements OnInit {
       this.checkButtonText = 'weiter';
     }
     else {
-      this.questionindex++;
+//next Question or next Thema or fertig
+      if (Object.keys(this.data.scheine[0].Thema[this.themaindex].questions).length === this.questionindex + 1) {
+        if (Object.keys(this.data.scheine[0].Thema).length === this.themaindex + 1) {
+          alert('fertig');
+        }
+        else {
+          this.themaindex++;
+          this.questionindex = 0;
+        }
+      }
+      else {
+        this.questionindex++;
+      }
       this.datareader();
       this.clearCheckboxes();
       this.checkButtonText = 'check';
@@ -61,6 +80,7 @@ export class QuestionsPage implements OnInit {
   }
 
   clearCheckboxes() {
+    //checkboxes wieder clearen
     this.answerBool = [false, false, false, false];
     for (let i = 0; i < 4; i++) {
       document.documentElement.style.setProperty(this.fields[i], '#fff');

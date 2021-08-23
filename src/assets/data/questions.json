@@ -1,29 +1,80 @@
 {
-    "ASchein": [
+    "scheine": [
         {
-            "question": "frage 1",
-            "answer1": "falsch",
-            "answer2": "richtig",
-            "answer3": "falsch",
-            "answer4": "richtig",
-            "correctAnswer": [
-                false,
-                true,
-                false,
-                true
-            ]
-        },
-        {
-            "question": "frage 2",
-            "answer1": "falsch",
-            "answer2": "richtig",
-            "answer3": "richtig",
-            "answer4": "falsch",
-            "correctAnswer": [
-                false,
-                true,
-                true,
-                false
+            "Thema": [
+                {
+                    "questions": [
+                        {
+                            "question": "frage 1",
+                            "answer1": "falsch",
+                            "answer2": "richtig",
+                            "answer3": "falsch",
+                            "answer4": "richtig",
+                            "correctAnswer": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "question": "frage 2",
+                            "answer1": "falsch",
+                            "answer2": "richtig",
+                            "answer3": "richtig",
+                            "answer4": "falsch",
+                            "correctAnswer": [
+                                false,
+                                true,
+                                true,
+                                false
+                            ]
+                        },
+                        {
+                            "question": "frage 3",
+                            "answer1": "falsch",
+                            "answer2": "richtig",
+                            "answer3": "richtig",
+                            "answer4": "falsch",
+                            "correctAnswer": [
+                                false,
+                                true,
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                    },
+                    {
+                        "questions": [
+                        {
+                            "question": "Thema2 Frage 1",
+                            "answer1": "falsch",
+                            "answer2": "richtig",
+                            "answer3": "falsch",
+                            "answer4": "richtig",
+                            "correctAnswer": [
+                                false,
+                                true,
+                                false,
+                                true
+                            ]
+                        },
+                        {
+                            "question": "Thema2 Frage 2",
+                            "answer1": "falsch",
+                            "answer2": "richtig",
+                            "answer3": "richtig",
+                            "answer4": "falsch",
+                            "correctAnswer": [
+                                false,
+                                true,
+                                true,
+                                false
+                            ]
+                        }
+                    ]
+                }
             ]
         }
     ]

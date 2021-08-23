@@ -19,7 +19,7 @@ export class QuestionsPage implements OnInit {
   fields = ['--field1', '--field2', '--field3', '--field4'];
   questionindex = 0;
   themaindex = 0;
-  test = 'Thema2';
+  answerschecker = [];
 
   checkButtonText = 'check';
 
@@ -53,21 +53,35 @@ export class QuestionsPage implements OnInit {
   check() {
     //change color if is true or false
     if (this.checkButtonText === 'check') {
+      let countTrue = 0;
+
       for (let i = 0; i < this.answerBool.length; i++) {
         if (this.answerBool[i] === this.data.scheine[0].Thema[this.themaindex].questions[this.questionindex].correctAnswer[i]) {
           document.documentElement.style.setProperty(this.fields[i], '#00ff003f');
+          countTrue++;
         }
         else {
           document.documentElement.style.setProperty(this.fields[i], '#ff00003f');
         }
       }
+
+      if (countTrue === 4) {
+        this.answerschecker.push(true);
+      }
+      else {
+        this.answerschecker.push(false);
+      }
+
       this.checkButtonText = 'weiter';
     }
+
     else {
 //next Question or next Thema or fertig
       if (Object.keys(this.data.scheine[0].Thema[this.themaindex].questions).length === this.questionindex + 1) {
         if (Object.keys(this.data.scheine[0].Thema).length === this.themaindex + 1) {
-          this.router.navigate(['result/2']);
+
+          this.router.navigate(['result/' + this.answerschecker]);
+
         }
         else {
           this.themaindex++;

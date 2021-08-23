@@ -1,28 +1,28 @@
 {
-    "questions": [
+    "ASchein": [
         {
-            "question": "Wie gehts weiter?",
-            "answer1": "garnicht",
-            "answer2": "so",
-            "answer3": "garnicht",
-            "answer4": "garnicht",
+            "question": "frage 1",
+            "answer1": "falsch",
+            "answer2": "richtig",
+            "answer3": "falsch",
+            "answer4": "richtig",
             "correctAnswer": [
                 false,
                 true,
                 false,
-                false
+                true
             ]
         },
         {
             "question": "frage 2",
-            "answer1": "garnicht",
-            "answer2": "so",
-            "answer3": "garnicht",
-            "answer4": "garnicht",
+            "answer1": "falsch",
+            "answer2": "richtig",
+            "answer3": "richtig",
+            "answer4": "falsch",
             "correctAnswer": [
                 false,
                 true,
-                false,
+                true,
                 false
             ]
         }

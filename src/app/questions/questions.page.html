@@ -6,7 +6,7 @@
 
 <ion-content>
 
-  <ion-text>
+  <ion-text class="frage">
     {{question}}
   </ion-text>
 
@@ -28,6 +28,6 @@
   </ion-item>
 
   <div id="container" class="ion-padding">
-    <ion-button color="primary" (click) = "check()">check</ion-button>
+    <ion-button color="primary" (click) = "check()">{{checkButtonText}}</ion-button>
   </div>
 </ion-content>

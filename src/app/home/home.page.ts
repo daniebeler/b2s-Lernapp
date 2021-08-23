@@ -15,7 +15,7 @@ export class HomePage {
 
 
   navigate(){
-    this.router.navigate(['/questions']);
+    this.router.navigate(['/quiztypes']);
   }
 
 

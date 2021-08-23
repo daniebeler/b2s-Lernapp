@@ -14,6 +14,10 @@ const routes: Routes = [
     path: 'questions',
     loadChildren: () => import('./questions/questions.module').then( m => m.QuestionsPageModule)
   },
+  {
+    path: 'quiztypes',
+    loadChildren: () => import('./quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
+  },
 
 ];
 

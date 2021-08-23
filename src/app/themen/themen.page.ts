@@ -26,9 +26,10 @@ export class ThemenPage implements OnInit {
   }
 
   datareader() {
+    const schein = this.activatedRoute.snapshot.paramMap.get('schein');
 // eslint-disable-next-line @typescript-eslint/prefer-for-of
-    for (let i = 0; i < this.data.scheine[0].Thema.length; i++) {
-      this.themes.push(this.data.scheine[0].Thema[i].themaName);
+    for (let i = 0; i < this.data.scheine[schein].Thema.length; i++) {
+      this.themes.push(this.data.scheine[schein].Thema[i].themaName);
     }
   }
 

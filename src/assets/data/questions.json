@@ -1,8 +1,10 @@
 {
     "scheine": [
         {
+            "scheinName": "Grundkurs Einsteiger",
             "Thema": [
                 {
+                    "themaName": "Thema1",
                     "questions": [
                         {
                             "question": "frage 1",
@@ -46,6 +48,7 @@
                     ]
                     },
                     {
+                        "themaName":"Thema2",
                         "questions": [
                         {
                             "question": "Thema2 Frage 1",
@@ -76,6 +79,9 @@
                     ]
                 }
             ]
+        },
+        {
+            "scheinName": "BFA Fortgeschritten"
         }
     ]
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-quiztypes',
@@ -9,14 +9,16 @@ import { Router, RouterModule } from '@angular/router';
 export class QuiztypesPage implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
   }
 
-  navigate() {
-    this.router.navigate(['/questions']);
+  navigate(site: string) {
+    const schein = this.activatedRoute.snapshot.paramMap.get('schein');
+    this.router.navigate([site + schein]);
   }
 
 }

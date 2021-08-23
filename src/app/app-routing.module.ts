@@ -12,17 +12,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'questions',
+    path: 'questions/:schein',
     loadChildren: () => import('./questions/questions.module').then( m => m.QuestionsPageModule)
   },
   {
-    path: 'quiztypes',
+    path: 'quiztypes/:schein',
     loadChildren: () => import('./quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
   },
   {
     path: 'result/:result',
     loadChildren: () => import('./result/result.module').then( m => m.ResultPageModule)
   },
+  {
+    path: 'themen/:schein',
+    loadChildren: () => import('./themen/themen.module').then( m => m.ThemenPageModule)
+  },
+
 
 ];
 

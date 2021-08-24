@@ -9,11 +9,6 @@
     <h1>Lernapp</h1>
   </div>
   <div id="container" class="ion-padding">
-    <ion-button
-      expand="block"
-      *ngFor="let course of courses"
-      (click)="navigate(course)"
-      >{{course}}</ion-button
-    >
+    <ion-button expand="block" *ngFor="let course of courses" (click)="navigate(course)">{{course}}</ion-button>
   </div>
 </ion-content>

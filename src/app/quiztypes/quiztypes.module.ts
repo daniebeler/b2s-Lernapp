@@ -7,12 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { QuiztypesPageRoutingModule } from './quiztypes-routing.module';
 
 import { QuiztypesPage } from './quiztypes.page';
+import { ComponentsModule } from '../components/components.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     QuiztypesPageRoutingModule
   ],
   declarations: [QuiztypesPage]

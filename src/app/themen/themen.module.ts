@@ -7,12 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { ThemenPageRoutingModule } from './themen-routing.module';
 
 import { ThemenPage } from './themen.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
     ThemenPageRoutingModule
   ],
   declarations: [ThemenPage]

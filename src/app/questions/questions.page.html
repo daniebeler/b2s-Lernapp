@@ -1,46 +1,42 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-  <ion-text class="frage"> {{question}} </ion-text>
+  <div id="placeholder">
+    <p>placeholder</p>
+  </div>
+  
+  <div class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Frage 1/14</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-text class="frage"> {{question}} </ion-text>
+    </ion-card-content>
+  </ion-card>
 
   <ion-item class="answerField1">
     <ion-label>{{answer1}}</ion-label>
-    <ion-checkbox
-      color="primary"
-      slot="start"
-      [(ngModel)]="answerBool[0]"
-    ></ion-checkbox>
+    <ion-checkbox [(ngModel)]="answerBool[0]"></ion-checkbox>
   </ion-item>
   <ion-item class="answerField2">
     <ion-label>{{answer2}}</ion-label>
-    <ion-checkbox
-      color="primary"
-      slot="start"
-      [(ngModel)]="answerBool[1]"
-    ></ion-checkbox>
+    <ion-checkbox [(ngModel)]="answerBool[1]"></ion-checkbox>
   </ion-item>
   <ion-item class="answerField3">
     <ion-label>{{answer3}}</ion-label>
-    <ion-checkbox
-      color="primary"
-      slot="start"
-      [(ngModel)]="answerBool[2]"
-    ></ion-checkbox>
+    <ion-checkbox [(ngModel)]="answerBool[2]"></ion-checkbox>
   </ion-item>
   <ion-item class="answerField4">
     <ion-label>{{answer4}}</ion-label>
-    <ion-checkbox
-      color="primary"
-      slot="start"
-      [(ngModel)]="answerBool[3]"
-    ></ion-checkbox>
+    <ion-checkbox [(ngModel)]="answerBool[3]"></ion-checkbox>
   </ion-item>
 
-  <div id="container" class="ion-padding">
-    <ion-button color="primary" (click)="check()"
-      >{{checkButtonText}}</ion-button
-    >
+  <div id="check">
+    <ion-button color="primary" (click)="check()">{{checkButtonText}}</ion-button>
   </div>
+</div>
 </ion-content>
 
 <app-custom-footer></app-custom-footer>

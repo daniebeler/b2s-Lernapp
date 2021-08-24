@@ -1,23 +1,21 @@
-<ion-tabs>
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
-      <ion-icon name="book"></ion-icon>
-      <ion-label>Theorie</ion-label>
+<ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule" (click) = 'navigate()'>
+        <ion-icon name="book"></ion-icon>
+        <ion-label>Theorie</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="speakers">
-      <ion-icon name="infinite-outline"></ion-icon>
-      <ion-label>Knoten</ion-label>
+        <ion-icon name="infinite-outline"></ion-icon>
+        <ion-label>Knoten</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="map">
-      <ion-icon name="search"></ion-icon>
-      <ion-label>Suche</ion-label>
+        <ion-icon name="search"></ion-icon>
+        <ion-label>Suche</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="about">
-      <ion-icon name="play-circle"></ion-icon>
-      <ion-label>Videos</ion-label>
+        <ion-icon name="play-circle"></ion-icon>
+        <ion-label>Videos</ion-label>
     </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+</ion-tab-bar>

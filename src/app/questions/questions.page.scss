@@ -1,15 +1,58 @@
+
 .answerField1 {
-    --background: var(--field1, #fff);
+    --background: var(--field1, var(--ion-color-button));
+
 }
 
 .answerField2 {
-    --background: var(--field2, #fff);
+    --background: var(--field2, var(--ion-color-button));
 }
 
 .answerField3 {
-    --background: var(--field3, #fff);
+    --background: var(--field3, var(--ion-color-button));
 }
 
 .answerField4 {
-    --background: var(--field4, #fff);
+    --background: var(--field4, var(--ion-color-button));
+}
+
+#placeholder {
+    height: 15vh;
+    width: 100vw;
+}
+
+ion-card {
+
+    color: white;
+    --background: var(--ion-color-button);
+    border-radius: 30px;
+
+    ion-text {
+        font-size: 1.1em;
+    }
+
+    ion-card-title {
+        color: white;
+    }
+}
+
+ion-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    --ion-background-color: white;
+    --border-radius: 22px;
+}
+
+.ion-padding {
+    padding-bottom: 0;
+}
+
+#check {
+    margin-left: 10px;
+    margin-top: 10px;
+
+    ion-button {
+        --border-radius: 10px;
+    }
 }

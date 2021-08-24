@@ -1,10 +1,16 @@
 <app-custom-header></app-custom-header>
 
-<ion-content [fullscreen]="true">
-  <div id="überschrift">
-    <h1>Lernapp</h1>
-  </div>
-  <div id="container" class="ion-padding">
-    <ion-button expand="block" *ngFor="let course of courses" (click)="navigate(course)">{{course}}</ion-button>
+<ion-content>
+  <div id="container">
+    <ion-button id="search">
+      <ion-icon name="search"></ion-icon>
+      <strong>Suche</strong>
+    </ion-button>
+
+    <div class="ion-padding">
+      <ion-button id="schein" expand="block" *ngFor="let course of courses" (click)="navigate(course)">
+        <p>{{course}}</p>
+      </ion-button>
+    </div>
   </div>
 </ion-content>

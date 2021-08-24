@@ -1,7 +1,6 @@
 
 .answerField1 {
     --background: var(--field1, var(--ion-color-button));
-
 }
 
 .answerField2 {
@@ -21,6 +20,27 @@
     width: 100vw;
 }
 
+.answers {
+    height: 40px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
+    ion-checkbox {
+        position: absolute;
+        right: 15px;
+        --background: white;
+        --border-radius: 15px;
+        --border-width: 0;
+        --size: 22px;
+    }
+
+    ion-label {
+        position: absolute;
+        left: 15px;
+    }
+}
+
 ion-card {
 
     color: white;
@@ -34,14 +54,6 @@ ion-card {
     ion-card-title {
         color: white;
     }
-}
-
-ion-item {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 15px;
-    --ion-background-color: white;
-    --border-radius: 22px;
 }
 
 .ion-padding {

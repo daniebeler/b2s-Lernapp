@@ -16,22 +16,22 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-item class="answerField1">
+  <ion-card class="answerField1 answers" (click) = checkbox(0)>
     <ion-label>{{answer1}}</ion-label>
     <ion-checkbox [(ngModel)]="answerBool[0]"></ion-checkbox>
-  </ion-item>
-  <ion-item class="answerField2">
+  </ion-card>
+  <ion-card class="answerField2 answers" (click) = checkbox(1)>
     <ion-label>{{answer2}}</ion-label>
     <ion-checkbox [(ngModel)]="answerBool[1]"></ion-checkbox>
-  </ion-item>
-  <ion-item class="answerField3">
+  </ion-card>
+  <ion-card class="answerField3 answers" (click) = checkbox(2)>
     <ion-label>{{answer3}}</ion-label>
     <ion-checkbox [(ngModel)]="answerBool[2]"></ion-checkbox>
-  </ion-item>
-  <ion-item class="answerField4">
+  </ion-card>
+  <ion-card class="answerField4 answers" (click) = checkbox(3)>
     <ion-label>{{answer4}}</ion-label>
     <ion-checkbox [(ngModel)]="answerBool[3]"></ion-checkbox>
-  </ion-item>
+  </ion-card>
 
   <div id="check">
     <ion-button color="primary" (click)="check()">{{checkButtonText}}</ion-button>

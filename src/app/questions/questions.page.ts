@@ -116,7 +116,16 @@ export class QuestionsPage implements OnInit {
     //checkboxes wieder clearen
     this.answerBool = [false, false, false, false];
     for (let i = 0; i < 4; i++) {
-      document.documentElement.style.setProperty(this.fields[i], '#fff');
+      document.documentElement.style.setProperty(this.fields[i], 'var(--ion-color-button)');
+    }
+  }
+
+  checkbox(i) {
+    if (this.answerBool[i]) {
+      this.answerBool[i] = false;
+    }
+    else {
+      this.answerBool[i] = true;
     }
   }
 

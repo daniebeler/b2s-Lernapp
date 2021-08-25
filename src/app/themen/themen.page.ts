@@ -11,6 +11,7 @@ export class ThemenPage implements OnInit {
 
   themes: Array <string> = [];
   data: any = [];
+  scheinName = '';
 
   constructor(
     private httpClient: HttpClient,
@@ -31,6 +32,7 @@ export class ThemenPage implements OnInit {
     for (let i = 0; i < this.data.scheine[schein].Thema.length; i++) {
       this.themes.push(this.data.scheine[schein].Thema[i].themaName);
     }
+    this.scheinName = this.data.scheine[schein].scheinName;
   }
 
   navigate(theme: string) {
@@ -45,6 +47,10 @@ export class ThemenPage implements OnInit {
 
     const schein = this.activatedRoute.snapshot.paramMap.get('schein');
     this.router.navigate(['questions/' + schein + scheinZahl]);
+  }
+
+  navigateHome() {
+    this.router.navigate(['home']);
   }
 
 }

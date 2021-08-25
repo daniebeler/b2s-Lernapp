@@ -82,11 +82,17 @@
   --ion-background-color: linear-gradient(135deg, #808080, #313131);
 }
 
+
+ion-button {
+  text-transform: none;
+ }
+
 @media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
    */
+
 
   body {
 

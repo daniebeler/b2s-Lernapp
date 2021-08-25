@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-questions',
   templateUrl: './questions.page.html',
@@ -16,19 +17,24 @@ export class QuestionsPage implements OnInit {
   answer4 = '';
   answerBool = [false, false, false, false];
   fields = ['--field1', '--field2', '--field3', '--field4'];
+  infos = ['--info1'];
   questionindex = 0;
   themaindex = 0;
   answerschecker = [];
   schein: string;
   thema: string;
+  questionsnumber= 0;
+  currentQuestion = 0;
+  quizType = 0;
+  image = [];
 
   checkButtonText = 'check';
 
   constructor(
     private httpClient: HttpClient,
     private router: Router,
-    private activatedRoute: ActivatedRoute
-    ) {
+    private activatedRoute: ActivatedRoute,
+  ) {
 
   }
 
@@ -40,6 +46,7 @@ export class QuestionsPage implements OnInit {
 
     this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
     if (this.schein.length === 2) {
+      this.quizType = 1;
       this.thema = this.schein.charAt(1);
       this.schein = this.schein.charAt(0);
       this.themaindex = Number(this.thema);
@@ -47,6 +54,25 @@ export class QuestionsPage implements OnInit {
 
   }
 
+
+  questionnumberfunction() {
+    let qeustionnumbers = 0;
+    if (this.quizType === 0) {
+      for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
+        for (const a of Object.keys(this.data.scheine[this.schein].Thema[i].questions)) {
+          qeustionnumbers++;
+        }
+      }
+    }
+    else {
+      for (const a of Object.keys(this.data.scheine[this.schein].Thema[this.themaindex].questions)) {
+        qeustionnumbers++;
+      }
+    }
+
+
+    return qeustionnumbers;
+  }
 
 
   datareader() {
@@ -57,6 +83,17 @@ export class QuestionsPage implements OnInit {
     this.answer2 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer2;
     this.answer3 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer3;
     this.answer4 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer4;
+    this.image[0] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].image;
+
+    if (this.image[0] === undefined) {
+      this.image = [];
+    }
+
+    if (this.questionsnumber === 0) {
+      this.questionsnumber = this.questionnumberfunction();
+    }
+
+    this.currentQuestion++;
   }
 
 
@@ -83,13 +120,17 @@ export class QuestionsPage implements OnInit {
       }
 
       this.checkButtonText = 'weiter';
+
+      document.documentElement.style.setProperty(this.infos[0], 'visible');
     }
 
     else {
-//next Question or next Thema or fertig
+      //next Question or next Thema or fertig
       if (Object.keys(this.data.scheine[this.schein].Thema[this.themaindex].questions).length === this.questionindex + 1) {
         if (Object.keys(this.data.scheine[this.schein].Thema).length === this.themaindex + 1) {
-
+          this.currentQuestion = 0;
+          this.questionindex = 0;
+          this.themaindex = 0;
           this.router.navigate(['result/' + this.answerschecker]);
 
         }
@@ -117,16 +158,23 @@ export class QuestionsPage implements OnInit {
     this.answerBool = [false, false, false, false];
     for (let i = 0; i < 4; i++) {
       document.documentElement.style.setProperty(this.fields[i], 'var(--ion-color-button)');
+      document.documentElement.style.setProperty(this.infos[0], 'hidden');
     }
   }
 
   checkbox(i) {
-    if (this.answerBool[i]) {
-      this.answerBool[i] = false;
-    }
-    else {
-      this.answerBool[i] = true;
+
+    if (this.checkButtonText === 'check') {
+      if (this.answerBool[i]) {
+        this.answerBool[i] = false;
+      }
+      else {
+        this.answerBool[i] = true;
+      }
     }
   }
 
+  infoPopover() {
+    alert();
+  }
 }

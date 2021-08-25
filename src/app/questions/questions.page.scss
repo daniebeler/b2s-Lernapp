@@ -16,8 +16,7 @@
 }
 
 #placeholder {
-    height: 15vh;
-    width: 100vw;
+    height: auto;
 }
 
 .answers {
@@ -25,6 +24,7 @@
     border-radius: 16px;
     display: flex;
     align-items: center;
+    margin-top: 10px;
 
     ion-checkbox {
         position: absolute;
@@ -33,19 +33,24 @@
         --border-radius: 15px;
         --border-width: 0;
         --size: 22px;
+        opacity: 1;
     }
 
     ion-label {
         position: absolute;
         left: 15px;
+        color: white;
+        font-size: 1rem;
     }
 }
 
-ion-card {
+
+#frageCard {
 
     color: white;
     --background: var(--ion-color-button);
     border-radius: 30px;
+    margin-bottom: 15px;
 
     ion-text {
         font-size: 1.1em;
@@ -67,4 +72,17 @@ ion-card {
     ion-button {
         --border-radius: 10px;
     }
+}
+
+.info {
+    --background: transparent;
+    --box-shadow: none;
+    position: absolute;
+    width: 100%;
+    visibility: var(--info1, hidden);
+
+    ion-icon {
+        font-size: 30px;
+    }
+    
 }

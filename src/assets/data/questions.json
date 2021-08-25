@@ -17,7 +17,8 @@
                                 true,
                                 false,
                                 true
-                            ]
+                            ],
+                            "image": "../../../../assets/img/questionimgs/VCBC.jpg"
                         },
                         {
                             "question": "frage 2",
@@ -30,7 +31,8 @@
                                 true,
                                 true,
                                 false
-                            ]
+                            ],
+                            "image": "../../../../assets/img/questionimgs/VCBC.jpg"
                         }
                     ]
                 },
@@ -68,7 +70,7 @@
             ]
         },
         {
-            "scheinName": "BFA Fortgeschritten",
+            "scheinName": "BFA Binnen (A-Schein)",
             "Thema": [
                 {
                     "themaName": "Thema1",

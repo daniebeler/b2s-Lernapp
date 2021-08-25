@@ -1,6 +1,18 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
+
+  <div class="ion-padding">
+    <ion-button id="schein" expand="block" (click)="navigateHome()">
+      <div id="überschrift">
+        <p>{{scheinName}}</p>
+      </div>
+      <div id="subtitle">
+        <p>Lerne die Basics</p>
+      </div>
+    </ion-button>
+  </div>
+
   <div id="container" class="ion-padding">
     <ion-button expand="block" (click)="navigate('questions/')">
       Alle Fragen

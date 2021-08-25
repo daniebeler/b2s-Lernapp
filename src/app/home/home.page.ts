@@ -11,6 +11,7 @@ export class HomePage {
 
   courses: Array <string> = [];
   data: any = [];
+  currentcourse: string;
 
   constructor(
     private httpClient: HttpClient,

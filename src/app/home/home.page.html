@@ -4,15 +4,24 @@
   <div id="container">
     <ion-button id="search">
       <ion-icon name="search"></ion-icon>
-      <strong>Suche</strong>
+      <strong>SUCHE</strong>
     </ion-button>
 
     <div class="ion-padding">
       <ion-button id="schein" expand="block" *ngFor="let course of courses" (click)="navigate(course)">
-        <p>{{course}}</p>
+        <div id="überschrift">
+          <p>{{course}}</p>
+        </div>
+        <div id="subtitle">
+          <p>Lerne die Basics</p>
+        </div>
+        
       </ion-button>
     </div>
   </div>
 </ion-content>
+<div id="erklärvideo">
+  <p>erklärvideo</p>
+</div>
 
 <app-custom-footer></app-custom-footer>

@@ -18,7 +18,8 @@
                                 false,
                                 true
                             ],
-                            "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+                            "image": "../../../../assets/img/questionimgs/VCBC.jpg",
+                            "correctGesamt": false
                         },
                         {
                             "question": "frage 2",
@@ -32,7 +33,8 @@
                                 true,
                                 false
                             ],
-                            "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+                            "image": "../../../../assets/img/questionimgs/VCBC.jpg",
+                            "correctGesamt": false
                         }
                     ]
                 },
@@ -50,7 +52,8 @@
                                 true,
                                 false,
                                 true
-                            ]
+                            ],
+                            "correctGesamt": false
                         },
                         {
                             "question": "Thema2 Frage 2",
@@ -63,7 +66,8 @@
                                 true,
                                 true,
                                 false
-                            ]
+                            ],
+                            "correctGesamt": false
                         }
                     ]
                 }

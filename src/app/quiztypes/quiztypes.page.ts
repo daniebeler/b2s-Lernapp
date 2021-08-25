@@ -12,6 +12,7 @@ export class QuiztypesPage implements OnInit {
   data: any;
   schein: any;
   scheinName = '';
+  allQuestions = 0;
 
   constructor(
     private router: Router,
@@ -29,6 +30,12 @@ export class QuiztypesPage implements OnInit {
   datareader() {
     this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
     this.scheinName = this.data.scheine[this.schein].scheinName;
+
+    for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
+      for (const a of Object.keys(this.data.scheine[this.schein].Thema[i].questions)) {
+        this.allQuestions++;
+      }
+    }
   }
 
   navigate(site: string) {

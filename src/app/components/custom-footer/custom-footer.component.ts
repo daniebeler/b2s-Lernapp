@@ -14,8 +14,8 @@ export class CustomFooterComponent implements OnInit {
 
   ngOnInit() {}
 
-  navigate() {
-    this.router.navigate(['home']);
+  navigate(site: string) {
+    this.router.navigate([site]);
   }
 
 }

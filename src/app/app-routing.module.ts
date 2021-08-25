@@ -26,6 +26,9 @@ const routes: Routes = [
   {
     path: 'themen/:schein',
     loadChildren: () => import('./themen/themen.module').then( m => m.ThemenPageModule)
+  },  {
+    path: 'videos',
+    loadChildren: () => import('./videos/videos.module').then( m => m.VideosPageModule)
   },
 
 

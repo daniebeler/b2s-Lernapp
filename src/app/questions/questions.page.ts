@@ -23,7 +23,7 @@ export class QuestionsPage implements OnInit {
   answerschecker = [];
   schein: string;
   thema: string;
-  questionsnumber= 0;
+  questionsnumber = 0;
   currentQuestion = 0;
   quizType = 0;
   image = [];
@@ -83,6 +83,7 @@ export class QuestionsPage implements OnInit {
     this.answer2 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer2;
     this.answer3 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer3;
     this.answer4 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer4;
+
     this.image[0] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].image;
 
     if (this.image[0] === undefined) {
@@ -114,13 +115,13 @@ export class QuestionsPage implements OnInit {
 
       if (countTrue === 4) {
         this.answerschecker.push(true);
+
       }
       else {
         this.answerschecker.push(false);
       }
 
       this.checkButtonText = 'weiter';
-
       document.documentElement.style.setProperty(this.infos[0], 'visible');
     }
 
@@ -172,9 +173,5 @@ export class QuestionsPage implements OnInit {
         this.answerBool[i] = true;
       }
     }
-  }
-
-  infoPopover() {
-    alert();
   }
 }

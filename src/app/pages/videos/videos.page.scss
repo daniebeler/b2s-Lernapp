@@ -1,52 +1,70 @@
-* {
-    --ion-background-color: grey !important;
-}
-
 #topVideo {
-    position: relative;
+  position: relative;
+  max-height: 40vh;
+
+  img {
     max-height: 40vh;
-    z-index: 0;
+    width: 100vw;
+    object-fit: cover;
+  }
 
-    img {
-        max-height: 40vh;
-        width: 100vw;
-        object-fit: cover;
-    }
-
-    ion-button {
-        height: auto;
-        margin: 0;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        --background: trasparent;
-        --box-shadow: none;
-        
-        ion-icon {
-            font-size: 80px;
-        }
-    }
+  ion-icon {
+    font-size: 100px;
+  }
 }
 
 #bottomVideos {
+  position: relative;
+
+  #left {
+    position: absolute;
+    width: 50vw;
+    left: 0;
+    img {
+        padding: 15px 7px 0px 15px;
+    }
+  }
+
+  #right {
+    position: absolute;
+    width: 50vw;
+    right: 0;
+    img {
+        padding: 15px 15px 0px 7px;
+    }
+
+    #firstImage {
+      height: 35vh;
+      position: relative;
+      img {
+        height: 35vh;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .image {
+    height: 45vh;
     position: relative;
-
-    #left {
-        position: absolute;
-        width: 50vw;
-        left: 0;
-        img {
-            padding: 15px 7px 15px 15px;
-        }
+    img {
+      height: 45vh;
+      object-fit: cover;
     }
+  }
+}
 
-    #right {
-        position: absolute;
-        width: 50vw;
-        right: 0;
-        img {
-            padding: 15px 15px 15px 7px;
-        }
-    }
+ion-button {
+  height: auto;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  --background: trasparent;
+  --background-hover: black;
+  --box-shadow: none;
+  pointer-events:none;
+  ion-icon {
+    font-size: 60px;
+  }
 }

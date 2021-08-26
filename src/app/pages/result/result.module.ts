@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { QuestionsPageRoutingModule } from './questions-routing.module';
+import { ResultPageRoutingModule } from './result-routing.module';
 
-import { QuestionsPage } from './questions.page';
-import { ComponentsModule } from '../components/components.module';
+import { ResultPage } from './result.page';
+import { ComponentsModule } from '../../components/components.module';
 
 
 @NgModule({
@@ -16,8 +16,8 @@ import { ComponentsModule } from '../components/components.module';
     FormsModule,
     IonicModule,
     ComponentsModule,
-    QuestionsPageRoutingModule
+    ResultPageRoutingModule
   ],
-  declarations: [QuestionsPage]
+  declarations: [ResultPage]
 })
-export class QuestionsPageModule {}
+export class ResultPageModule {}

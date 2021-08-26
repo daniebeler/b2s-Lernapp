@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
@@ -13,22 +13,27 @@ const routes: Routes = [
   },
   {
     path: 'questions/:schein',
-    loadChildren: () => import('./questions/questions.module').then( m => m.QuestionsPageModule)
+    loadChildren: () => import('./pages/questions/questions.module').then( m => m.QuestionsPageModule)
   },
   {
     path: 'quiztypes/:schein',
-    loadChildren: () => import('./quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
+    loadChildren: () => import('./pages/quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
   },
   {
     path: 'result/:result',
-    loadChildren: () => import('./result/result.module').then( m => m.ResultPageModule)
+    loadChildren: () => import('./pages/result/result.module').then( m => m.ResultPageModule)
   },
   {
     path: 'themen/:schein',
-    loadChildren: () => import('./themen/themen.module').then( m => m.ThemenPageModule)
-  },  {
+    loadChildren: () => import('./pages/themen/themen.module').then( m => m.ThemenPageModule)
+  },
+  {
     path: 'videos',
-    loadChildren: () => import('./videos/videos.module').then( m => m.VideosPageModule)
+    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
+  },
+  {
+    path: 'knots',
+    loadChildren: () => import('./pages/knots/knots.module').then( m => m.KnotsPageModule)
   },
 
 

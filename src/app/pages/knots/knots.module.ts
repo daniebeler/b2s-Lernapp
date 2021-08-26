@@ -4,20 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { VideosPageRoutingModule } from './videos-routing.module';
+import { KnotsPageRoutingModule } from './knots-routing.module';
+import { ComponentsModule } from '../../components/components.module';
 
-import { VideosPage } from './videos.page';
-import { ComponentsModule } from '../components/components.module';
-
+import { KnotsPage } from './knots.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    VideosPageRoutingModule,
+    KnotsPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [VideosPage]
+  declarations: [KnotsPage]
 })
-export class VideosPageModule {}
+export class KnotsPageModule {}

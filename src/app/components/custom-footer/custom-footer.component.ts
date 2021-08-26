@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class CustomFooterComponent implements OnInit {
 
+  knotsIcon = '../../../assets/icon/footerIcons/knoten.svg';
+
   constructor(
     private router: Router
   ) { }

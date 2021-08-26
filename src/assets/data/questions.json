@@ -1,148 +1,217 @@
 {
-    "scheine": [
+  "scheine": [
+    {
+      "scheinName": "Grundkurs",
+      "Thema": [
         {
-            "scheinName": "Grundkurs",
-            "Thema": [
-                {
-                    "themaName": "Thema1",
-                    "questions": [
-                        {
-                            "question": "Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "falsch",
-                            "answer4": "richtig",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                false,
-                                true
-                            ],
-                            "image": "../../../../assets/img/questionimgs/VCBC.jpg",
-                            "solved": 0
-                        },
-                        {
-                            "question": "frage 2",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "richtig",
-                            "answer4": "falsch",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                true,
-                                false
-                            ],
-                            "image": "../../../../assets/img/questionimgs/VCBC.jpg",
-                            "solved": 0
-                        }
-                    ]
-                },
-                {
-                    "themaName": "Thema2",
-                    "questions": [
-                        {
-                            "question": "Thema2 Frage 1",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "falsch",
-                            "answer4": "richtig",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                false,
-                                true
-                            ],
-                            "solved": 0
-                        },
-                        {
-                            "question": "Thema2 Frage 2",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "richtig",
-                            "answer4": "falsch",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                true,
-                                false
-                            ],
-                            "solved": 0
-                        }
-                    ]
-                }
-            ]
+          "themaName": "Thema1",
+          "questions": [
+            {
+              "question": "Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg",
+              "correctGesamt": false
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg",
+              "correctGesamt": false
+            }
+          ]
         },
         {
-            "scheinName": "BFA Binnen (A-Schein)",
-            "Thema": [
-                {
-                    "themaName": "Thema1",
-                    "questions": [
-                        {
-                            "question": "frage 1",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "falsch",
-                            "answer4": "richtig",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                false,
-                                true
-                            ],
-                            "solved": 0
-                        },
-                        {
-                            "question": "frage 2",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "richtig",
-                            "answer4": "falsch",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                true,
-                                false
-                            ],
-                            "solved": 0
-                        }
-                    ]
-                },
-                {
-                    "themaName": "Thema2",
-                    "questions": [
-                        {
-                            "question": "frage 1",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "falsch",
-                            "answer4": "richtig",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                false,
-                                true
-                            ],
-                            "solved": 0
-                        },
-                        {
-                            "question": "frage 2",
-                            "answer1": "falsch",
-                            "answer2": "richtig",
-                            "answer3": "richtig",
-                            "answer4": "falsch",
-                            "correctAnswer": [
-                                false,
-                                true,
-                                true,
-                                false
-                            ],
-                            "solved": 0
-                        }
-                    ]
-                }
-            ]
+          "themaName": "Thema2",
+          "questions": [
+            {
+              "question": "Thema2 Frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ],
+              "correctGesamt": false
+            },
+            {
+              "question": "Thema2 Frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "correctGesamt": false
+            }
+          ]
         }
-    ]
+      ]
+    },
+    {
+      "scheinName": "BFA-Binnen (A-Schein)",
+      "Thema": [
+        {
+          "id": "A",
+          "themaName": "Basismanöver und Jachtbedienung (28 Fragen)",
+          "questions": [
+            {
+              "id": 1,
+              "question": "In welchen der folgenden Abbildungen stimmen sowohl Segelstellung, als auch die Bezeichnung des Kurses?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 2,
+              "question": "In welchen der folgenden Abbildungen stimmen sowohl Segelstellung, als auch die Bezeichnung des Kurses?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 3,
+              "question": "In welchen der folgenden Abbildungen stimmen sowohl Segelstellung, als auch die Bezeichnung des Kurses?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 4,
+              "question": "In welchen der folgenden Abbildungen stimmen sowohl Segelstellung, als auch die Bezeichnung des Kurses?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Welche der folgenden Abläufe beschreiben das Manöver \"Wende\"?",
+              "answer1": "Hart-am-Wind-Kurs - Boot geht mit dem Bug durch den Wind - Vorsegel vorne über und Schoten dicht - Hart-am-Wind-Kurs",
+              "answer2": "Raumwindkurs - Boot fällt ab auf Vorwindkurs - Großschot dicht - Boot geht mit dem Heck durch den Wind - Vorsegel vorne über und Großschot fieren - Raumwindkurs",
+              "answer3": "Hart-am-Wind-Kurs - Boot dreht mit dem Bug durch den Wind - Vorsegelschot bleibt gelegt und Vorsegel steht back - Ruder in Luv fixiert",
+              "answer4": "Halbwindkurs - Boot geht auf Kurs im Wind - Schoten loswerfen",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 6,
+              "question": "Welche der folgenden Aussagen bezüglich Halsen auf Jollen bei stärkerem Wind treffen zu?",
+              "answer1": "Die Bootsgeschwindigkeit muss während der gesamten Halse auf ein für die Manövrierfähigkeit notwendiges Minimum reduziert werden",
+              "answer2": "Ein mögliches Kentern nach dem Überkommen des Baums kann durch geeigneten Gewichtstrimm vermieden werden",
+              "answer3": "Die Großschot muss vor der Drehung des Hecks durch den Wind unbedingt dicht geholt werden",
+              "answer4": "Das Manöver sollte mit zaghafter Ruderlage durchgeführt und die Bootsdrehung immer wieder unterbrochen werden",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Welche der folgenden Abläufe beschreiben das Manöver \"Halse\" auf einer Jacht bei stärkerem Wind?",
+              "answer1": "Hart-am-WindKurs - Boot geht mit dem Bug durch den Wind - Vorsegel vorne über und Schoten dicht - Hart-am-Wind-Kurs",
+              "answer2": "Raumwindkurs - Boot fällt ab auf Vorwindkurs - Großschot dicht - Boot geht mit dem Heck durch den Wind - Großschot fieren und Stützruder - Raumwindkurs",
+              "answer3": "Hart-am-Wind-Kurs - Boot dreht mit dem Bug durch den Wind - Vorsegelschot bleibt belegt und Vorsegel staht back - Ruder in Luv fixiert",
+              "answer4": "Halbwindkurs - Boot schießt in den Wind - Schoten loswerfen",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            }
+          ]
+        },
+        {
+          "themaName": "Thema2",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

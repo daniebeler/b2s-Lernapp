@@ -56,7 +56,7 @@
               "correctGesamt": false
             },
             {
-              "question": "Thema2 Frage 2",
+              "question": "Frage 2",
               "answer1": "falsch",
               "answer2": "richtig",
               "answer3": "richtig",
@@ -78,7 +78,7 @@
       "Thema": [
         {
           "id": "A",
-          "themaName": "Basismanöver und Jachtbedienung (28 Fragen)",
+          "themaName": "Basismanöver und Jachtbedienung (28)",
           "questions": [
             {
               "id": 1,
@@ -177,11 +177,562 @@
                 false,
                 true
               ]
+            },
+            {
+              "id": 8,
+              "question": "Nach dem Aufschießer während eines Anlegemanövers hat die Jolle zu viel Schwung und droht mit dem Steg zu kollidieren. Welche Maßnahmen sind geeignet, um Fahrt aus dem Boot zu nehmen und Schäden zu vermeiden?",
+              "answer1": "Unmittelbar vor der Kollision auf den Steg übersteigen und die Jolle mit Armen oder Beinen abbremsen",
+              "answer2": "Ein Bein oder ein Paddel tief ins Wasser tauchen",
+              "answer3": "Großsegel backhalten",
+              "answer4": "Fock backhalten",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 9,
+              "question": "Was sollte beim Setzen des Großsegels beachtet werden?",
+              "answer1": "Die Großschot muss während des Setzens des Großsegel gefiert sein",
+              "answer2": "Die Großschot muss während des Setzens des Großsegel dicht genommen werden",
+              "answer3": "Der Baumniederholer muss während des Setzens des Großsegel gefiehert sein",
+              "answer4": "Der Baumniederholer muss während des Setzens des Großsegels dicht genommen werden",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 10,
+              "question": "Nach dem Anlegen an den Steg soll das Großsegel geborgen werden. Was ist dabei zu beachten",
+              "answer1": "Für das reibungsfreie Bergen des Großsegels sollte der Wind achterlich einfallen",
+              "answer2": "Beim Bergen des großsegels sollte dieses killen",
+              "answer3": "Beim Fieren des Großsegels sollte sicher gestellt sein, dass der Baum nicht auf das Boot fällt",
+              "answer4": "Die Großschot sollte während des gesamten Bergens möglichst dicht bleiben",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 11,
+              "question": "Welche der folgenden Abläufe beschreiben das Manöver \"Großsegel reffen mit Bindereff\" korrekt?",
+              "answer1": "Vorwindkurs - Dirk durchsetzen - Großfall fieren - Reffkausch am Mast fixieren - Großfall dicht - Schmerreep dicht - Dirk fieren",
+              "answer2": "Vorwindkurs - Dirk durchsetzen - Großfall fieren - Arretierung am Lümmelbeschlag lösen und Großsegeltuch auf Großbaum wickeln - Arretierung am Lümmelbeschlag fixieren - Großfall dicht - Dirk fieren",
+              "answer3": "Hart-am-Wind-Kurs - Großschot fieren und Baum anheben - Großfall fieren - vordere Reffkausch fixieren - Großfall dicht - Reffleine (Schmerreep) dicht - Baum absenken und Großschot dicht",
+              "answer4": "Hart-am-Wind-Kurs - Großschot fieren und Dirk durchsetzen - Großfall fieren - Arretierung am Lümmelbeschlag lösen und Großsegeltuch auf Großbaum wickeln - Arretierung am Lümmelbeschlag fixieren - Großfall dicht - Dirk fieren und Großschot dicht",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Welche Anzeichen deuten bei einem richtig getrimmten Boot darauf hin, dass gerefft werden sollte?",
+              "answer1": "Dauerhaftes, starkes Gegenruder, um einem Anluven des Bootes entgegen zu wirken",
+              "answer2": "Hohe Leegierigkeit des Bootes und dadurch Gefahr einer Patenthalse",
+              "answer3": "Bootsgeschwindigkeiten größer als die Rumpfgeschwindigkeiten werden erreicht",
+              "answer4": "Sehr starke Kränkung des Bootes",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 13,
+              "question": "Welche der folgenden Abläufe beschreiben das Manöver \"Q-Wende\"?",
+              "answer1": "Raumwindkurs - Boot luvt an und geht mit dem Bug durch den Wind - Vorsegel vorne über und Schoten fieren - abfallen auf Raumwindkurs",
+              "answer2": "Hart-am-Wind-Kurs - Boot fällt ab auf Vorwindkurs - Großschot dicht - Boot geht mit dem Heck durch den Wind - Vorsegel vorne über und Vorschot dicht - anluven auf Hart-am-Wind-Kurs",
+              "answer3": "Hart-am-Wind-Kurs - Boot dreht mit dem Bug durch den Wind - Vorsegelschot bleibt belegt und Vorsegel steht back - Ruder in Luv fixiert",
+              "answer4": "Halbwindkurs - Boot schießt in den Wind - Schoten loswerden",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 14,
+              "question": "Auf einem Hart-am-Wind-Kurs geht ein Crewmitglied über Bord. Welche der folgenden Abläufe beschreiben das Bergemanöver mit \"Q-Wende\"?",
+              "answer1": "Abfallen mit dichten Segeln - Beidrehen - Boot liegt bei und treibt auf den Überbordgegangenen zu",
+              "answer2": "Durch den Wind gehen ohne Segel zu bedienen - mit dichten Segeln auf Vorwindkurs am Überbordgegangenen vorbei segelne - halsen ohne Segel zu bedienen - Aufschießer zum Überbordgegangenen zu",
+              "answer3": "Abfallen auf Raumwindkurs - Wende - auf Halbwindkurs in Lee des Überbordgegangenen segeln - (Nahezu-)Aufschießer zum Überbordgegangenen hin",
+              "answer4": "Wende - abfallen auf Vorwindkurs - Schoten loswerden - auf Überbordgegangenen zutreiben",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 15,
+              "question": "Welche der folgenden Aussagen treffen auf das Bergemanover mit \"Q-Wende\" zu?",
+              "answer1": "Der Kurs weg vom Überbordgegangenen wird nach der W-Wende gekreuzt",
+              "answer2": "Nach der Q-Wende erfolgt ein (Nahezu-)Aufschießer zum Überbordgegangenen hin",
+              "answer3": "Nach der Q-Wende muss sich das Boot in Luv des Überbordgegangenen befinden",
+              "answer4": "Zumindest eine Halse ist notwendig zwischen dem Über-Bord-Gehen und dem Aufnehmen des Crewmitglieds",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 16,
+              "question": "Was sind Vorteile des Bergemanovers mit Q-Wende gegenüber anderen Bergemanövern?",
+              "answer1": "Das Manöver kann unabhängig von der Bootsgröße alleine gefahren werden",
+              "answer2": "Das Manöver kann mit jedem Boot und auch von relativ unerfahrenen Seglern durchgeführt werden",
+              "answer3": "Die Distanz zum Überbordgegangenen bleibt während des gesamten Manövers gering",
+              "answer4": "Das Manöver kann unabhängig vom Kurs, auf dem eine Person über Bord geht, gefahren werden",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 17,
+              "question": "Eine Jacht soll für einen längeren Zeitraum längsseits an einem Schwingsteg festgemacht liegen. Welche Vorkehrungen sind zu treffen?",
+              "answer1": "Kielflosse und Ruderblatt aufholen und versorgen",
+              "answer2": "Vor- und Achterleine ausbringen",
+              "answer3": "Zwei Springleinen ausbringen",
+              "answer4": "Fender zum Schutz des Rumpfs stegseitig ausbringen",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 18,
+              "question": "Welche der Aussagen bezüglich Springleinen treffen zu?",
+              "answer1": "Die Vorspring läuft vom Bug schräg nach achtern",
+              "answer2": "Die Vorspring läuft vom Heck schräg nach achtern",
+              "answer3": "Die Vorspring läuft vom Bug schräg nach vorne",
+              "answer4": "Die Vorspring läuft vom Heck schräg nach vorne",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "id": 19,
+              "question": "Es soll mit einer Jolle an einer Boje angelegt werden. Welche der folgenden Abläufe beschreiben geeignete Anlegemanöver?",
+              "answer1": "Vorleine vorbereiten - auf Halbwindkurs in Luv der Boje segeln - Schoten dicht und auf Vorwindkurs auf die Boje zutreiben - Vorleine an der Boje festmachen - Segel bergen",
+              "answer2": "Vorleine vorbereiten - auf Halbwindkurs in Lee der Boje segeln - Großsegel bergen und zur Boje hin aufschießen - Vorleine an der Boje festmachen - Vorsegel bergen",
+              "answer3": "Vorleine vorberieten - auf Halbwindkurs in Lee der Boje segeln - Schoten lösen und zur Boje hin aufschießen - Vorleine an der Boje festmachen - Segel bergen",
+              "answer4": "Vorleine vorbereiten - auf Halbwindkurs in Luv der Boje segeln - Schoten lose und zur Boje hin aufschießen - Vorleine an der Boje festmachen - Segel bergen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 20,
+              "question": "Eine Jolle soll für einen längeren Zeitraum an einer Boje festgemacht liegen. Welche Vorkehrungen sind nach Möglichkeit zu treffen?",
+              "answer1": "Segel bergen, Schwert aufholen und Ruderblatt verstauen",
+              "answer2": "Zusätzlich zur Vorleine eine Sorgleine ausbringen",
+              "answer3": "Vorleine möglichst weit vorne am Boot festmahcen und mit einem geeigneten Knoten an der Boje befestigen",
+              "answer4": "Fender ausbringen und, wenn vorhanden, zusätzlich den Anker ausbringen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 21,
+              "question": "Auf einem Hart-am-Wind-Kurs fällt eine Bö ein. Welche der folgenden Aussagen treffen zu?",
+              "answer1": "Das Boot wird für die Dauer der Bö luvgieriger",
+              "answer2": "Das Boot wird für die Dauer der Bö Leegieriger",
+              "answer3": "Für die Dauer der Bö kann angeluvt werden, da der scheinbare Wind achterlicher einfällt",
+              "answer4": "Für die Dauer der Bö muss abgefallen werden, da der scheinbare Wind vorlicher einfällt",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 22,
+              "question": "Welche Maßnahmen sind geeignet, um beim Einfallen einer Bö das Boot auf Kurs zu halten?",
+              "answer1": "Verstärkt ausreiten",
+              "answer2": "Gegebenenfalls stärker Ruder legen",
+              "answer3": "Schwert absenken",
+              "answer4": "Großschot fieren",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 23,
+              "question": "Das Boot segelt einen Hart-am-Wind-Kurs bei böigen Verhältnissen. Welche kurzfristigen Maßnahmen sind geeignet, um zu verhindern, dass das Boot in den Wind schießt?",
+              "answer1": "Beim Einfallen einer Bö wird die Vorschot gefiert, nach dem Ende der Bö wieder dicht geholt",
+              "answer2": "Beim Einfallen der Bö wird die Vorschot dicht geholt, nach dem Ende der Bö wieder gefiert",
+              "answer3": "Beim Einfallen der Bö wird die Großschot gefiert, nach dem Ende der Bö wieder dicht geholt",
+              "answer4": "Beim Einfallen der Bö wird die Großschot dicht geholt, nach dem Ende der Bö wieder gefiert",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 24,
+              "question": "Eine Jolle segelt einen Hart-am-Wind-Kurs bei frischem Wind. Welche Risiken bestehen, wenn bei Einfall einer Bö Ruderstellung, Segel- und Gewichtstrimm nicht an die veränderten Windverhältnisse angepasst werden?",
+              "answer1": "Kentern",
+              "answer2": "Patenthalse",
+              "answer3": "Unterschneiden",
+              "answer4": "Unbeabsichtigtes in den Wind Schießen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 25,
+              "question": "Welche der aufgezählten Kriterien beeinflussen die Wahl eines geeigneten Ankerplatzes beim freien Ankern?",
+              "answer1": "Grundbeschaffenheit",
+              "answer2": "Schwojradius",
+              "answer3": "Wassertiefe",
+              "answer4": "Schutz vor Welle",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 26,
+              "question": "Welche Grundbeschaffenheiten sind zum Ankern gut geeignet",
+              "answer1": "Sand",
+              "answer2": "Fels",
+              "answer3": "Seegras",
+              "answer4": "feiner Kies",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 27,
+              "question": "Wo sollte die Schlepptrosse bei Schlepper und Geschleppten, wenn möglich, befestigt oder zuletzt umgelenkt werden?",
+              "answer1": "Schlepper: möglichst weit achtern / Geschleppter: möglichst weit vorne",
+              "answer2": "Schlepper: mittschiffs / Geschleppter: möglichst weit vorne",
+              "answer3": "Schlepper: möglichst weit achtern / Geschleppter: mittschiffs",
+              "answer4": "Schlepper: mittschiffs / Geschleppter: mittschiffs",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 28,
+              "question": "Was muss beim Schleppen eines Kielbootes beachtet werden?",
+              "answer1": "Die Kommunikation zwischen Schlepper und Geschleppten muss sichergestellt werden",
+              "answer2": "Alle Crewmitglieder des Geschleppten müssen auf den Schlepper übersteigen",
+              "answer3": "Die Geschwindigkeit des Schleppzuges darf die Rumpfgeschwindigkeit des Geschleppten nicht überschreiten",
+              "answer4": "Die Segel müssen gesetzt bleiben, um den Schlepper zu unterstützen und die Belastung der Beschläge zu verringern",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
             }
           ]
         },
         {
-          "themaName": "Thema2",
+          "id": "B",
+          "themaName": "Segeltheorie (20)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "C",
+          "themaName": "Bootskunde und Tauwerk (20)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "D",
+          "themaName": "Sicherheit und Sondermanöver (20)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "E",
+          "themaName": "Trimmen und Trimmeinrichtungen (8)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "F",
+          "themaName": "Regatta (8)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "G",
+          "themaName": "Knoten und seemännische Arbeiten (12)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "H",
+          "themaName": "Seemannschaft und seemännische Sprache (8)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "I",
+          "themaName": "Wetter (12)",
+          "questions": [
+            {
+              "question": "frage 1",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "falsch",
+              "answer4": "richtig",
+              "correctAnswer": [
+                false,
+                true,
+                false,
+                true
+              ]
+            },
+            {
+              "question": "frage 2",
+              "answer1": "falsch",
+              "answer2": "richtig",
+              "answer3": "richtig",
+              "answer4": "falsch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            }
+          ]
+        },
+        {
+          "id": "J",
+          "themaName": "Recht (24)",
           "questions": [
             {
               "question": "frage 1",

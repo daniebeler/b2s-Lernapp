@@ -14,7 +14,7 @@
 #search {
   height: 50px;
   width: 200px;
-  --border-radius: 21px;
+  --border-radius: var(--button-radius);
 }
 
 ion-button {
@@ -29,7 +29,7 @@ ion-button {
 
 #schein {
   height: 120px;
-  --border-radius: 25px;
+  --border-radius: var(--button-radius);
 
   #überschrift {
     top: 10px;

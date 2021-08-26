@@ -2,7 +2,7 @@ ion-button {
     margin-top: 15px;
     --background: var(--ion-color-button);
     height: 45px;
-    --border-radius: 19px;
+    --border-radius: var(--button-radius);
 
     ion-icon {
         font-size: 40px;
@@ -12,7 +12,7 @@ ion-button {
 }  
 #schein {
   height: 120px;
-  --border-radius: 25px;
+  --border-radius: var(--button-radius);
 
   #überschrift {
     top: 10px;

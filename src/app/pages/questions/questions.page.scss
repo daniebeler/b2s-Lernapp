@@ -20,28 +20,18 @@
 }
 
 .answers {
-    height: 40px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
+  --border-radius: var(--button-radius);
 
-    ion-checkbox {
-        position: absolute;
-        right: 15px;
-        --background: white;
-        --border-radius: 15px;
-        --border-width: 0;
-        --size: 22px;
-        opacity: 1;
-    }
+  ion-checkbox {
+      right: 15px;
+      --background: white;
+      --border-radius: 30px;
+      --border-width: 0;
+      --size: 22px;
+      opacity: 1;
+  }
 
-    ion-label {
-        position: absolute;
-        left: 15px;
-        color: white;
-        font-size: 1rem;
-    }
+
 }
 
 
@@ -49,8 +39,7 @@
 
     color: white;
     --background: var(--ion-color-button);
-    border-radius: 30px;
-    margin-bottom: 15px;
+    --border-radius: var(--button-radius);
 
     ion-text {
         font-size: 1.1em;
@@ -84,7 +73,7 @@
     ion-icon {
         font-size: 30px;
     }
-    
+
 }
 
 .modal .popover-content {

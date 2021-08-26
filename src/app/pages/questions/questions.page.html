@@ -4,44 +4,54 @@
   <div id="placeholder" *ngFor="let url of image">
     <img [src]="url" alt="Bild zur frage">
   </div>
-  
+
   <div class="ion-padding">
-  <ion-card id="frageCard">
-    <ion-card-header>
-      <ion-card-title>Frage {{currentQuestion}}/{{questionsnumber}}</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      <ion-text class="frage"> {{question}} </ion-text>
-    </ion-card-content>
-  </ion-card>
+    <ion-card id="frageCard">
+      <ion-card-header>
+        <ion-card-title>Frage {{currentQuestion}}/{{questionsnumber}}</ion-card-title>
+      </ion-card-header>
 
-  <ion-card class="answerField1 answers" (click) = checkbox(0)>
-    <ion-label>{{answer1}}</ion-label>
+      <ion-card-content>
+        <ion-text class="frage"> {{question}} </ion-text>
+      </ion-card-content>
+    </ion-card>
 
-    <ion-button class="info">
-      <ion-icon name="information-circle"></ion-icon>
-    </ion-button>
+    <!-- Card with infobutton: -->
 
-    <ion-checkbox [(ngModel)]="answerBool[0]" disabled="true"></ion-checkbox>
-  </ion-card>
-  <ion-card class="answerField2 answers" (click) = checkbox(1)>
-    <ion-label>{{answer2}}</ion-label>
-    <ion-checkbox [(ngModel)]="answerBool[1]" disabled="true"></ion-checkbox>
-  </ion-card>
-  <ion-card class="answerField3 answers" (click) = checkbox(2)>
-    <ion-label>{{answer3}}</ion-label>
-    <ion-checkbox [(ngModel)]="answerBool[2]" disabled="true"></ion-checkbox>
-  </ion-card>
-  <ion-card class="answerField4 answers" (click) = checkbox(3)>
-    <ion-label>{{answer4}}</ion-label>
-    <ion-checkbox [(ngModel)]="answerBool[3]" disabled="true"></ion-checkbox>
-  </ion-card>
+    <!-- <ion-card class="answerField1 answers" (click)=checkbox(0)>
+      <ion-label>{{answer1}}</ion-label>
 
-  <div id="check">
-    <ion-button color="primary" (click)="check()">{{checkButtonText}}</ion-button>
+      <ion-button class="info">
+        <ion-icon name="information-circle"></ion-icon>
+      </ion-button>
+
+      <ion-checkbox [(ngModel)]="answerBool[0]" disabled="true"></ion-checkbox>
+    </ion-card> -->
+
+    <ion-item class="answerField1 answers ion-margin-top">
+      <ion-label color="light" class="ion-text-wrap">{{answer1}}</ion-label>
+      <ion-checkbox [(ngModel)]="answerBool[0]"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="answerField2 answers ion-margin-top">
+      <ion-label color="light" class="ion-text-wrap">{{answer2}}</ion-label>
+      <ion-checkbox [(ngModel)]="answerBool[1]"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="answerField3 answers ion-margin-top">
+      <ion-label color="light" class="ion-text-wrap">{{answer3}}</ion-label>
+      <ion-checkbox [(ngModel)]="answerBool[2]"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="answerField4 answers ion-margin-top">
+      <ion-label color="light" class="ion-text-wrap">{{answer4}}</ion-label>
+      <ion-checkbox [(ngModel)]="answerBool[3]"></ion-checkbox>
+    </ion-item>
+
+    <div id="check">
+      <ion-button color="primary" (click)="check()">{{checkButtonText}}</ion-button>
+    </div>
   </div>
-</div>
 </ion-content>
 
 <app-custom-footer></app-custom-footer>

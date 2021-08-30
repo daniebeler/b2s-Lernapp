@@ -7,7 +7,33 @@
       <strong>SUCHE</strong>
     </ion-button>
 
+
+
+
+
+
     <div class="ion-padding">
+
+<!--
+      <ion-item class="question">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div id="überschrift">
+                <p>Kurs 12</p>
+              </div>
+              <div id="subtitle">
+                <p>Lerne die Basics</p>
+              </div>
+            </ion-col>
+            <ion-col>
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item> -->
+
+
       <ion-button id="schein" expand="block" *ngFor="let course of courses" (click)="navigate(course)">
         <div id="überschrift">
           <p>{{course}}</p>
@@ -15,13 +41,10 @@
         <div id="subtitle">
           <p>Lerne die Basics</p>
         </div>
-        
+
+
       </ion-button>
     </div>
   </div>
 </ion-content>
-<div id="erklärvideo">
-  <p>erklärvideo</p>
-</div>
-
 <app-custom-footer></app-custom-footer>

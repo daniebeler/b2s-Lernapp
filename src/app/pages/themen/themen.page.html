@@ -14,8 +14,8 @@
   </div>
 
   <div id="container" class="ion-padding">
-    <ion-button expand="block" *ngFor="let theme of themes" (click)="navigate(theme)">
-      {{theme}}
+    <ion-button expand="block" *ngFor="let theme of themes" (click)="navigate(theme)" id="themes">
+      <p>{{theme}}</p>
       <ion-icon name="play"></ion-icon>
     </ion-button>
   </div>

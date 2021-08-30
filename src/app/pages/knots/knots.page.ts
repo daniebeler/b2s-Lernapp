@@ -33,6 +33,15 @@ export class KnotsPage implements OnInit {
   }
 
   navigate(site: string) {
-    this.router.navigate(['knot-slider/' + site]);
+
+    let knotNumber: any;
+
+    for (const i in this.knots) {
+      if (this.knots[i] === site) {
+        knotNumber = i;
+      }
+    }
+
+    this.router.navigate(['knot-slider/' + knotNumber]);
   }
 }

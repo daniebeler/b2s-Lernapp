@@ -3,15 +3,15 @@
         {
             "knotName": "Palsteak",
             "pictures": [
-                "../../../assets/img/questionimgs/VCBC.jpg",
-                "../../../assets/img/questionimgs/VCBC.jpg",
-                "../../../assets/img/questionimgs/VCBC.jpg"
+                "../../../assets/img/knots/VCBC.jpg",
+                "../../../assets/img/knots/VCBC.jpg",
+                "../../../assets/img/knots/VCBC.jpg"
             ]
         },
         {
             "knotName": "kreuzknoten",
             "pictures": [
-                "../../../assets/img/questionimgs/VCBC.jpg"
+                "../../../assets/img/knots/VCBC.jpg"
             ]
         }
     ]

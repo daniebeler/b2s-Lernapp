@@ -1,11 +1,10 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-
   <div class="ion-padding">
     <ion-button id="schein" expand="block" (click)="navigateHome()">
       <div id="überschrift">
-        <p>{{scheinName}}</p>
+        <p>{{licenseName}}</p>
       </div>
       <div id="subtitle">
         <p>Lerne die Basics</p>
@@ -14,8 +13,8 @@
   </div>
 
   <div id="container" class="ion-padding">
-    <ion-button expand="block" *ngFor="let theme of themes" (click)="navigate(theme)" id="themes">
-      <p>{{theme}}</p>
+    <ion-button expand="block" *ngFor="let topicName of topicNames; let i = index" (click)="navigate(topicName)" id="themes">
+      <p>{{topicName}} ({{numberOfQuestionsPerTopic[i]}})</p>
       <ion-icon name="play"></ion-icon>
     </ion-button>
   </div>

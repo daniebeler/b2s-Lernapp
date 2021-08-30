@@ -9,9 +9,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ThemenPage implements OnInit {
 
-  themes: Array <string> = [];
-  data: any = [];
-  scheinName = '';
+  topicNames: Array <string> = [];
+  numberOfQuestionsPerTopic: Array <number> = [];
+  allQuestions: any = [];
+  licenseName = '';
 
   constructor(
     private httpClient: HttpClient,
@@ -21,7 +22,7 @@ export class ThemenPage implements OnInit {
 
   ngOnInit() {
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      this.data = data;
+      this.allQuestions = data;
       this.datareader();
     });
   }
@@ -29,18 +30,19 @@ export class ThemenPage implements OnInit {
   datareader() {
     const schein = this.activatedRoute.snapshot.paramMap.get('schein');
 // eslint-disable-next-line @typescript-eslint/prefer-for-of
-    for (let i = 0; i < this.data.scheine[schein].Thema.length; i++) {
-      this.themes.push(this.data.scheine[schein].Thema[i].themaName);
+    for (let i = 0; i < this.allQuestions.scheine[schein].Thema.length; i++) {
+      this.topicNames.push(this.allQuestions.scheine[schein].Thema[i].themaName);
+      this.numberOfQuestionsPerTopic.push(this.allQuestions.scheine[schein].Thema[i].questions.length);
     }
-    this.scheinName = this.data.scheine[schein].scheinName;
+    this.licenseName = this.allQuestions.scheine[schein].scheinName;
   }
 
   navigate(theme: string) {
 
     let scheinZahl: any;
 
-    for (const i in this.themes) {
-      if (this.themes[i] === theme) {
+    for (const i in this.topicNames) {
+      if (this.topicNames[i] === theme) {
         scheinZahl = i;
       }
     }

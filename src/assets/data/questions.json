@@ -78,7 +78,7 @@
       "Thema": [
         {
           "id": "A",
-          "themaName": "Basismanöver und Jachtbedienung (28)",
+          "themaName": "Basismanöver und Jachtbedienung",
           "questions": [
             {
               "id": 1,
@@ -92,7 +92,8 @@
                 true,
                 false,
                 true
-              ]
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
             {
               "id": 2,
@@ -106,7 +107,8 @@
                 true,
                 true,
                 false
-              ]
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
             {
               "id": 3,
@@ -120,7 +122,8 @@
                 true,
                 false,
                 true
-              ]
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
             {
               "id": 4,
@@ -134,7 +137,8 @@
                 true,
                 false,
                 true
-              ]
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
             {
               "id": 5,
@@ -476,27 +480,283 @@
         },
         {
           "id": "B",
-          "themaName": "Segeltheorie (20)",
+          "themaName": "Segeltheorie",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Welche dieser schematisch dargestellten Bootsrümpfe sind ausschließlich formstabil?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
               "correctAnswer": [
                 false,
                 true,
                 false,
                 true
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 2,
+              "question": "Welche dieser schematisch dargestellten Bootsrümpfe sind charakteristisch für die Gewichtsstabilität?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 3,
+              "question": "Welche der folgenden konstruktiven Maßnahmen erhöhen die Form- bzw. Gewichtsstabilität?",
+              "answer1": "Breiter Rumpf",
+              "answer2": "Schlanker Rumpf",
+              "answer3": "Gewicht über die Wasserlinie",
+              "answer4": "Gewicht unter die Wasserlinie",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 4,
+              "question": "Welche Maßnahmen sind geeignet, um der Leekrängung einer Jolle auf einem Am-Wind-Kurs entgegenzuwirken?",
+              "answer1": "Schwert etwas aufholen",
+              "answer2": "Mannschaftsgewicht nach vor",
+              "answer3": "Ausreiten",
+              "answer4": "Vorschoter ins Trapez",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Aus welchen Komponenten setzt sich der scheinbare Wind zusammen?",
+              "answer1": "Aus Abweichungswind und korrigiertem Wind",
+              "answer2": "Aus Ausgleichswind und spürbarem Wind",
+              "answer3": "Aus Grundwind und additivem Wind",
+              "answer4": "Aus Fahrtwind und wahrem Wind",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 6,
+              "question": "Wie wird der an Bord spürbare Wind genannt, wenn das Boot Fahrt macht?",
+              "answer1": "Wahrer Wind",
+              "answer2": "Scheinbarer Wind",
+              "answer3": "Grundwind",
+              "answer4": "Fahrtwind",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Auf einem Raumwindkurs fällt eine Bö ein. Wie verändert sich der an Bord spürbare Wind im ersten Moment?",
+              "answer1": "Er fällt vorlicher ein",
+              "answer2": "Er fällt achterlicher ein",
+              "answer3": "Er wird stärker",
+              "answer4": "Er wird schwächer",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Auf einem Halbwindkurs gelangt ein Boot in eine Windabdeckung. Wie verändert sich der an Bord spürbare Wind im ersten Moment?",
+              "answer1": "Er fällt vorlicher ein",
+              "answer2": "Er fällt achterlicher ein",
+              "answer3": "Er wird stärker",
+              "answer4": "Er wird schwächer",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 9,
+              "question": "Nach dem Ablegen beschleunigt ein Segelboot bei konstanten Windverhältnissen ohne Kursänderung. Welche der folgenden Aussagen treffen zu?",
+              "answer1": "Mit zunehmender Fahrt müssen die Segel weiter angeholt werden",
+              "answer2": "Mit zunehmender Fahrt können die Segel gefiert werden",
+              "answer3": "Mit zunehmender Fahrt fällt der scheinbare Wind achterlicher ein",
+              "answer4": "Mit zunehmender Fahrt fällt der scheinbare Wind vorlicher ein",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 10,
+              "question": "Sie segeln bei mittlerem Wind auf Kurs am Wind. Welche der folgenden Aussagen treffen zu?",
+              "answer1": "Auftriebskraft und Gewichtskraft erzeugen ein aufrichtendes Moment",
+              "answer2": "Auftriebskraft und Gewichtskraft erzeugen ein krängendes Moment",
+              "answer3": "Querkraft und Kraft im Lateraldruckpunkt erzeugen ein aufrichtendes Moment",
+              "answer4": "Querkraft und Kraft im Lateraldruckpunkt erzeugen ein krängendes Moment",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 11,
+              "question": "In welchem Punkt werden die im Segel wirkenden Umströmungskräfte zusammengefasst?",
+              "answer1": "Segeldruckpunkt",
+              "answer2": "Strömungsschwerpunkt",
+              "answer3": "Windangriffspunkt",
+              "answer4": "Bernoullischer Punkt",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Die Summe welcher Kräfte wird in der Segeltheorie im Lateraldruckpunkt zusammengefasst?",
+              "answer1": "Die Summe aller Gewichtskräfte",
+              "answer2": "Die Summe aller im Segel angreifenden Windkräfte",
+              "answer3": "Die Summe aller auf das Unterwasserschiff wirkenden (Umströmungs-)Kräfte",
+              "answer4": "Die Summe aller durch das verdrängte Wasser wirkenden Auftriebskräfte",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 13,
+              "question": "Was bewirkt die Querkraft?",
+              "answer1": "Vortrieb",
+              "answer2": "Abdrift",
+              "answer3": "Krängung",
+              "answer4": "Vertrimmung",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 14,
+              "question": "Welche der folgenden Aussagen bezüglich der im Segeldruckpunkt angreifenden Kräfte treffen zu?",
+              "answer1": "Die Vortriebskraft wirkt in Fahrtrichtung",
+              "answer2": "Die Vortriebskraft wirkt gegen die Fahrtrichtung",
+              "answer3": "Die Querkraft wirkt nach Luv",
+              "answer4": "Die Querkraft wirkt quer zur Fahrtrichtung nach Lee",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 15,
+              "question": "Die Jolle segelt einen Hart-am-Wind-Kurs bei frischem Wind mit starker Krängung. Durch welche Maßnahmen kann die Luvgierigkeit reduziert werden?",
+              "answer1": "Großsegel reffen",
+              "answer2": "Großschot fieren",
+              "answer3": "Verstärktes Ausreiten",
+              "answer4": "Vorschoter ins Trapez",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 16,
+              "question": "In welchen der beschriebenen Situationen ist damit zu rechnen, dass ein Boot luvgierig ist?",
+              "answer1": "Katgetakelte Jolle platt vor dem Wind aufrecht gesegelt",
+              "answer2": "Katgetakelte Jolle auf Raumwindkurs aufrecht gesegelt",
+              "answer3": "Slupgetakelte Jacht auf der Kreuz bei starkem Wind",
+              "answer4": "Slupgetakelte Jacht mit erheblicher Leekrängung",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 17,
+              "question": "Ein Boot segelt auf Halbwindkurs ohne Krängung. Welche der folgenden Aussagen bezüglich Gierigkeit treffen zu?",
+              "answer1": "Befindet sich der Segeldruckpunkt achterlicher als der Lateraldruckpunkt ist das Segelboot luvgierig",
+              "answer2": "Durch das Setzen eines kleinen Vorsegels kann einer Luvgierigkeit entgegen gewirkt werden",
+              "answer3": "Die Verlagerung des Mannschaftsgewichts nach Luv verstärkt die Luvgierigkeit",
+              "answer4": "Nach dem Aufholen des Schwertes tendiert das Boot zu einer höheren Luvgierigkeit",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 18,
+              "question": "Bei leichtem Wind geht das Ruderblatt verloren. Das Boot muss mit Segel- und Gewichtstrimm gesteuert werden. Wie kann mit dem Boot abgefallen werden?",
+              "answer1": "Mannschaftsgewicht nach Lee",
+              "answer2": "Mannschaftsgewicht nach Luv",
+              "answer3": "Großsegel fieren und Vorsegel anholen",
+              "answer4": "Großsegel dicht und Vorsegel anholen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 19,
+              "question": "Was ist für die Entstehung von Auftrieb am Segel wichtig?",
+              "answer1": "Dass das Segel ausreichend dicht geholt wird",
+              "answer2": "Dass die Luft möglichst ohne Turbulenzen am Segel entlang strömt",
+              "answer3": "Dass der Wind möglichst im rechten Winkel auf das Segel trifft",
+              "answer4": "Dass möglichst starke Turbulenzen erzeugt werden",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 20,
+              "question": "Wie wird die seitliche Projektion des Unterwasserschiffs bezeichnet?",
+              "answer1": "Schattenriss",
+              "answer2": "Lateralplan",
+              "answer3": "Querfläche",
+              "answer4": "Kielprojektion",
               "correctAnswer": [
                 false,
                 true,
@@ -508,7 +768,7 @@
         },
         {
           "id": "C",
-          "themaName": "Bootskunde und Tauwerk (20)",
+          "themaName": "Bootskunde und Tauwerk",
           "questions": [
             {
               "question": "frage 1",
@@ -540,7 +800,7 @@
         },
         {
           "id": "D",
-          "themaName": "Sicherheit und Sondermanöver (20)",
+          "themaName": "Sicherheit und Sondermanöver",
           "questions": [
             {
               "question": "frage 1",
@@ -572,7 +832,7 @@
         },
         {
           "id": "E",
-          "themaName": "Trimmen und Trimmeinrichtungen (8)",
+          "themaName": "Trimmen und Trimmeinrichtungen",
           "questions": [
             {
               "question": "frage 1",
@@ -604,7 +864,7 @@
         },
         {
           "id": "F",
-          "themaName": "Regatta (8)",
+          "themaName": "Regatta",
           "questions": [
             {
               "question": "frage 1",
@@ -636,7 +896,7 @@
         },
         {
           "id": "G",
-          "themaName": "Knoten und seemännische Arbeiten (12)",
+          "themaName": "Knoten und seemännische Arbeiten",
           "questions": [
             {
               "question": "frage 1",
@@ -668,7 +928,7 @@
         },
         {
           "id": "H",
-          "themaName": "Seemannschaft und seemännische Sprache (8)",
+          "themaName": "Seemannschaft und seemännische Sprache",
           "questions": [
             {
               "question": "frage 1",
@@ -700,7 +960,7 @@
         },
         {
           "id": "I",
-          "themaName": "Wetter (12)",
+          "themaName": "Wetter",
           "questions": [
             {
               "question": "frage 1",
@@ -732,7 +992,7 @@
         },
         {
           "id": "J",
-          "themaName": "Recht (24)",
+          "themaName": "Recht",
           "questions": [
             {
               "question": "frage 1",

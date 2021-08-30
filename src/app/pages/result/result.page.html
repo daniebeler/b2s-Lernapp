@@ -2,15 +2,15 @@
 
 <ion-content class="ion-padding">
 
-  <ion-button expand="block" *ngFor="let topicIndex of topicIndizes">
+  <ion-button expand="block" *ngFor="let topicIndex of topicIndizes; let i = index">
 
     <div id="überschrift">
       <p>{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
     </div>
 
     <div id="subtitle">
-      <p>True: {{this.trueInTheme[topicIndex]}}<br>
-        False: {{this.falseInTheme[topicIndex]}}</p>
+      <p>True: {{this.topics[i].thema[0].trueCount}}<br>
+        False: {{this.topics[i].thema[0].falseCount}}</p>
     </div>
 
   </ion-button>

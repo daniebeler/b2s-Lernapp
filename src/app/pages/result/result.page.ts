@@ -18,6 +18,8 @@ export class ResultPage implements OnInit {
   falseInTheme: Array<any> = [];
   topic: number;
   schein: number;
+  topics = [];
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -61,15 +63,30 @@ export class ResultPage implements OnInit {
     if (isNaN(this.topic)) {
       for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
         this.topicIndizes.push(i.toString());
-        this.trueInTheme.push(this.countTrue(i));
-        this.falseInTheme.push(this.countFalse(i));
+        const test = this.countTrue(i);
+        this.topics.push({
+          thema: [
+            {
+              trueCount: test,
+              falseCount: this.countFalse(i, test)
+            }
+          ]
+        });
       }
     }
     else {
       this.topicIndizes.push(this.topic.toString());
-      this.trueInTheme.push(this.countTrue(this.topic));
-      this.falseInTheme.push(this.countFalse(this.topic));
+      const trueAnzahl = this.countTrue(0);
+      this.topics.push({
+        thema: [
+          {
+            trueCount: trueAnzahl,
+            falseCount: this.countFalse(0, trueAnzahl)
+          }
+        ]
+      });
     }
+    // console.log(this.topics);
   }
 
 
@@ -82,13 +99,10 @@ export class ResultPage implements OnInit {
       }
       this.resultArrayCounter++;
     }
-    console.log(trueAnzahl);
     return trueAnzahl;
   }
 
-  countFalse(thema: number) {
-    console.log(Object.keys(this.data.scheine[this.schein].Thema[thema].questions).length - this.countTrue(thema));
-    return Object.keys(this.data.scheine[this.schein].Thema[thema].questions).length - this.trueInTheme[thema];
+  countFalse(thema: number,  trueCount: number) {
+    return Object.keys(this.data.scheine[this.schein].Thema[thema].questions).length - trueCount;
   }
-
 }

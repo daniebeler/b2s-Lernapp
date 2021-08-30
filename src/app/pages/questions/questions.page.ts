@@ -128,11 +128,13 @@ export class QuestionsPage implements OnInit {
     else {
       //next Question or next Thema or fertig
       if (Object.keys(this.data.scheine[this.schein].Thema[this.themaindex].questions).length === this.questionindex + 1) {
-        if (Object.keys(this.data.scheine[this.schein].Thema).length === this.themaindex + 1) {
+        if (Object.keys(this.data.scheine[this.schein].Thema).length === this.themaindex + 1 && this.thema === undefined) {
           this.currentQuestion = 0;
           this.questionindex = 0;
           this.themaindex = 0;
-          this.router.navigate(['result/' + this.answerschecker]);
+
+          this.router.navigate(['result/' + this.schein.toString() + this.answerschecker]);
+
 
         }
         else {
@@ -140,7 +142,10 @@ export class QuestionsPage implements OnInit {
             this.themaindex++;
           }
           else {
-            this.router.navigate(['result/' + this.answerschecker]);
+            this.currentQuestion = 0;
+            this.questionindex = 0;
+            this.themaindex = Number(this.thema);
+            this.router.navigate(['result/' + this.schein.toString() + this.thema.toString() + this.answerschecker]);
           }
           this.questionindex = 0;
         }

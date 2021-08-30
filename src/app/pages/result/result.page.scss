@@ -1,0 +1,24 @@
+ion-button {
+    margin-top: 30px;
+    --background: var(--ion-color-button);
+    --box-shadow: var(--shadow);  
+    height: 120px;
+    --border-radius: var(--button-radius);
+  
+    #überschrift p{
+      top: 10px;
+      left: 0;
+      position: absolute;
+      border-bottom: 1px solid white;
+      width: 50vw;
+      text-align: left;
+      padding-bottom: 3px;
+    }
+  
+    #subtitle {
+      position: absolute;
+      left: 0;
+      margin-top: 30px;
+    }
+  }
+  

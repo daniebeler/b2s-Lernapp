@@ -1,7 +1,20 @@
 <app-custom-header></app-custom-header>
 
-<ion-content>
-  <p>Sie haben {{result}} prozent richtig gehabt</p>
+<ion-content class="ion-padding">
+
+  <ion-button expand="block" *ngFor="let topicIndex of topicIndizes">
+
+    <div id="überschrift">
+      <p>{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
+    </div>
+
+    <div id="subtitle">
+      <p>True: {{this.trueInTheme[topicIndex]}}<br>
+        False: {{this.falseInTheme[topicIndex]}}</p>
+    </div>
+
+  </ion-button>
+
 </ion-content>
 
 <app-custom-footer></app-custom-footer>

@@ -1,17 +1,17 @@
 {
     "knots": [
         {
-            "knotName": "Palsteak",
+            "knotName": "Palstek",
             "pictures": [
-                "../../../assets/img/questionimgs/VCBC.jpg",
-                "../../../assets/img/questionimgs/VCBC.jpg",
-                "../../../assets/img/questionimgs/VCBC.jpg"
+                "../../../assets/img/knots/VCBC.jpg",
+                "../../../assets/img/knots/VCBC.jpg",
+                "../../../assets/img/knots/VCBC.jpg"
             ]
         },
         {
-            "knotName": "kreuzknoten",
+            "knotName": "Kreuzknoten",
             "pictures": [
-                "../../../assets/img/questionimgs/VCBC.jpg"
+                "../../../assets/img/knots/VCBC.jpg"
             ]
         }
     ]

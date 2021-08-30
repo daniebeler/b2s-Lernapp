@@ -1,81 +1,57 @@
-
 .answerField1 {
-    --background: var(--field1, var(--ion-color-button));
+  --background: var(--field1, var(--ion-color-button));
 }
 
 .answerField2 {
-    --background: var(--field2, var(--ion-color-button));
+  --background: var(--field2, var(--ion-color-button));
 }
 
 .answerField3 {
-    --background: var(--field3, var(--ion-color-button));
+  --background: var(--field3, var(--ion-color-button));
 }
 
 .answerField4 {
-    --background: var(--field4, var(--ion-color-button));
+  --background: var(--field4, var(--ion-color-button));
 }
 
-#placeholder {
-    height: auto;
-}
-
-.answers {
+.answer {
   --border-radius: var(--button-radius);
 
   ion-checkbox {
-      right: 15px;
-      --background: white;
-      --border-radius: 30px;
-      --border-width: 0;
-      --size: 22px;
-      opacity: 1;
+    right: 15px;
+    --background: white;
+    --border-radius: 30px;
+    --border-width: 0;
+    --size: 22px;
   }
-
-
 }
 
+.question {
+  color: white;
+  --background: var(--ion-color-button);
+  --border-radius: var(--button-radius);
 
-#frageCard {
-
-    color: white;
-    --background: var(--ion-color-button);
-    --border-radius: var(--button-radius);
-
-    ion-text {
-        font-size: 1.1em;
-    }
-
-    ion-card-title {
-        color: white;
-    }
+  ion-list {
+    background: inherit;
+  }
 }
 
-.ion-padding {
-    padding-bottom: 0;
-}
-
-#check {
-    margin-left: 10px;
-    margin-top: 10px;
-
-    ion-button {
-        --border-radius: 10px;
-    }
+.checkbutton{
+  --border-radius: var(--button-radius);
 }
 
 .info {
-    --background: transparent;
-    --box-shadow: none;
-    position: absolute;
-    width: 100%;
-    visibility: var(--info1, hidden);
+  --background: transparent;
+  --box-shadow: none;
+  position: absolute;
+  width: 100%;
+  visibility: var(--info1, hidden);
 
-    ion-icon {
-        font-size: 30px;
-    }
-
+  ion-icon {
+    font-size: 30px;
+  }
 }
 
 .modal .popover-content {
-    --background: #222;
-  }
+  --background: #222;
+}

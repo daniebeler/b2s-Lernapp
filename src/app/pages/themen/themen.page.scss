@@ -4,16 +4,6 @@ ion-button {
     height: 45px;
     --border-radius: var(--button-radius);
     --box-shadow: var(--shadow);
-
-    ion-icon {
-        font-size: 40px;
-        position: absolute;
-        right: 0;
-    }
-}
-
-#themes p {
-  margin-right: auto;
 }
 
 #schein {
@@ -35,4 +25,9 @@ ion-button {
     left: 0;
     margin-top: 30px;
   }
+}
+
+.button {
+  --border-radius: var(--button-radius);
+  --background: var(--ion-color-button);
 }

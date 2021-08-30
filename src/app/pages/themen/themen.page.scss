@@ -1,16 +1,10 @@
-ion-button {
-    margin-top: 15px;
-    --background: var(--ion-color-button);
-    height: 45px;
-    --border-radius: var(--button-radius);
-    --box-shadow: var(--shadow);
-}
-
-#schein {
+.header-item {
   height: 120px;
   --border-radius: var(--button-radius);
+  --background: var(--ion-color-button);
+  --box-shadow: var(--shadow);
 
-  #überschrift p{
+  #überschrift p {
     top: 10px;
     left: 0;
     position: absolute;
@@ -27,7 +21,13 @@ ion-button {
   }
 }
 
-.button {
+.button-topic {
   --border-radius: var(--button-radius);
   --background: var(--ion-color-button);
+  -webkit-border-radius: var(--button-radius);
+  -moz-border-radius: var(--button-radius);
+
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+
 }

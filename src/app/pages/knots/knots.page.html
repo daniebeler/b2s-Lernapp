@@ -1,7 +1,12 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-
+    <div id="container" class="ion-padding">
+        <ion-button expand="block" *ngFor="let knot of knots" id="knots" (click) = "navigate(knot)">
+          <p>{{knot}}</p>
+          <ion-icon name="play"></ion-icon>
+        </ion-button>
+      </div>
 </ion-content>
 
 <app-custom-footer></app-custom-footer>

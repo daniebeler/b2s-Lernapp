@@ -1,0 +1,18 @@
+{
+    "knots": [
+        {
+            "knotName": "Palsteak",
+            "pictures": [
+                "../../../assets/img/questionimgs/VCBC.jpg",
+                "../../../assets/img/questionimgs/VCBC.jpg",
+                "../../../assets/img/questionimgs/VCBC.jpg"
+            ]
+        },
+        {
+            "knotName": "kreuzknoten",
+            "pictures": [
+                "../../../assets/img/questionimgs/VCBC.jpg"
+            ]
+        }
+    ]
+}

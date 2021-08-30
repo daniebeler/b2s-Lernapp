@@ -931,11 +931,12 @@
           "themaName": "Seemannschaft und seemännische Sprache",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Wie sollte ein ausweichpflichtiges Fahrzeug sein Ausweichmanöver durchführen?",
+              "answer1": "Das Ausweichmanöver sollte deutlich und rechtzeitlich erfolgen",
+              "answer2": "Unmittelbar vor dem Beginn des Ausweichmanövers sollte ein langer Ton als Schallsignal abgegeben werden",
+              "answer3": "Bei kreuzenden Kursen sollte das ausweichpflichtige Fahrzeug möglichst hinter dem anderen Fahrzeug vorbeifahren",
+              "answer4": "Der Passierabstand sollte, unabhängig von den Bootsgrößen der beteiligten Fahzeuge, zumindest 50m betragen",
               "correctAnswer": [
                 false,
                 true,
@@ -944,11 +945,96 @@
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "Wie verhält sich der Schiffsführer eines Fahrzeugs unter Segel, wenn ein ausweichpflichtiges Fahrzeug auf möglichem Kollisionskurs seiner Ausweichpflicht nicht nachkommt?",
+              "answer1": "Er birgt die Segel, um die Manövrierfähigkeit zu erhöhen und die Gefahr eines Zusammenstoßes zu verringern",
+              "answer2": "Er versucht den anderen Verkehrszeilnehmer auf seine Ausweichpflicht aufmerksam zu machen, sofern dies möglich und erfolgversprechend ist",
+              "answer3": "Er notiert sich Kennzeichen und/oder Namen des anderen Fahrzeugs, um den Gesetzesverstoß bei den Behörden zu melden",
+              "answer4": "Er führt selbst ein geeignetes Ausweichmanöver durch",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 3,
+              "question": "Wie hat sich ein Schiffsführer bei unmittelbar drohender Gefahr zu verhalten?",
+              "answer1": "Er hat sich ganz genau an die geltenden Gesetze und Verordnungen zu halten",
+              "answer2": "Er hat zur Abwendung einer Gefahr notfalls auch von den Verordnungen abzuweichen",
+              "answer3": "Er muss durch sein Handeln stets die Sicherheit von Mannschaft, Boot, Schiffahrt und Umwelt gewährleisten",
+              "answer4": "Er hat in Notsituationen unbedingt aktive Hilfe zu leisten, auch wenn die eigene Sicherheit dadurch beeinträchtigt wird",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 4,
+              "question": "Warum sollte auf einer Jacht bei stetig zunehmender Windstärke gerefft werden?",
+              "answer1": "Um Material und Mannschaft zu schonen",
+              "answer2": "Um die durch Krängung entstehende Luvgierigkeit und die damit verbundene Gefahr eines Sonnenschusses zu verringern",
+              "answer3": "Um das Überschreiten der Rumpfgeschwindigkeit zu verhindern",
+              "answer4": "Um die Größe der Segelfläche der im Gleitzustand verringerten Fläche des Lateralplans anzupassen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Wie wird das äußere Ende einer Spiere bezeichnet?",
+              "answer1": "Keep",
+              "answer2": "Topp",
+              "answer3": "Liek",
+              "answer4": "Nock",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 6,
+              "question": "Was wird als \"abtakeln\" bezeichnet?",
+              "answer1": "Das Bergen aller Segel nachdem das Boot festgemacht ist",
+              "answer2": "Das Abbauen von Mast, sowie stehendem und laufendem Gut",
+              "answer3": "Das Lösen eines Taklings vom Tampen einer Leine",
+              "answer4": "Das Niederholen der Nationalen zu Sonnenuntergang",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Wie wird ein häufig im Masttop befestigter Windrichtungsanzeiger bezeichnet?",
+              "answer1": "Verklicker",
+              "answer2": "Checker",
+              "answer3": "Spion",
+              "answer4": "Schummler",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Was wird als \"Legerwall\" bezeichnet?",
+              "answer1": "Künstlich angelegte Mauern vor Häfen, die die darin liegenden Boote vor Seegang und Schwell schützen",
+              "answer2": "Das vorderste (wasserdichte) Schott, das die Schwimmfähigkeit eines Bootes trotz eines möglichen massiven Schadens im Bugbereich gewährleistet",
+              "answer3": "Land in Lee eines Bootes bei starkem Wind, auf das es droht getrieben zu werden",
+              "answer4": "Die Böenwalze an der Vorderseite von Gewittern in denen der Wind kurzzeitig Sturmstärke erreichen kann",
               "correctAnswer": [
                 false,
                 true,

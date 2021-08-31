@@ -2,7 +2,7 @@
 
 <ion-content class="ion-padding">
 
-<!--   <ion-button expand="block" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="buttonClicked(i)">
+  <!--   <ion-button expand="block" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="buttonClicked(i)">
 
     <div id="überschrift">
       <p>{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
@@ -25,20 +25,29 @@
 
   <ion-item class="ion-margin-top" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="buttonClicked(i)">
     <ion-list>
-      <p class="ion-text-wrap title">{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
+      <p class="underlined ion-text-wrap title">{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
+
       <div id="subtitle" *ngIf="!this.clicked[i]; else elseBlock">
         <p>True: {{this.topics[i].thema[0].trueCount}}<br>
           False: {{this.topics[i].thema[0].falseCount}}</p>
       </div>
       <ng-template #elseBlock>
         <div *ngFor="let wrongQuestion of wrongQuestionsArray; let questionIndex = index">
-          {{this.wrongQuestionsJSON.thema[i].question[questionIndex].question}}
+          <strong class="underlin">FRAGE {{this.wrongQuestionsJSON.thema[i].question[questionIndex].id}}</strong>
+          <hr>
+          <p>{{this.wrongQuestionsJSON.thema[i].question[questionIndex].question}}</p>
+
           <br>
-          <p>
+          <strong>
             Richtig:
-          </p>
-          <p>
-            {{this.wrongQuestionsJSON.thema[i].question[questionIndex].trueAnswers[0]}}
+          </strong>
+          <ion-label class="ion-text-wrap" *ngFor="let correctAnswer of this.wrongQuestionsJSON.thema[i].question[questionIndex].trueAnswers">
+            {{correctAnswer}}
+          </ion-label>
+
+          <p><strong>Falsch:</strong></p>
+          <p *ngFor="let wrongAnswer of this.wrongQuestionsJSON.thema[i].question[questionIndex].wrongAnswers">
+            {{wrongAnswer}}
           </p>
         </div>
       </ng-template>

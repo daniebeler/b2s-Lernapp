@@ -158,20 +158,15 @@ export class ResultPage implements OnInit {
     if (isNaN(this.topic)) {
       this.wrongQuestionsJSON.thema[themaIndex].question.push({
         question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question,
-        answer1: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer1,
-        answer2: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer2,
-        answer3: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer3,
-        answer4: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer4,
+        trueAnswers: this.getTrueAnswers(themaIndex, questionIndex)
+
 
       });
+      console.log(this.wrongQuestionsJSON);
     }
     else {
       this.wrongQuestionsJSON.thema[0].question.push({
-        question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question,
-        answer1: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer1,
-        answer2: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer2,
-        answer3: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer3,
-        answer4: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer4,
+        question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question
 
       });
     }
@@ -184,4 +179,29 @@ export class ResultPage implements OnInit {
     }
 
   }
+
+  getTrueAnswers(themaIndex: number, questionIndex: number) {
+
+
+    const arr = [];
+    if (this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].correctAnswer[0]) {
+      arr.push(this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer1);
+    }
+
+    if (this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].correctAnswer[1]) {
+      arr.push(this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer2);
+    }
+
+    if (this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].correctAnswer[2]) {
+      arr.push(this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer3);
+    }
+
+    if (this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].correctAnswer[3]) {
+      arr.push(this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer4);
+    }
+    return arr;
+  }
 }
+
+
+

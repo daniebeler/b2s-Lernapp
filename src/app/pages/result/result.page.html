@@ -13,8 +13,8 @@
         False: {{this.topics[i].thema[0].falseCount}}</p>
     </div>
     <ng-template #elseBlock>
-      <p *ngFor="let wrongQuestion of wrongQuestionsArray">
-        {{wrongQuestion}}
+      <p *ngFor="let wrongQuestion of wrongQuestionsArray; let questionIndex = index">
+        {{this.wrongQuestionsJSON.thema[i].question[questionIndex].question}}
         <br>
       </p>
     </ng-template>

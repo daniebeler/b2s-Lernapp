@@ -24,7 +24,7 @@ export class ResultPage implements OnInit {
       question: []
     }]
   };
-  wrongQuestionsArray: Array<string> = [];
+  wrongQuestionsArray = [];
   clicked = [];
 
 
@@ -139,27 +139,49 @@ export class ResultPage implements OnInit {
     }
   }
 
-  addQuestionToJson(themaIndex: number, questionIndex: number) {
-
-
-    this.wrongQuestionsJSON.thema[themaIndex].question.push({
-      question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question,
-    });
-  }
-
-
   createTopicsJSON() {
-    for (const i of this.data.scheine[this.schein].Thema) {
+    if (isNaN(this.topic)) {
+      for (const i of this.data.scheine[this.schein].Thema) {
+        this.wrongQuestionsJSON.thema.push({
+          question: []
+        });
+      }
+    }
+    else {
       this.wrongQuestionsJSON.thema.push({
         question: []
       });
     }
   }
 
+  addQuestionToJson(themaIndex: number, questionIndex: number) {
+    if (isNaN(this.topic)) {
+      this.wrongQuestionsJSON.thema[themaIndex].question.push({
+        question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question,
+        answer1: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer1,
+        answer2: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer2,
+        answer3: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer3,
+        answer4: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer4,
+
+      });
+    }
+    else {
+      this.wrongQuestionsJSON.thema[0].question.push({
+        question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question,
+        answer1: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer1,
+        answer2: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer2,
+        answer3: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer3,
+        answer4: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].answer4,
+
+      });
+    }
+  }
+
   jsonToArray(thema: number) {
+    this.wrongQuestionsArray = [];
     for (let i = 0; i < Object.keys(this.wrongQuestionsJSON.thema[thema].question).length; i++) {
       this.wrongQuestionsArray.push(this.wrongQuestionsJSON.thema[thema].question[i].question);
-      console.log(this.wrongQuestionsJSON.thema[thema].question[i].question);
     }
+
   }
 }

@@ -132,8 +132,10 @@ export class QuestionsPage implements OnInit {
           this.currentQuestion = 0;
           this.questionindex = 0;
           this.themaindex = 0;
+          const answercheckerToResult = this.answerschecker;
+          this.answerschecker = [];
 
-          this.router.navigate(['result/' + this.schein.toString() + this.answerschecker]);
+          this.router.navigate(['result/' + this.schein.toString() + answercheckerToResult]);
 
 
         }

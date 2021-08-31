@@ -46,8 +46,11 @@ datareader() {
         scheinZahl = i;
       }
     }
-    this.router.navigate(['quiztypes/' + scheinZahl]);
+    this.router.navigate(['tabs/home/quiztypes/' + scheinZahl]);
   }
 
+  nav(){
+    this.router.navigate(['tabs/']);
+  }
 
 }

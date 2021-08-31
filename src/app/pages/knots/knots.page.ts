@@ -42,6 +42,6 @@ export class KnotsPage implements OnInit {
       }
     }
 
-    this.router.navigate(['knot-slider/' + knotNumber]);
+    this.router.navigate(['tabs/knots/knot-slider/' + knotNumber]);
   }
 }

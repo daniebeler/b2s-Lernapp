@@ -3,21 +3,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
     path: 'questions/:schein',
     loadChildren: () => import('./pages/questions/questions.module').then( m => m.QuestionsPageModule)
-  },
-  {
-    path: 'quiztypes/:schein',
-    loadChildren: () => import('./pages/quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
   },
   {
     path: 'result/:result',
@@ -28,19 +19,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/themen/themen.module').then( m => m.ThemenPageModule)
   },
   {
-    path: 'videos',
-    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'knots',
-    loadChildren: () => import('./pages/knots/knots.module').then( m => m.KnotsPageModule)
-  },
-  {
-    path: 'knot-slider/:knot',
-    loadChildren: () => import('./pages/knot-slider/knot-slider.module').then( m => m.KnotSliderPageModule)
-  },
-
-
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
+  }
 
 ];
 

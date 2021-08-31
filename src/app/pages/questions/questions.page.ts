@@ -167,16 +167,4 @@ export class QuestionsPage implements OnInit {
       document.documentElement.style.setProperty(this.infos[0], 'hidden');
     }
   }
-
-  checkbox(i) {
-
-    if (this.checkButtonText === 'check') {
-      if (this.answerBool[i]) {
-        this.answerBool[i] = false;
-      }
-      else {
-        this.answerBool[i] = true;
-      }
-    }
-  }
 }

@@ -867,11 +867,12 @@
           "themaName": "Regatta",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Was gehört zu den Voraussetzungen für die Zulassung zu einer Regatta?",
+              "answer1": "Eine gültige Haftpflichtversicherung für das Boot",
+              "answer2": "Die Zugehörigkeit zu einer regionalen oder nationalen Regattamannschaft",
+              "answer3": "Die Mitgliedschaft beim Österreichischen Segel-Verband (OeSV) oder einem anderen nationalen Mitgliedsverband von World Sailing",
+              "answer4": "Amateurstatus und Leumdungszeugnis",
               "correctAnswer": [
                 false,
                 true,
@@ -880,11 +881,97 @@
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "In der Abbildung ist die Startlinie kurz vor dem Startschuss schematisch dargestellt. Welche der folgenden Aussagen treffen zu?",
+              "answer1": "Die linke Seite der Startlinie ist bevorzugt (Startboje)",
+              "answer2": "Die rechte Seite der Startlinie ist bevorzugt (Startschiff)",
+              "answer3": "Es sollte in der Mitte gestartet werden",
+              "answer4": "Es sollte immer nahe beim Startschiff gestartet werden",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 3,
+              "question": "Was muss ein geschädigter Regattateilnehmer unmittelbar nach dem Regelverstoß tun, damit ein möglicher Protest verhandelt werden kann?",
+              "answer1": "Durch Zuruf oder Funk (wenn vorhanden) die Wettfahrtleitung vom Regelverstoß in Kenntnis setzen",
+              "answer2": "Drei kurze Pfiffe mit einer Trillerpfeife abgeben",
+              "answer3": "Lauter und deutlicher Zuruf des Wortes \"Protest\"",
+              "answer4": "Ab einer Rumpflänge von 6 Metern die Protestflagge setzen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 4,
+              "question": "Wie kann sich ein Regattateilnehmer nach einem Regelverstoß entlasten (wenn nicht anders in den Segelanweisungen festgelegt)?",
+              "answer1": "Bei einer Bahnmarkenberührung mit einer Ein-Drehung-Strafe",
+              "answer2": "Bei einer Bahnmarkenberührung mit einer Zwei-Drehungen-Strafe",
+              "answer3": "Bei einer Wegerechtsverletzung mit einer Ein-Drehung-Strafe",
+              "answer4": "Bei einer Wegerechtsverletzung mit einer Zwei-Drehungen-Strafe",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Zwei sich in einer Wettfahrt befindlichen Segelboote sind auf Kollisionskurs. Durch welchen Zuruf macht das Boot mit Wegerecht das ander Boot auf seine Ausweichpflicht aufmerksam?",
+              "answer1": "Wasser!",
+              "answer2": "Raum!",
+              "answer3": "Vorrang!",
+              "answer4": "Wenden Sie!",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 6,
+              "question": "Welche Regeln gelten für an einer Regatta teilnehmenden Boote gegenüber anderen Verkehrsteilnehmern?",
+              "answer1": "Die an der Regatta teilnehmenden Boote haben sich an die gesetzlichen Fahrregeln zu halten",
+              "answer2": "Die an der Regatta teilnehmenden Boote haben gegenüber nicht teilnehmenden Booten grundsätzlich keine Ausweichpflicht",
+              "answer3": "Die an der Regatta teilnehmenden Boote sind gegenüber nicht teilnehmenden Booten grundsätzlich ausweichpflichtig",
+              "answer4": "Die an der Regatta teilnehmenden Boote müssen sich gegenüber allen anderen Verkehrsteilnehmern an die Fahrregeln der Wettfahrtregeln halten",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Welche Regeln gelten für Kleinfahrzeuge unter Segel gegenüber an einer offiziell angemeldeten Regatta teilnehmenden Booten?",
+              "answer1": "Ein nicht an der Regatta teilnehmendes Boot ist grundsätzlich ausweichpflichtig gegenüber den Regattateilnehmern",
+              "answer2": "Für ein nicht an der Regatta teilnehmendes Boot gelten gegenüber den Regattateilnehmern die gesetzlichen Fahrregeln",
+              "answer3": "Ein nicht an der Regatta teilnehmendes Boot muss sich vom Regattafeld freihalten",
+              "answer4": "Grundsätzlich darf jeder Verkehrsteilnehmer das Regattafeld befahren; jedoch gebietet die gute Seemannschaft die Regattateilnehmer nicht zu stören",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Wie hat sich ein Schiffsführer während einer Regatta zu verhalten, wenn ein Boot in Not geraten ist?",
+              "answer1": "Es besteht keine Hilfeleistungspflicht",
+              "answer2": "Hilfe leisten, sofern keine Platzierung unter den ersten drei vorliegt",
+              "answer3": "Sofort Hilfe leisten",
+              "answer4": "Bei Unmöglichkeit der Hilfeleistung muss die Wettfahrtleitung beim Zieleinlauf informiert werden",
               "correctAnswer": [
                 false,
                 true,

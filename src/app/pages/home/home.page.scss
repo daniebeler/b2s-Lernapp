@@ -1,14 +1,12 @@
+.title {
+  border-bottom: 1px solid white;
+}
+
 #container {
   text-align: center;
   position: absolute;
   left: 0;
   right: 0;
-}
-
-#überschrift {
-  margin-top: 20px;
-  text-align: center;
-  color: white;
 }
 
 #search {
@@ -28,42 +26,13 @@ ion-button {
   }
 }
 
-#schein {
-  height: 120px;
-  --border-radius: var(--button-radius);
-
-  #überschrift p{
-    top: 10px;
-    left: 0;
-    position: absolute;
-    border-bottom: 1px solid white;
-    width: 50vw;
-    text-align: left;
-    padding-bottom: 3px;
-  }
-
-  #subtitle {
-    position: absolute;
-    left: 0;
-    margin-top: 30px;
-  }
-}
-
-#erklärvideo {
-  height: 20vh;
-  width: 100vw;
-
-}
-
-
-
-.circular{
-  height:70px;
+.circular {
+  height: 70px;
   width: 70px;
   position: relative;
-  transform:scale(2);
+  transform: scale(2);
 }
-.circular .inner{
+.circular .inner {
   position: absolute;
   z-index: 6;
   top: 50%;
@@ -73,19 +42,18 @@ ion-button {
   margin: -40px 0 0 -40px;
   background: #dde6f0;
   border-radius: 100%;
-
 }
-.circular .number{
+.circular .number {
   position: absolute;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  z-index:10;
-  font-size:18px;
-  font-weight:500;
-  color:#4158d0;
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: #4158d0;
 }
-.circular .bar{
+.circular .bar {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -93,7 +61,7 @@ ion-button {
   -webkit-border-radius: 100%;
   clip: rect(0px, 100%, 100%, 50px);
 }
-.circle .bar .progress{
+.circle .bar .progress {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -101,32 +69,28 @@ ion-button {
   clip: rect(0px, 50%, 100%, 0px);
   background: #4158d0;
 }
-.circle .left .progress{
-  z-index:1;
+.circle .left .progress {
+  z-index: 1;
   animation: left 4s linear both;
 }
-@keyframes left{
-  100%{
+@keyframes left {
+  100% {
     transform: rotate(180deg);
   }
 }
 .circle .right {
   transform: rotate(180deg);
-  z-index:3;
-
+  z-index: 3;
 }
-.circle .right .progress{
+.circle .right .progress {
   animation: right 4s linear both;
-  animation-delay:4s;
+  animation-delay: 4s;
 }
-@keyframes right{
-  100%{
+@keyframes right {
+  100% {
     transform: rotate(180deg);
   }
 }
-
-
-
 
 .question {
   color: white;
@@ -137,8 +101,6 @@ ion-button {
     background: inherit;
   }
 }
-
-
 
 .progress-80 {
   background: red;

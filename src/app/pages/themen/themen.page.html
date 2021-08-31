@@ -1,14 +1,13 @@
 <app-custom-header></app-custom-header>
 
 <ion-content class="ion-padding">
-  <ion-button class="header-item" expand="block" (click)="navigateHome()">
-    <div id="überschrift">
-      <p>{{licenseName}}</p>
-    </div>
-    <div id="subtitle">
+
+  <ion-item class="ion-margin-top" (click)="navigateHome()">
+    <ion-list>
+      <p class="ion-text-wrap title">{{licenseName}}</p>
       <p>Lerne die Basics</p>
-    </div>
-  </ion-button>
+    </ion-list>
+  </ion-item>
 
   <ion-item class="button-topic ion-margin-top" *ngFor="let topicName of topicNames; let i = index"
     (click)="navigate(topicName)">

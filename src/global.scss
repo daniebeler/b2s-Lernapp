@@ -42,3 +42,20 @@ p {
 ion-button {
   text-transform: none;
 }
+
+ion-item {
+  --border-radius: var(--button-radius);
+  --background: var(--ion-color-button);
+  -webkit-border-radius: var(--button-radius);
+  -moz-border-radius: var(--button-radius);
+
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+
+  color: white;
+}
+
+ion-list {
+  background: inherit !important;
+}
+

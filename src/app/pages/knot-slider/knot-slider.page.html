@@ -1,13 +1,14 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-  <ion-slides>
+  <ion-slides class="slide-item">
 
     <ion-slide *ngFor="let slide of slides" >
-      <div class="slide">
-        <img [src]="slide" alt="Bilder zur erklärung von Knoten">
+      <div class="ion-padding">
+        <img class="slide-img" [src]="slide" alt="Bilder zur erklärung von Knoten">
       </div>
-    </ion-slide>  
+
+    </ion-slide>
   </ion-slides>
 </ion-content>
 

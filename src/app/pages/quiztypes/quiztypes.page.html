@@ -1,32 +1,31 @@
 <app-custom-header></app-custom-header>
 
-<ion-content>
+<ion-content class="ion-padding">
 
-  <div class="ion-padding">
-    <ion-button id="schein" expand="block" (click)="navigateHome()">
-      <div id="überschrift">
-        <p>{{scheinName}}</p>
-      </div>
-      <div id="subtitle">
-        <p>Lerne die Basics</p>
-      </div>
-    </ion-button>
-  </div>
+  <ion-button id="schein" expand="block" (click)="navigateHome()">
+    <div id="überschrift">
+      <p>{{scheinName}}</p>
+    </div>
+    <div id="subtitle">
+      <p>Lerne die Basics</p>
+    </div>
+  </ion-button>
 
-  <div id="container" class="ion-padding">
-    <ion-button expand="block" (click)="navigate('questions/')">
-      <p>Alle Fragen lernen</p>
-      <ion-icon name="play"></ion-icon>
-    </ion-button>
-    <ion-button expand="block" (click)="navigate('themen/')">
-      <p>Einzelne Themen lernen</p>
-      <ion-icon name="play"></ion-icon>
-    </ion-button>
-    <ion-button expand="block" (click)="navigate('questions/')">
-      <p>Püfungssimulation</p>
-      <ion-icon name="play"></ion-icon>
-    </ion-button>
-  </div>
+  <ion-item class="button-quiztype ion-margin-top" (click)="navigate('questions/')">
+    <ion-label color="light" class="ion-text-wrap">Alle Fragen lernen</ion-label>
+    <ion-icon color="light" name="play"></ion-icon>
+  </ion-item>
+
+  <ion-item class="button-quiztype ion-margin-top" (click)="navigate('themen/')">
+    <ion-label color="light" class="ion-text-wrap">Einzelne Themen lernen</ion-label>
+    <ion-icon color="light" name="play"></ion-icon>
+  </ion-item>
+
+  <ion-item class="button-quiztype ion-margin-top" (click)="navigate('questions/')">
+    <ion-label color="light" class="ion-text-wrap">Püfungssimulation</ion-label>
+    <ion-icon color="light" name="play"></ion-icon>
+  </ion-item>
+
 </ion-content>
 
 <app-custom-footer></app-custom-footer>

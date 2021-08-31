@@ -63,12 +63,12 @@ export class ResultPage implements OnInit {
     if (isNaN(this.topic)) {
       for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
         this.topicIndizes.push(i.toString());
-        const test = this.countTrue(i);
+        const trueAnzahl = this.countTrue(i);
         this.topics.push({
           thema: [
             {
-              trueCount: test,
-              falseCount: this.countFalse(i, test)
+              trueCount: trueAnzahl,
+              falseCount: this.countFalse(i, trueAnzahl)
             }
           ]
         });
@@ -76,16 +76,17 @@ export class ResultPage implements OnInit {
     }
     else {
       this.topicIndizes.push(this.topic.toString());
-      const trueAnzahl = this.countTrue(0);
+      const trueAnzahl = this.countTrue(this.topic);
       this.topics.push({
         thema: [
           {
             trueCount: trueAnzahl,
-            falseCount: this.countFalse(0, trueAnzahl)
+            falseCount: this.countFalse(this.topic, trueAnzahl)
           }
         ]
       });
     }
+    console.log(this.topics);
     // console.log(this.topics);
   }
 

@@ -2,16 +2,22 @@
 
 <ion-content class="ion-padding">
 
-  <ion-button expand="block" *ngFor="let topicIndex of topicIndizes; let i = index">
+  <ion-button expand="block" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="buttonClicked(i)">
 
     <div id="überschrift">
       <p>{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
     </div>
 
-    <div id="subtitle">
+    <div id="subtitle" *ngIf="!this.clicked[i]; else elseBlock">
       <p>True: {{this.topics[i].thema[0].trueCount}}<br>
         False: {{this.topics[i].thema[0].falseCount}}</p>
     </div>
+    <ng-template #elseBlock>
+      <p *ngFor="let wrongQuestion of wrongQuestionsArray">
+        {{wrongQuestion}}
+        <br>
+      </p>
+    </ng-template>
 
   </ion-button>
 

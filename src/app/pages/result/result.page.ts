@@ -19,6 +19,13 @@ export class ResultPage implements OnInit {
   topic: number;
   schein: number;
   topics = [];
+  wrongQuestionsJSON = {
+    thema: [{
+      question: []
+    }]
+  };
+  wrongQuestionsArray: Array<string> = [];
+  clicked = [];
 
 
   constructor(
@@ -29,13 +36,14 @@ export class ResultPage implements OnInit {
   }
 
   ngOnInit() {
-
     const resultreceived = this.activatedRoute.snapshot.paramMap.get('result');
     this.getScheinAndTopic(resultreceived);
     this.resultreceivedToArray(resultreceived);
 
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
+      this.fillClickedArray();
+      this.createTopicsJSON();
       this.answersInTheme();
     });
 
@@ -55,6 +63,17 @@ export class ResultPage implements OnInit {
       else if (resultreceived[i] === 'f') {
         this.resultArray.push(false);
       }
+    }
+  }
+
+  fillClickedArray() {
+    if (isNaN(this.topic)) {
+      for (const i of this.data.scheine[this.schein].Thema) {
+        this.clicked.push(false);
+      }
+    }
+    else {
+      this.clicked.push(false);
     }
   }
 
@@ -86,8 +105,6 @@ export class ResultPage implements OnInit {
         ]
       });
     }
-    console.log(this.topics);
-    // console.log(this.topics);
   }
 
 
@@ -98,12 +115,51 @@ export class ResultPage implements OnInit {
       if (this.resultArray[this.resultArrayCounter] === true) {
         trueAnzahl++;
       }
+      else {
+        this.addQuestionToJson(thema, i);
+      }
       this.resultArrayCounter++;
     }
     return trueAnzahl;
   }
 
-  countFalse(thema: number,  trueCount: number) {
+  countFalse(thema: number, trueCount: number) {
     return Object.keys(this.data.scheine[this.schein].Thema[thema].questions).length - trueCount;
+  }
+
+  buttonClicked(buttonIndex: number) {
+    if (this.clicked[buttonIndex] === false) {
+      this.clicked = [];
+      this.fillClickedArray();
+      this.clicked[buttonIndex] = true;
+      this.jsonToArray(buttonIndex);
+    }
+    else {
+      this.clicked[buttonIndex] = false;
+    }
+  }
+
+  addQuestionToJson(themaIndex: number, questionIndex: number) {
+
+
+    this.wrongQuestionsJSON.thema[themaIndex].question.push({
+      question: this.data.scheine[this.schein].Thema[themaIndex].questions[questionIndex].question,
+    });
+  }
+
+
+  createTopicsJSON() {
+    for (const i of this.data.scheine[this.schein].Thema) {
+      this.wrongQuestionsJSON.thema.push({
+        question: []
+      });
+    }
+  }
+
+  jsonToArray(thema: number) {
+    for (let i = 0; i < Object.keys(this.wrongQuestionsJSON.thema[thema].question).length; i++) {
+      this.wrongQuestionsArray.push(this.wrongQuestionsJSON.thema[thema].question[i].question);
+      console.log(this.wrongQuestionsJSON.thema[thema].question[i].question);
+    }
   }
 }

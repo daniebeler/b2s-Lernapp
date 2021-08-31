@@ -10,18 +10,24 @@
     <div class="ion-padding">
 
       <ion-item class="ion-margin-top" *ngFor="let course of courses" (click)="navigate(course)">
-        <ion-list>
-          <h5 class="ion-text-wrap title"><strong>{{course}}</strong></h5>
-          <hr>
-          <p>Lerne die Basics</p>
-
-          <div class="progress-holder">
-            <div class="left-block"></div>
-            <div class="right-block" id="right-block"></div>
-             <div class="mask"><span>{{this.percent}}</span></div>
-           </div>
-
-        </ion-list>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-list>
+                <h5 class="ion-text-wrap title"><strong>{{course}}</strong></h5>
+                <hr>
+                <p>Lerne die Basics</p>
+              </ion-list>
+            </ion-col>
+            <ion-col size="auto">
+              <div class="progress-holder">
+                <div class="left-block"></div>
+                <div class="right-block" id="right-block"></div>
+                <div class="mask"><span>{{this.percent}}</span></div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-item>
 
     </div>

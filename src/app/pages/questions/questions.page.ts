@@ -169,4 +169,8 @@ export class QuestionsPage implements OnInit {
       document.documentElement.style.setProperty(this.infos[0], 'hidden');
     }
   }
+
+  navigateHome() {
+    this.router.navigate(['tabs/home']);
+  }
 }

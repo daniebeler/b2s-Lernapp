@@ -47,8 +47,11 @@
       <ion-checkbox [(ngModel)]="answerBool[3]"></ion-checkbox>
     </ion-item>
 
-    <ion-button class="checkbutton ion-margin-top" (click)="check()">{{checkButtonText}}</ion-button>
+
   </div>
 </ion-content>
 
-<app-custom-footer></app-custom-footer>
+<ion-footer class="ion-no-border">
+    <ion-button class="checkbutton ion-margin-top" (click)="navigateHome()">home</ion-button>
+    <ion-button class="checkbutton ion-margin-top right" (click)="check()">{{checkButtonText}}</ion-button>
+</ion-footer>

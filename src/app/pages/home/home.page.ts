@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ElementSchemaRegistry } from '@angular/compiler';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 
 @Component({
   selector: 'app-home',
@@ -18,9 +19,10 @@ export class HomePage {
 
   constructor(
     private httpClient: HttpClient,
-    private router: Router
+    private router: Router,
+    private screenOrientation: ScreenOrientation
   ) {
-
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
    }
 
 

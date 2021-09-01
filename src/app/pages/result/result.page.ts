@@ -95,7 +95,7 @@ export class ResultPage implements OnInit {
             }
           ]
         });
-        this.getPercent(i);
+        this.getPercent(i, i);
       }
     }
     else {
@@ -109,16 +109,16 @@ export class ResultPage implements OnInit {
           }
         ]
       });
+      this.getPercent(0, this.topic);
     }
   }
 
 
-  getPercent(thema: number) {
-    const trueCount = this.topics[thema].thema[0].trueCount;
-    const answersNumber = Object.keys(this.data.scheine[this.schein].Thema[thema].questions).length;
+  getPercent(topicIndex: number , themaIndex: number) {
+    const trueCount = this.topics[topicIndex].thema[0].trueCount;
+    const answersNumber = Object.keys(this.data.scheine[this.schein].Thema[themaIndex].questions).length;
     const percent = trueCount / answersNumber * 100;
     this.setPercentOfProgressCircle(percent);
-    console.log(percent);
   }
 
 

@@ -15,18 +15,6 @@
       </ion-list>
     </ion-item>
 
-    <!-- Card with infobutton: -->
-
-    <!-- <ion-card class="answerField1 answers" (click)=checkbox(0)>
-      <ion-label>{{answer1}}</ion-label>
-
-      <ion-button class="info">
-        <ion-icon name="information-circle"></ion-icon>
-      </ion-button>
-
-      <ion-checkbox [(ngModel)]="answerBool[0]" disabled="true"></ion-checkbox>
-    </ion-card> -->
-
     <ion-item class="answerField1 answer ion-margin-top">
       <ion-label color="light" class="ion-text-wrap">{{answer1}}</ion-label>
       <ion-checkbox [(ngModel)]="answerBool[0]"></ion-checkbox>
@@ -47,11 +35,10 @@
       <ion-checkbox [(ngModel)]="answerBool[3]"></ion-checkbox>
     </ion-item>
 
-
   </div>
 </ion-content>
 
-<ion-footer class="ion-no-border">
-    <ion-button class="checkbutton ion-margin-top" (click)="navigateHome()">home</ion-button>
-    <ion-button class="checkbutton ion-margin-top right" (click)="check()">{{checkButtonText}}</ion-button>
+<ion-footer class="ion-no-border ion-padding">
+  <ion-button class="checkbutton" (click)="navigateHome()">Home</ion-button>
+  <ion-button class="checkbutton ion-float-right" (click)="check()">{{checkButtonText}}</ion-button>
 </ion-footer>

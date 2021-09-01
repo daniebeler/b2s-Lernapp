@@ -15,14 +15,6 @@
 }
 
 .answer {
-  --border-radius: var(--button-radius);
-
-  -webkit-border-radius: var(--button-radius);
-  -moz-border-radius: var(--button-radius);
-
-  -webkit-box-shadow: var(--shadow);
-  -moz-box-shadow: var(--shadow);
-
   ion-checkbox {
     right: 15px;
     --background: white;
@@ -33,46 +25,15 @@
 }
 
 .question {
-  color: white;
-  --background: var(--ion-color-button);
-  --border-radius: var(--button-radius);
-
-  -webkit-border-radius: var(--button-radius);
-  -moz-border-radius: var(--button-radius);
-
-  -webkit-box-shadow: var(--shadow);
-  -moz-box-shadow: var(--shadow);
-
   ion-list {
     background: inherit;
   }
 }
 
-.checkbutton{
+.checkbutton {
   --border-radius: var(--button-radius);
 }
 
-// .info {
-//   --background: transparent;
-//   --box-shadow: none;
-//   position: absolute;
-//   width: 100%;
-//   visibility: var(--info1, hidden);
-
-//   ion-icon {
-//     font-size: 30px;
-//   }
-// }
-
-.modal .popover-content {
-  --background: #222;
-}
-
-
-.right{
-  float: right;
-}
-
-ion-footer{
+ion-footer {
   background: #3a3a3a !important;
 }

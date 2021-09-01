@@ -12,7 +12,9 @@ export class QuiztypesPage implements OnInit {
   data: any;
   schein: any;
   scheinName = '';
+  quote = '';
   allQuestions = 0;
+  percent: string;
 
   constructor(
     private router: Router,
@@ -25,11 +27,14 @@ export class QuiztypesPage implements OnInit {
       this.data = data;
       this.datareader();
     });
+
+    this.setPercentOfProgressCircle(35);
   }
 
   datareader() {
     this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
     this.scheinName = this.data.scheine[this.schein].scheinName;
+    this.quote = this.data.scheine[this.schein].quote;
 
     for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
       for (const a of Object.keys(this.data.scheine[this.schein].Thema[i].questions)) {
@@ -43,7 +48,21 @@ export class QuiztypesPage implements OnInit {
   }
 
   navigateHome() {
-    this.router.navigate(['home']);
+    this.router.navigate(['tabs/home']);
+  }
+
+  setPercentOfProgressCircle(percent: number) {
+
+    this.percent = percent + '%';
+    let deg = percent * 3.6;
+    if (percent >= 50) {
+      document.documentElement.style.setProperty('--background-processCircle', 'white');
+      deg = deg - 180;
+    }
+    else {
+      document.documentElement.style.setProperty('--background-processCircle', '#777777');
+    }
+    document.documentElement.style.setProperty('--transform', 'rotate('+deg+'deg)');
   }
 
 }

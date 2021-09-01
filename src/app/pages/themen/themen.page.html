@@ -3,11 +3,25 @@
 <ion-content class="ion-padding">
 
   <ion-item class="ion-margin-top" (click)="navigateHome()">
-    <ion-list>
-      <h5 class="ion-text-wrap title"><strong>{{licenseName}}</strong></h5>
-      <hr>
-      <p>Lerne die Basics</p>
-    </ion-list>
+
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <h5 class="ion-text-wrap title"><strong>{{licenseName}}</strong></h5>
+            <hr>
+            <p>{{quote}}</p>
+          </ion-list>
+        </ion-col>
+        <ion-col size="auto" class="ion-padding-top ion-padding-start ion-padding-bottom">
+          <div class="progress-holder">
+            <div class="left-block"></div>
+            <div class="right-block" id="right-block"></div>
+            <div class="mask"><p>{{this.percent}}</p></div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-item>
 
   <ion-item class="button-topic ion-margin-top" *ngFor="let topicName of topicNames; let i = index"

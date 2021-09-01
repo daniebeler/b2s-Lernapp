@@ -1,39 +1,5 @@
 <app-custom-header></app-custom-header>
 
-<<<<<<< HEAD
-<ion-content>
-  <div id="container">
-    <ion-button id="search">
-      <ion-icon name="search"></ion-icon>
-      <strong>SUCHE</strong>
-    </ion-button>
-
-    <div class="ion-padding">
-
-      <ion-item class="ion-margin-top" *ngFor="let course of courses; let i = index" (click)="navigate(course)">
-        <ion-grid class="ion-no-padding">
-          <ion-row>
-            <ion-col>
-              <ion-list>
-                <h5 class="ion-text-wrap title"><strong>{{course}}</strong></h5>
-                <hr>
-                <p>{{quotes[i]}}</p>
-              </ion-list>
-            </ion-col>
-            <ion-col size="auto" class="ion-padding-top ion-padding-start ion-padding-bottom">
-              <div class="progress-holder">
-                <div class="left-block"></div>
-                <div class="right-block" [ngStyle]="applyStyles(i)"></div>
-                <div class="mask"><p>{{this.progressPercent[i]}}</p></div>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-item>
-
-    </div>
-  </div>
-=======
 <ion-content class="ion-padding">
   <ion-item class="ion-margin-top" *ngFor="let course of courses; let i = index" (click)="navigate(course)">
     <ion-grid class="ion-no-padding">
@@ -57,5 +23,4 @@
       </ion-row>
     </ion-grid>
   </ion-item>
->>>>>>> a4621706e7bad3007ee933c7317272c50596d096
 </ion-content>

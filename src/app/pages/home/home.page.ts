@@ -38,11 +38,18 @@ export class HomePage {
       this.data = data;
       this.datareader();
 
-      this.getJSON();
       if (this.storageService.shouldCreateProgressJSON()) {
         this.generateProgressJson();
       }
     });
+  }
+
+  ionViewDidEnter() {
+    this.progressPercent = [];
+    this.backgroundProgressbar = [];
+    this.transformProgressbar = [];
+    this.getJSON();
+    console.log('hola');
   }
 
   generateProgressJson() {
@@ -147,7 +154,7 @@ export class HomePage {
     else {
       this.backgroundProgressbar.push('#777');
     }
-    this.transformProgressbar.push('rotate('+deg+'deg)');
+    this.transformProgressbar.push('rotate(' + deg + 'deg)');
   }
 
   applyStyles(thema: number) {

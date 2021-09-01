@@ -3,7 +3,7 @@ import { Router, RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ElementSchemaRegistry } from '@angular/compiler';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { Storage } from '@ionic/storage-angular';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +22,7 @@ export class HomePage {
     private httpClient: HttpClient,
     private router: Router,
     private screenOrientation: ScreenOrientation,
-    private storage: Storage
+    private storageService: StorageService
   ) {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
    }
@@ -35,13 +35,8 @@ ngOnInit() {
     this.datareader();
   });
   this.setPercentOfProgressCircle(80);
-  this.test();
-}
-
-async test() {
-  console.log(this.storage);
-  await this.storage.create();
-  await this.storage.set('name', 'Mr. Ionitron');
+  this.storageService.set('test', 'fuf');
+  console.log(this.storageService.get('test'));
 }
 
 datareader() {

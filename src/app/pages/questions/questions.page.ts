@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-questions',
@@ -27,13 +28,15 @@ export class QuestionsPage implements OnInit {
   currentQuestion = 0;
   quizType = 0;
   image = [];
+  progress: any = [];
 
-  checkButtonText = 'check';
+  checkButtonText = 'Check';
 
   constructor(
     private httpClient: HttpClient,
     private router: Router,
     private activatedRoute: ActivatedRoute,
+    private storageService: StorageService
   ) {
 
   }
@@ -41,7 +44,7 @@ export class QuestionsPage implements OnInit {
   ngOnInit() {
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
-      this.datareader();
+      this.getJSON();
     });
 
     this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
@@ -52,6 +55,14 @@ export class QuestionsPage implements OnInit {
       this.themaindex = Number(this.thema);
     }
 
+
+  }
+
+  async getJSON() {
+    this.storageService.getStorage('progress').then(data => {
+      this.progress = data;
+      this.datareader();
+    });
   }
 
 
@@ -100,7 +111,7 @@ export class QuestionsPage implements OnInit {
 
   check() {
     //change color if is true or false
-    if (this.checkButtonText === 'check') {
+    if (this.checkButtonText === 'Check') {
       let countTrue = 0;
 
       for (let i = 0; i < this.answerBool.length; i++) {
@@ -115,13 +126,16 @@ export class QuestionsPage implements OnInit {
 
       if (countTrue === 4) {
         this.answerschecker.push(true);
-
+        this.progress.scheine[this.schein].thema[this.themaindex].correctQuestion[this.questionindex] = true;
+        this.storageService.set('progress', this.progress);
       }
       else {
         this.answerschecker.push(false);
+        this.progress.scheine[this.schein].thema[this.themaindex].correctQuestion[this.questionindex] = false;
+        this.storageService.set('progress', this.progress);
       }
 
-      this.checkButtonText = 'weiter';
+      this.checkButtonText = 'Weiter';
       document.documentElement.style.setProperty(this.infos[0], 'visible');
     }
 
@@ -157,7 +171,7 @@ export class QuestionsPage implements OnInit {
       }
       this.datareader();
       this.clearCheckboxes();
-      this.checkButtonText = 'check';
+      this.checkButtonText = 'Check';
     }
   }
 

@@ -17,6 +17,9 @@ export class HomePage {
   currentcourse: string;
   percent: string;
   userStats: any = [];
+  progressPercent = [];
+  backgroundProgressbar = [];
+  transformProgressbar = [];
 
   constructor(
     private httpClient: HttpClient,
@@ -34,20 +37,76 @@ export class HomePage {
       this.data = data;
       this.datareader();
 
-
-      this.storageService.set('test', JSON.stringify(this.data));
-      this.userStats = this.getJSON().then(res =>{
-        console.log(res);
-      });
-
+      this.getJSON();
+      if (this.storageService.shouldCreateProgressJSON()) {
+        this.generateProgressJson();
+      }
     });
-    this.setPercentOfProgressCircle(80);
+  }
+
+  generateProgressJson() {
+    const newJSON = {
+      scheine: [
+
+      ]
+    };
+    for (let schein = 0; schein < Object.keys(this.data.scheine).length; schein++) {
+
+      newJSON.scheine.push(
+        {
+          thema: [
+
+          ]
+        }
+      );
+
+      for (let thema = 0; thema < Object.keys(this.data.scheine[schein].Thema).length; thema++) {
+
+        newJSON.scheine[schein].thema.push(
+          {
+            correctQuestion: []
+          }
+        );
+
+        const correctQuestionArray = [];
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let question = 0; question < Object.keys(this.data.scheine[schein].Thema[thema].questions).length; question++) {
+          correctQuestionArray.push(false);
+          newJSON.scheine[schein].thema[thema].correctQuestion = correctQuestionArray;
+        }
+
+      }
+
+    }
+
+    this.storageService.set('progress', newJSON);
   }
 
   async getJSON() {
-    this.storageService.getStorage('test').then(data => {
-      return JSON.parse(data);
+    this.storageService.getStorage('progress').then(data => {
+      this.userStats = data;
+      this.getPercent();
     });
+  }
+
+  getPercent() {
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
+    for (let schein = 0; schein < Object.keys(this.data.scheine).length; schein++) {
+      let countAll = 0;
+      let countTrue = 0;
+
+      for (let thema = 0; thema < Object.keys(this.data.scheine[schein].Thema).length; thema++) {
+        for (let question = 0; question < Object.keys(this.data.scheine[schein].Thema[thema].questions).length; question++) {
+          countAll++;
+          if (this.userStats.scheine[schein].thema[thema].correctQuestion[question]) {
+            countTrue++;
+          }
+        }
+      }
+      const percent = countTrue / countAll * 100;
+      this.setPercentOfProgressCircle(percent);
+    }
   }
 
   datareader() {
@@ -78,16 +137,24 @@ export class HomePage {
 
   setPercentOfProgressCircle(percent: number) {
 
-    this.percent = percent + '%';
+    this.progressPercent.push(Math.ceil(percent) + '%');
     let deg = percent * 3.6;
     if (percent >= 50) {
-      document.documentElement.style.setProperty('--background-processCircle', 'white');
+      this.backgroundProgressbar.push('white');
       deg = deg - 180;
     }
     else {
-      document.documentElement.style.setProperty('--background-processCircle', '#777777');
+      this.backgroundProgressbar.push('#777');
     }
-    document.documentElement.style.setProperty('--transform', 'rotate(' + deg + 'deg)');
+    this.transformProgressbar.push('rotate('+deg+'deg)');
+  }
+
+  applyStyles(thema: number) {
+    const styles = {
+      'background-color': this.backgroundProgressbar[thema],
+      transform: this.transformProgressbar[thema]
+    };
+    return styles;
   }
 
 }

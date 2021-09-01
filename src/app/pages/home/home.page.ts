@@ -49,7 +49,6 @@ export class HomePage {
     this.backgroundProgressbar = [];
     this.transformProgressbar = [];
     this.getJSON();
-    console.log('hola');
   }
 
   generateProgressJson() {

@@ -11,6 +11,7 @@ import { ElementSchemaRegistry } from '@angular/compiler';
 export class HomePage {
 
   courses: Array <string> = [];
+  quotes: Array <string> = [];
   data: any = [];
   currentcourse: string;
   percent: string;
@@ -36,6 +37,7 @@ datareader() {
   // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < this.data.scheine.length; i++) {
     this.courses.push(this.data.scheine[i].scheinName);
+    this.quotes.push(this.data.scheine[i].quote);
   }
 
 }

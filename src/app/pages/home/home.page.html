@@ -9,17 +9,17 @@
 
     <div class="ion-padding">
 
-      <ion-item class="ion-margin-top" *ngFor="let course of courses" (click)="navigate(course)">
-        <ion-grid>
+      <ion-item class="ion-margin-top" *ngFor="let course of courses; let i = index" (click)="navigate(course)">
+        <ion-grid class="ion-no-padding">
           <ion-row>
             <ion-col>
               <ion-list>
                 <h5 class="ion-text-wrap title"><strong>{{course}}</strong></h5>
                 <hr>
-                <p>Lerne die Basics</p>
+                <p>{{quotes[i]}}</p>
               </ion-list>
             </ion-col>
-            <ion-col size="auto">
+            <ion-col size="auto" class="ion-padding-top ion-padding-start ion-padding-bottom">
               <div class="progress-holder">
                 <div class="left-block"></div>
                 <div class="right-block" id="right-block"></div>

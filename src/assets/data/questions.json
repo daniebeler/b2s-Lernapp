@@ -2,6 +2,7 @@
   "scheine": [
     {
       "scheinName": "Grundkurs",
+      "quote": "Lerne die Basics",
       "Thema": [
         {
           "themaName": "Thema1",
@@ -79,6 +80,7 @@
     },
     {
       "scheinName": "BFA-Binnen (A-Schein)",
+      "quote": "Lerne die Basics",
       "Thema": [
         {
           "id": "A",

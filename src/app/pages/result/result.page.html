@@ -24,13 +24,28 @@
 
 
   <ion-item class="ion-margin-top" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="buttonClicked(i)">
-    <ion-list>
-      <p class="underlined ion-text-wrap title">{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
+    <ion-list style="width: 100%;">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p class="underlined ion-text-wrap title">{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
+            <div id="subtitle" *ngIf="!this.clicked[i]; else elseBlock">
+              <p>True: {{this.topics[i].thema[0].trueCount}}<br>
+                False: {{this.topics[i].thema[0].falseCount}}</p>
+            </div>
+          </ion-col>
+          <ion-col size="auto">
+            <div class="progress-holder">
+              <div class="left-block"></div>
+              <div class="right-block" [ngStyle]="applyStyles(i)"></div>
+              <div class="mask"><p>{{this.percentAusgabe[i]}}</p></div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-      <div id="subtitle" *ngIf="!this.clicked[i]; else elseBlock">
-        <p>True: {{this.topics[i].thema[0].trueCount}}<br>
-          False: {{this.topics[i].thema[0].falseCount}}</p>
-      </div>
+      
+      
       <ng-template #elseBlock>
         <div *ngFor="let wrongQuestion of wrongQuestionsArray; let questionIndex = index">
           <strong class="underlin">FRAGE {{this.wrongQuestionsJSON.thema[i].question[questionIndex].id}}</strong>

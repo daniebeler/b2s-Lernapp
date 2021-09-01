@@ -26,6 +26,10 @@ export class ResultPage implements OnInit {
   };
   wrongQuestionsArray = [];
   clicked = [];
+  percent: string;
+  percentAusgabe = [];
+  backgroundProgressbar = [];
+  transformProgressbar = [];
 
 
   constructor(
@@ -37,8 +41,8 @@ export class ResultPage implements OnInit {
 
   ngOnInit() {
     const resultreceived = this.activatedRoute.snapshot.paramMap.get('result');
-    this.getScheinAndTopic(resultreceived);
     this.resultreceivedToArray(resultreceived);
+    this.getScheinAndTopic(resultreceived);
 
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
@@ -91,6 +95,7 @@ export class ResultPage implements OnInit {
             }
           ]
         });
+        this.getPercent(i);
       }
     }
     else {
@@ -105,6 +110,15 @@ export class ResultPage implements OnInit {
         ]
       });
     }
+  }
+
+
+  getPercent(thema: number) {
+    const trueCount = this.topics[thema].thema[0].trueCount;
+    const answersNumber = Object.keys(this.data.scheine[this.schein].Thema[thema].questions).length;
+    const percent = trueCount / answersNumber * 100;
+    this.setPercentOfProgressCircle(percent);
+    console.log(percent);
   }
 
 
@@ -129,10 +143,12 @@ export class ResultPage implements OnInit {
 
   buttonClicked(buttonIndex: number) {
     if (this.clicked[buttonIndex] === false) {
-      this.clicked = [];
-      this.fillClickedArray();
-      this.clicked[buttonIndex] = true;
-      this.jsonToArray(buttonIndex);
+      if (this.topics[buttonIndex].thema[0].falseCount !== 0) {
+        this.clicked = [];
+        this.fillClickedArray();
+        this.clicked[buttonIndex] = true;
+        this.jsonToArray(buttonIndex);
+      }
     }
     else {
       this.clicked[buttonIndex] = false;
@@ -164,7 +180,6 @@ export class ResultPage implements OnInit {
 
 
       });
-      console.log(this.wrongQuestionsJSON);
     }
     else {
       this.wrongQuestionsJSON.thema[0].question.push({
@@ -228,6 +243,27 @@ export class ResultPage implements OnInit {
     }
     return arr;
   }
+
+  setPercentOfProgressCircle(percent: number) {
+
+    this.percentAusgabe.push( Math.ceil(percent) + '%');
+    let deg = percent * 3.6;
+    if (percent >= 50) {
+      this.backgroundProgressbar.push('white');
+      deg = deg - 180;
+    }
+    else {
+      this.backgroundProgressbar.push('#777');
+    }
+    this.transformProgressbar.push('rotate('+deg+'deg)');
+  }
+
+  applyStyles(thema: number) {
+    const styles = {'background-color' : this.backgroundProgressbar[thema],
+                    transform: this.transformProgressbar[thema]};
+    return styles;
+}
+
 }
 
 

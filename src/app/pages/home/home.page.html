@@ -14,9 +14,9 @@
         <ion-col size="auto" class="ion-padding-top ion-padding-start ion-padding-bottom">
           <div class="progress-holder">
             <div class="left-block"></div>
-            <div class="right-block" id="right-block"></div>
+            <div class="right-block" [ngStyle]="applyStyles(i)"></div>
             <div class="mask">
-              <p>{{this.percent}}</p>
+              <p>{{this.progressPercent[i]}}</p>
             </div>
           </div>
         </ion-col>

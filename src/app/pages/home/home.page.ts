@@ -21,6 +21,7 @@ export class HomePage {
   backgroundProgressbar = [];
   transformProgressbar = [];
 
+
   constructor(
     private httpClient: HttpClient,
     private router: Router,

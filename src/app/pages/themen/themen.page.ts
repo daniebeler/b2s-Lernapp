@@ -13,6 +13,8 @@ export class ThemenPage implements OnInit {
   numberOfQuestionsPerTopic: Array <number> = [];
   allQuestions: any = [];
   licenseName = '';
+  quote = '';
+  percent: string;
 
   constructor(
     private httpClient: HttpClient,
@@ -25,6 +27,7 @@ export class ThemenPage implements OnInit {
       this.allQuestions = data;
       this.datareader();
     });
+    this.setPercentOfProgressCircle(35);
   }
 
   datareader() {
@@ -35,6 +38,7 @@ export class ThemenPage implements OnInit {
       this.numberOfQuestionsPerTopic.push(this.allQuestions.scheine[schein].Thema[i].questions.length);
     }
     this.licenseName = this.allQuestions.scheine[schein].scheinName;
+    this.quote = this.allQuestions.scheine[schein].quote;
   }
 
   navigate(theme: string) {
@@ -52,7 +56,21 @@ export class ThemenPage implements OnInit {
   }
 
   navigateHome() {
-    this.router.navigate(['home']);
+    this.router.navigate(['tabs/home']);
+  }
+
+  setPercentOfProgressCircle(percent: number) {
+
+    this.percent = percent + '%';
+    let deg = percent * 3.6;
+    if (percent >= 50) {
+      document.documentElement.style.setProperty('--background-processCircle', 'white');
+      deg = deg - 180;
+    }
+    else {
+      document.documentElement.style.setProperty('--background-processCircle', '#777777');
+    }
+    document.documentElement.style.setProperty('--transform', 'rotate('+deg+'deg)');
   }
 
 }

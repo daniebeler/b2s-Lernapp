@@ -12,7 +12,7 @@ export class ThemenPage implements OnInit {
 
   topicNames: Array <string> = [];
   numberOfQuestionsPerTopic: Array <number> = [];
-  allQuestions: any = [];
+  allQuestions: any;
   licenseName = '';
   quote = '';
   percent: string;
@@ -30,14 +30,17 @@ export class ThemenPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      this.allQuestions = data;
-      this.datareader();
-    });
+
   }
 
   ionViewDidEnter() {
-    this.getJSON();
+    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
+      if (this.allQuestions === undefined) {
+        this.allQuestions = data;
+        this.datareader();
+      }
+      this.getJSON();
+    });
   }
 
   async getJSON() {

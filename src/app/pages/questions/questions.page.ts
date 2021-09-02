@@ -129,6 +129,9 @@ export class QuestionsPage implements OnInit {
 
       if (countTrue === 4) {
         this.answerschecker.push(true);
+        console.log(this.schein);
+        console.log(this.themaindex);
+        console.log(this.progress);
         this.progress.scheine[this.schein].thema[this.themaindex].correctQuestion[this.questionindex] = true;
         this.storageService.set('progress', this.progress);
       }

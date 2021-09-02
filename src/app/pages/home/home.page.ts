@@ -98,6 +98,8 @@ export class HomePage {
   checkIfJSONchanged() {
     this.completeLicenses();
     this.completeTopics();
+    this.completeQuestions();
+    this.storageService.set('progress', this.userStats);
   }
 
   completeLicenses() {
@@ -149,6 +151,17 @@ export class HomePage {
             id: missingids[i] + 1,
             correctQuestion: []
           });
+        }
+      }
+    }
+  }
+
+  completeQuestions() {
+    for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
+      for (let thema = 0; thema < Object.keys(this.questionsJSON.scheine[schein].Thema).length; thema++) {
+        for (let i = Object.keys(this.userStats.scheine[schein].thema[thema].correctQuestion).length;
+         i < Object.keys(this.questionsJSON.scheine[schein].Thema[thema].questions).length; i++) {
+          this.userStats.scheine[schein].thema[thema].correctQuestion.push(false);
         }
       }
     }

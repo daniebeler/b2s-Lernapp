@@ -30,15 +30,18 @@ export class QuiztypesPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      this.data = data;
-      this.datareader();
-    });
 
   }
 
+
   ionViewDidEnter() {
-    this.getJSON();
+    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
+      if (this.data === undefined) {
+        this.data = data;
+        this.datareader();
+      }
+      this.getJSON();
+    });
   }
 
   async getJSON() {

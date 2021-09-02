@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -25,15 +25,21 @@
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
 
-
 @font-face {
-  font-family: 'Josefin-Sans';
-  src: url('/assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+  font-family: "Josefin-Sans";
+  src: url("/assets/fonts/JosefinSans-Regular.ttf") format("truetype");
 }
 
 * {
-  font-family: 'Josefin-Sans' !important;
+  font-family: "Josefin-Sans" !important;
 }
+
+ion-content{
+  --background: url('/assets/img/background/VCBC.jpg') no-repeat center/cover fixed;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 
 p {
   font-size: 1.05rem;
@@ -64,14 +70,12 @@ hr {
   margin: 0;
 }
 
-h5{
- margin-bottom: 0;
+h5 {
+  margin-bottom: 0;
 }
 
-ion-list{
-
+ion-list {
 }
-
 
 .progress-holder {
   position: relative;
@@ -101,7 +105,6 @@ ion-list{
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     transform-origin: left center;
-    transform: var(--transform, none);
   }
 
   .mask {

@@ -68,3 +68,7 @@ ion-button {
     font-size: 60px;
   }
 }
+
+ion-content{
+  --background: var(--ion-background-color);
+}

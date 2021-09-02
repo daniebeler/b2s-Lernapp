@@ -37,3 +37,7 @@
 ion-footer {
   background: #3a3a3a !important;
 }
+
+ion-content{
+  --background: var(--ion-background-color);
+}

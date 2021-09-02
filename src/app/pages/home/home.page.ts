@@ -38,16 +38,24 @@ export class HomePage {
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
       this.datareader();
-
-        this.generateProgressJson();
     });
   }
 
   ionViewDidEnter() {
-    this.progressPercent = [];
-    this.backgroundProgressbar = [];
-    this.transformProgressbar = [];
-    this.getJSON();
+    this.storageService.shouldCreateProgressJSON().then(test => {
+      const generateProgress = test;
+      if (generateProgress === null) {
+        this.generateProgressJson();
+      }
+      else {
+        this.progressPercent = [];
+        this.backgroundProgressbar = [];
+        this.transformProgressbar = [];
+        this.getJSON();
+      }
+    });
+
+
   }
 
   generateProgressJson() {
@@ -86,7 +94,13 @@ export class HomePage {
 
     }
 
-    this.storageService.set('progress', newJSON);
+    this.storageService.set('progress', newJSON).then(test =>{
+      this.progressPercent = [];
+      this.backgroundProgressbar = [];
+      this.transformProgressbar = [];
+      this.getJSON();
+    });
+
   }
 
   async getJSON() {

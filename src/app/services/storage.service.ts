@@ -1,7 +1,5 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
-import { ResultPage } from '../pages/result/result.page';
 
 @Injectable({
   providedIn: 'root'
@@ -22,10 +20,8 @@ export class StorageService {
     return this.storage.get(key);
   }
 
-  shouldCreateProgressJSON() {
-    this.storage.clear();
-    return this.storage.keys();
-
+  async shouldCreateProgressJSON() {
+    return this.storage.get('progress');
   }
 
 }

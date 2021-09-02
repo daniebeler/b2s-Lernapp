@@ -34,12 +34,12 @@
   font-family: "Josefin-Sans" !important;
 }
 
-ion-content{
-  --background: url('/assets/img/background/VCBC.jpg') no-repeat center/cover fixed;
+ion-content {
+  --background: url("/assets/img/background/boje.jpg") no-repeat center/cover
+    fixed;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
 
 p {
   font-size: 1.05rem;
@@ -82,7 +82,7 @@ ion-list {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: white;
+  background: var(--color-progress-bar);
   overflow: hidden;
 
   .left-block {
@@ -91,7 +91,7 @@ ion-list {
     position: absolute;
     top: 0px;
     left: 0px;
-    background: #777777;
+    background: var(--color-progress-bar-dark);
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
   }
@@ -113,7 +113,7 @@ ion-list {
     position: absolute;
     left: 10%;
     top: 10%;
-    background: #898989;
+    background: #464646;
     border-radius: 50%;
     text-align: center;
 

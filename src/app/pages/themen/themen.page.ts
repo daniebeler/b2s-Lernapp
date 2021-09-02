@@ -101,11 +101,11 @@ export class ThemenPage implements OnInit {
     this.progressPercent.push(Math.ceil(percent) + '%');
     let deg = percent * 3.6;
     if (percent >= 50) {
-      this.backgroundProgressbar.push('white');
+      this.backgroundProgressbar.push('var(--color-progress-bar)');
       deg = deg - 180;
     }
     else {
-      this.backgroundProgressbar.push('#777');
+      this.backgroundProgressbar.push('var(--color-progress-bar-dark)');
     }
     this.transformProgressbar.push('rotate(' + deg + 'deg)');
   }

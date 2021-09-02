@@ -98,7 +98,6 @@ ion-list{
     position: absolute;
     top: 0px;
     left: 50%;
-    background-color: var(--background-processCircle, #777777);
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     transform-origin: left center;
@@ -111,7 +110,7 @@ ion-list{
     position: absolute;
     left: 10%;
     top: 10%;
-    background: var(--ion-color-button);
+    background: #898989;
     border-radius: 50%;
     text-align: center;
 

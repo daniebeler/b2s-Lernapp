@@ -1,10 +1,12 @@
 {
   "scheine": [
     {
+      "id": 1,
       "scheinName": "Grundkurs",
       "quote": "Lerne die Basics",
       "Thema": [
         {
+          "id": 1,
           "themaName": "Thema1",
           "questions": [
             {
@@ -42,6 +44,7 @@
           ]
         },
         {
+          "id": 1,
           "themaName": "Thema2",
           "questions": [
             {
@@ -78,12 +81,15 @@
         }
       ]
     },
+    
     {
+      "id": 2,
       "scheinName": "BFA-Binnen (A-Schein)",
       "quote": "Fortgeschritten",
       "Thema": [
         {
-          "id": "A",
+          "id": 1,
+          "indicator": "A",
           "themaName": "Basismanöver und Jachtbedienung",
           "questions": [
             {
@@ -485,7 +491,8 @@
           ]
         },
         {
-          "id": "B",
+          "id": 1,
+          "indicator": "B",
           "themaName": "Segeltheorie",
           "questions": [
             {
@@ -773,7 +780,8 @@
           ]
         },
         {
-          "id": "C",
+          "id": 1,
+          "indicator": "C",
           "themaName": "Bootskunde und Tauwerk",
           "questions": [
             {
@@ -805,7 +813,8 @@
           ]
         },
         {
-          "id": "D",
+          "id": 1,
+          "indicator": "D",
           "themaName": "Sicherheit und Sondermanöver",
           "questions": [
             {
@@ -837,7 +846,8 @@
           ]
         },
         {
-          "id": "E",
+          "id": 1,
+          "indicator": "E",
           "themaName": "Trimmen und Trimmeinrichtungen",
           "questions": [
             {
@@ -869,7 +879,8 @@
           ]
         },
         {
-          "id": "F",
+          "id": 1,
+          "indicator": "F",
           "themaName": "Regatta",
           "questions": [
             {
@@ -988,7 +999,8 @@
           ]
         },
         {
-          "id": "G",
+          "id": 1,
+          "indicator": "G",
           "themaName": "Knoten und seemännische Arbeiten",
           "questions": [
             {
@@ -1020,7 +1032,8 @@
           ]
         },
         {
-          "id": "H",
+          "id": 1,
+          "indicator": "H",
           "themaName": "Seemannschaft und seemännische Sprache",
           "questions": [
             {
@@ -1138,7 +1151,8 @@
           ]
         },
         {
-          "id": "I",
+          "id": 1,
+          "indicator": "I",
           "themaName": "Wetter",
           "questions": [
             {
@@ -1170,7 +1184,8 @@
           ]
         },
         {
-          "id": "J",
+          "id": 1,
+          "indicator": "J",
           "themaName": "Recht",
           "questions": [
             {

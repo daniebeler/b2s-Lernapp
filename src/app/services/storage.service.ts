@@ -24,4 +24,8 @@ export class StorageService {
     return this.storage.get('progress');
   }
 
+  clear() {
+    this.storage.clear();
+  }
+
 }

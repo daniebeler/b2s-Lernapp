@@ -59,10 +59,16 @@ export class HomePage {
     };
     for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
 
-      newJSON.scheine.push({ thema: [] });
+      newJSON.scheine.push({
+        id: this.questionsJSON.scheine[schein].id,
+        thema: []
+      });
 
       for (let thema = 0; thema < Object.keys(this.questionsJSON.scheine[schein].Thema).length; thema++) {
-        newJSON.scheine[schein].thema.push({ correctQuestion: [] });
+        newJSON.scheine[schein].thema.push({
+          id: thema + 1,
+          correctQuestion: []
+        });
         const correctQuestionArray = [];
 
         // eslint-disable-next-line @typescript-eslint/prefer-for-of
@@ -72,7 +78,6 @@ export class HomePage {
         }
       }
     }
-
     this.storageService.set('progress', newJSON).then(() => {
       this.progressPercent = [];
       this.backgroundProgressbar = [];
@@ -84,8 +89,70 @@ export class HomePage {
   async getProgressJSONFromStorage() {
     this.storageService.getStorage('progress').then(data => {
       this.userStats = data;
+      console.log(this.userStats);
+      this.checkIfJSONchanged();
       this.getPercent();
     });
+  }
+
+  checkIfJSONchanged() {
+    this.completeLicenses();
+    this.completeTopics();
+  }
+
+  completeLicenses() {
+    if (Object.keys(this.questionsJSON.scheine).length !== Object.keys(this.userStats.scheine).length) {
+      const missingids = [];
+      for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
+        let found = false;
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let progress = 0; progress < Object.keys(this.userStats.scheine).length; progress++) {
+          if (this.questionsJSON.scheine[schein].id === this.userStats.scheine[progress].id) {
+            found = true;
+          }
+        }
+        if (!found) {
+          missingids.push(schein);
+        }
+
+      }
+      // eslint-disable-next-line @typescript-eslint/prefer-for-of
+      for (let i = 0; i < missingids.length; i++) {
+        this.userStats.scheine.splice(missingids[i], 0, {
+          id: missingids[i] + 1,
+          thema: []
+        });
+      }
+    }
+  }
+
+  completeTopics() {
+    for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
+      if (Object.keys(this.questionsJSON.scheine[schein].Thema).length !== Object.keys(this.userStats.scheine[schein].thema).length) {
+        const missingids = [];
+        for (let thema = 0; thema < Object.keys(this.questionsJSON.scheine[schein].Thema).length; thema++) {
+          let found = false;
+          // eslint-disable-next-line @typescript-eslint/prefer-for-of
+          for (let progress = 0; progress < Object.keys(this.userStats.scheine[schein].thema).length; progress++) {
+            if (this.questionsJSON.scheine[schein].Thema[thema].id === this.userStats.scheine[schein].thema[progress].id) {
+              found = true;
+            }
+          }
+          if (!found) {
+            missingids.push(thema);
+          }
+
+        }
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let i = 0; i < missingids.length; i++) {
+          this.userStats.scheine[schein].thema.push({
+            id: missingids[i] + 1,
+            correctQuestion: []
+          });
+        }
+      }
+    }
+    console.log(this.userStats);
   }
 
   getPercent() {
@@ -149,5 +216,9 @@ export class HomePage {
       transform: this.transformProgressbar[thema]
     };
     return styles;
+  }
+
+  reset() {
+    this.storageService.clear();
   }
 }

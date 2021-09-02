@@ -3,24 +3,19 @@
 <ion-content>
   <ion-slides class="slide-item">
 
-    <ion-slide>
-      <div class="ion-padding">
+    <ion-slide class="ion-padding">
+      <ion-list>
         <h1>{{this.knotName}}</h1>
         <h5>{{this.knotUsage}}</h5>
-      </div>
-
+      </ion-list>
     </ion-slide>
 
-    <ion-slide *ngFor="let slide of slides; let i = index" >
+    <ion-slide class="ion-padding" *ngFor="let slide of slides; let i = index">
       <ion-list>
-      <div class="ion-padding">
+        <h2>Schritt {{i + 1}}</h2>
         <img class="slide-img" [src]="slide" alt="Bilder zur erklärung von Knoten">
-      </div>
-
-      <div class="explanation">
         <p>{{this.knotExplanation[i]}}</p>
-      </div>
-    </ion-list>
+      </ion-list>
     </ion-slide>
   </ion-slides>
 </ion-content>

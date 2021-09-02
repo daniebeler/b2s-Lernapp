@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { StorageService } from 'src/app/services/storage.service';
+
 
 @Component({
   selector: 'app-quiztypes',
@@ -15,11 +17,16 @@ export class QuiztypesPage implements OnInit {
   quote = '';
   allQuestions = 0;
   percent: string;
+  progressPercent = [];
+  backgroundProgressbar = [];
+  transformProgressbar = [];
+  userStats: any = [];
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private httpClient: HttpClient,
+    private storageService: StorageService
   ) { }
 
   ngOnInit() {
@@ -28,7 +35,36 @@ export class QuiztypesPage implements OnInit {
       this.datareader();
     });
 
-    this.setPercentOfProgressCircle(35);
+  }
+
+  ionViewDidEnter() {
+    this.getJSON();
+  }
+
+  async getJSON() {
+    this.storageService.getStorage('progress').then(data => {
+      this.userStats = data;
+      this.getPercent();
+    });
+  }
+
+  getPercent() {
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
+    for (let schein = 0; schein < Object.keys(this.data.scheine).length; schein++) {
+      let countAll = 0;
+      let countTrue = 0;
+
+      for (let thema = 0; thema < Object.keys(this.data.scheine[schein].Thema).length; thema++) {
+        for (let question = 0; question < Object.keys(this.data.scheine[schein].Thema[thema].questions).length; question++) {
+          countAll++;
+          if (this.userStats.scheine[schein].thema[thema].correctQuestion[question]) {
+            countTrue++;
+          }
+        }
+      }
+      const percent = countTrue / countAll * 100;
+      this.setPercentOfProgressCircle(percent);
+    }
   }
 
   datareader() {
@@ -53,16 +89,23 @@ export class QuiztypesPage implements OnInit {
 
   setPercentOfProgressCircle(percent: number) {
 
-    this.percent = percent + '%';
+    this.progressPercent.push(Math.ceil(percent) + '%');
     let deg = percent * 3.6;
     if (percent >= 50) {
-      document.documentElement.style.setProperty('--background-processCircle', 'white');
+      this.backgroundProgressbar.push('white');
       deg = deg - 180;
     }
     else {
-      document.documentElement.style.setProperty('--background-processCircle', '#777777');
+      this.backgroundProgressbar.push('#777');
     }
-    document.documentElement.style.setProperty('--transform', 'rotate('+deg+'deg)');
+    this.transformProgressbar.push('rotate(' + deg + 'deg)');
   }
 
+  applyStyles(thema: number) {
+    const styles = {
+      'background-color': this.backgroundProgressbar[thema],
+      transform: this.transformProgressbar[thema]
+    };
+    return styles;
+  }
 }

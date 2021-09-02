@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { StorageService } from 'src/app/services/storage.service';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -38,9 +39,7 @@ export class HomePage {
       this.data = data;
       this.datareader();
 
-      if (this.storageService.shouldCreateProgressJSON()) {
         this.generateProgressJson();
-      }
     });
   }
 

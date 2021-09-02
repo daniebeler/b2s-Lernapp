@@ -47,6 +47,7 @@ export class QuestionsPage implements OnInit {
       this.getJSON();
     });
 
+
     this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
     if (this.schein.length === 2) {
       this.quizType = 1;
@@ -54,8 +55,10 @@ export class QuestionsPage implements OnInit {
       this.schein = this.schein.charAt(0);
       this.themaindex = Number(this.thema);
     }
+  }
 
-
+  ionViewDidEnter() {
+    this.clearCheckboxes();
   }
 
   async getJSON() {

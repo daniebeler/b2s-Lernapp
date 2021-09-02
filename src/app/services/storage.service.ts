@@ -23,19 +23,9 @@ export class StorageService {
   }
 
   shouldCreateProgressJSON() {
-    let keys = [];
-    this.storage.keys().then(data => {
-      keys = data;
-      // eslint-disable-next-line @typescript-eslint/prefer-for-of
-      for (let i = 0; i < keys.length; i++) {
-        if (keys[i] === 'progress') {
-          return false;
-        }
-      }
-      return true;
-    });
+    this.storage.clear();
+    return this.storage.keys();
 
-    return false;
   }
 
 }

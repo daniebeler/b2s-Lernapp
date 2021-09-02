@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { StorageService } from 'src/app/services/storage.service';
-import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +13,7 @@ export class HomePage {
 
   courses: Array<string> = [];
   quotes: Array<string> = [];
-  data: any = [];
-  currentcourse: string;
-  percent: string;
+  questionsJSON: any = [];
   userStats: any = [];
   progressPercent = [];
   backgroundProgressbar = [];
@@ -36,7 +33,7 @@ export class HomePage {
   // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
   ngOnInit() {
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      this.data = data;
+      this.questionsJSON = data;
       this.datareader();
     });
   }
@@ -45,65 +42,46 @@ export class HomePage {
     this.storageService.shouldCreateProgressJSON().then(test => {
       const generateProgress = test;
       if (generateProgress === null) {
-        this.generateProgressJson();
+        this.generateProgressJSON();
       }
       else {
         this.progressPercent = [];
         this.backgroundProgressbar = [];
         this.transformProgressbar = [];
-        this.getJSON();
+        this.getProgressJSONFromStorage();
       }
     });
-
-
   }
 
-  generateProgressJson() {
+  generateProgressJSON() {
     const newJSON = {
-      scheine: [
-
-      ]
+      scheine: []
     };
-    for (let schein = 0; schein < Object.keys(this.data.scheine).length; schein++) {
+    for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
 
-      newJSON.scheine.push(
-        {
-          thema: [
+      newJSON.scheine.push({ thema: [] });
 
-          ]
-        }
-      );
-
-      for (let thema = 0; thema < Object.keys(this.data.scheine[schein].Thema).length; thema++) {
-
-        newJSON.scheine[schein].thema.push(
-          {
-            correctQuestion: []
-          }
-        );
-
+      for (let thema = 0; thema < Object.keys(this.questionsJSON.scheine[schein].Thema).length; thema++) {
+        newJSON.scheine[schein].thema.push({ correctQuestion: [] });
         const correctQuestionArray = [];
 
         // eslint-disable-next-line @typescript-eslint/prefer-for-of
-        for (let question = 0; question < Object.keys(this.data.scheine[schein].Thema[thema].questions).length; question++) {
+        for (let question = 0; question < Object.keys(this.questionsJSON.scheine[schein].Thema[thema].questions).length; question++) {
           correctQuestionArray.push(false);
           newJSON.scheine[schein].thema[thema].correctQuestion = correctQuestionArray;
         }
-
       }
-
     }
 
-    this.storageService.set('progress', newJSON).then(test =>{
+    this.storageService.set('progress', newJSON).then(() => {
       this.progressPercent = [];
       this.backgroundProgressbar = [];
       this.transformProgressbar = [];
-      this.getJSON();
+      this.getProgressJSONFromStorage();
     });
-
   }
 
-  async getJSON() {
+  async getProgressJSONFromStorage() {
     this.storageService.getStorage('progress').then(data => {
       this.userStats = data;
       this.getPercent();
@@ -112,12 +90,12 @@ export class HomePage {
 
   getPercent() {
     // eslint-disable-next-line @typescript-eslint/prefer-for-of
-    for (let schein = 0; schein < Object.keys(this.data.scheine).length; schein++) {
+    for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
       let countAll = 0;
       let countTrue = 0;
 
-      for (let thema = 0; thema < Object.keys(this.data.scheine[schein].Thema).length; thema++) {
-        for (let question = 0; question < Object.keys(this.data.scheine[schein].Thema[thema].questions).length; question++) {
+      for (let thema = 0; thema < Object.keys(this.questionsJSON.scheine[schein].Thema).length; thema++) {
+        for (let question = 0; question < Object.keys(this.questionsJSON.scheine[schein].Thema[thema].questions).length; question++) {
           countAll++;
           if (this.userStats.scheine[schein].thema[thema].correctQuestion[question]) {
             countTrue++;
@@ -131,15 +109,13 @@ export class HomePage {
 
   datareader() {
     // eslint-disable-next-line @typescript-eslint/prefer-for-of
-    for (let i = 0; i < this.data.scheine.length; i++) {
-      this.courses.push(this.data.scheine[i].scheinName);
-      this.quotes.push(this.data.scheine[i].quote);
+    for (let i = 0; i < this.questionsJSON.scheine.length; i++) {
+      this.courses.push(this.questionsJSON.scheine[i].scheinName);
+      this.quotes.push(this.questionsJSON.scheine[i].quote);
     }
-
   }
 
   navigate(site: string) {
-
     let scheinZahl: any;
 
     for (const i in this.courses) {
@@ -152,11 +128,9 @@ export class HomePage {
 
   nav() {
     this.router.navigate(['tabs/']);
-
   }
 
   setPercentOfProgressCircle(percent: number) {
-
     this.progressPercent.push(Math.ceil(percent) + '%');
     let deg = percent * 3.6;
     if (percent >= 50) {
@@ -176,5 +150,4 @@ export class HomePage {
     };
     return styles;
   }
-
 }

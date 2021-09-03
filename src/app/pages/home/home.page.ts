@@ -89,9 +89,7 @@ export class HomePage {
   async getProgressJSONFromStorage() {
     this.storageService.getStorage('progress').then(data => {
       this.userStats = data;
-      console.log(this.userStats);
       this.checkIfJSONchanged();
-      this.getPercent();
     });
   }
 
@@ -99,7 +97,9 @@ export class HomePage {
     this.completeLicenses();
     this.completeTopics();
     this.completeQuestions();
-    this.storageService.set('progress', this.userStats);
+    this.storageService.set('progress', this.userStats).then(value => {
+    this.getPercent();
+    });
   }
 
   completeLicenses() {

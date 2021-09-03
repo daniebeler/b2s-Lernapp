@@ -18,23 +18,28 @@ export class KnotSliderPage implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.knot = this.activatedRoute.snapshot.paramMap.get('knot');
-    this.httpClient.get('./assets/data/knots.json').subscribe(data => {
-      this.data = data;
-      this.getSlidePictures();
-      this.knotFirstSlide();
+
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.knot = this.router.getCurrentNavigation().extras.state.knotindex;
+        this.httpClient.get('./assets/data/knots.json').subscribe(data => {
+          this.data = data;
+          this.getSlidePictures();
+          this.knotFirstSlide();
+        });
+      }
     });
   }
 
   knotFirstSlide() {
-    this.knotName = this.data.knots[this.knot].knotName;
-    this.knotUsage = this.data.knots[this.knot].knotUsage;
+    this.knotName = this.data.knots[this.knot].name;
+    this.knotUsage = this.data.knots[this.knot].usage;
   }
-
 
   getSlidePictures() {
      for (let i = 0; i < Object.keys(this.data.knots[this.knot].pictures).length; i++) {
@@ -43,5 +48,4 @@ export class KnotSliderPage implements OnInit {
        this.knotExplanation.push(this.data.knots[this.knot].slideExplanation[i]);
      }
   }
-
 }

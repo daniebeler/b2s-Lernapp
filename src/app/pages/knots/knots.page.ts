@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 
 @Component({
@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 })
 export class KnotsPage implements OnInit {
 
-  data: any;
-  knots: Array <string> = [];
+  knotsArray: Array<any> = [];
 
   constructor(
     private httpClient: HttpClient,
@@ -20,28 +19,17 @@ export class KnotsPage implements OnInit {
 
   ngOnInit() {
     this.httpClient.get('./assets/data/knots.json').subscribe(data => {
-      this.data = data;
-      this.datareader();
+      const knotsJSON: any = data;
+      this.knotsArray = knotsJSON.knots;
     });
   }
 
-  datareader() {
-
-    for (let i = 0; i < Object.keys(this.data.knots).length; i++) {
-      this.knots.push(this.data.knots[i].knotName);
-    }
-  }
-
-  navigate(site: string) {
-
-    let knotNumber: any;
-
-    for (const i in this.knots) {
-      if (this.knots[i] === site) {
-        knotNumber = i;
+  navigate(knotIndex: any) {
+    const navigationExtras: NavigationExtras = {
+      state: {
+        knotindex: knotIndex
       }
-    }
-
-    this.router.navigate(['tabs/knots/knot-slider/' + knotNumber]);
+    };
+    this.router.navigate(['tabs/knots/knot-slider'], navigationExtras);
   }
 }

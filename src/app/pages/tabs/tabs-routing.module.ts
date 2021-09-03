@@ -25,7 +25,7 @@ const routes: Routes = [
         loadChildren: () => import('../knots/knots.module').then(m => m.KnotsPageModule)
       },
       {
-        path: 'knots/knot-slider/:knot',
+        path: 'knots/knot-slider',
         loadChildren: () => import('../knot-slider/knot-slider.module').then(m => m.KnotSliderPageModule)
       },
       {

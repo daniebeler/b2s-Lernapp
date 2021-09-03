@@ -1,28 +1,28 @@
 {
-    "knots": [
-        {
-            "knotName": "Palstek",
-            "knotUsage": "Dieser knoten wird überall verwendet",
-            "pictures": [
-                "../../../assets/img/knots/VCBC.jpg",
-                "../../../assets/img/knots/VCBC.jpg",
-                "../../../assets/img/knots/VCBC.jpg"
-            ],
-            "slideExplanation": [
-                "ende dort durch",
-                "ende da durch",
-                "festziehen"
-            ]
-        },
-        {
-            "knotName": "Kreuzknoten",
-            "knotUsage": "Dieser knoten wird überall verwendet",
-            "pictures": [
-                "../../../assets/img/knots/VCBC.jpg"
-            ],
-            "slideExplanation": [
-                "ende dort durch"
-            ]
-        }
-    ]
+  "knots": [
+    {
+      "name": "Palstek",
+      "usage": "Dieser knoten wird überall verwendet",
+      "pictures": [
+        "../../../assets/img/knots/VCBC.jpg",
+        "../../../assets/img/knots/VCBC.jpg",
+        "../../../assets/img/knots/VCBC.jpg"
+      ],
+      "slideExplanation": [
+        "ende dort durch",
+        "ende da durch",
+        "festziehen"
+      ]
+    },
+    {
+      "name": "Kreuzknoten",
+      "usage": "Dieser knoten wird überall verwendet",
+      "pictures": [
+        "../../../assets/img/knots/VCBC.jpg"
+      ],
+      "slideExplanation": [
+        "ende dort durch"
+      ]
+    }
+  ]
 }

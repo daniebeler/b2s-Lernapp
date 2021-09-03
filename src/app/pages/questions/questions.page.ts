@@ -29,6 +29,7 @@ export class QuestionsPage implements OnInit {
   quizType = 0;
   image = [];
   progress: any = [];
+  answerDisable = 'auto';
 
   checkButtonText = 'Check';
 
@@ -142,6 +143,7 @@ export class QuestionsPage implements OnInit {
       }
 
       this.checkButtonText = 'Weiter';
+      this.answerDisable = 'none';
       document.documentElement.style.setProperty(this.infos[0], 'visible');
     }
 
@@ -178,6 +180,7 @@ export class QuestionsPage implements OnInit {
       this.datareader();
       this.clearCheckboxes();
       this.checkButtonText = 'Check';
+      this.answerDisable = 'auto';
     }
   }
 

@@ -25,7 +25,7 @@
   </ion-item>
 
   <ion-item class="button-topic ion-margin-top" *ngFor="let topicName of topicNames; let i = index"
-    (click)="navigate(topicName)">
+    (click)="navigate(i)">
     <ion-label color="light" class="ion-text-wrap">{{topicName}} ({{numberOfQuestionsPerTopic[i]}})</ion-label>
     <ion-icon color="light" name="play"></ion-icon>
   </ion-item>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { StorageService } from 'src/app/services/storage.service';
@@ -165,7 +165,6 @@ export class HomePage {
         }
       }
     }
-    console.log(this.userStats);
   }
 
   getPercent() {
@@ -195,15 +194,11 @@ export class HomePage {
     }
   }
 
-  navigate(site: string) {
-    let scheinZahl: any;
-
-    for (const i in this.courses) {
-      if (this.courses[i] === site) {
-        scheinZahl = i;
-      }
-    }
-    this.router.navigate(['tabs/home/quiztypes/' + scheinZahl]);
+  navigate(index: any) {
+    const test = {
+        license: index
+      };
+    this.router.navigate(['tabs/home/quiztypes/' + JSON.stringify(test)]);
   }
 
   nav() {

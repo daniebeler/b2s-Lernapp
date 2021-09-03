@@ -21,6 +21,7 @@ export class QuiztypesPage implements OnInit {
   backgroundProgressbar = [];
   transformProgressbar = [];
   userStats: any = [];
+  scheinJSON: any = [];
 
   constructor(
     private router: Router,
@@ -71,7 +72,9 @@ export class QuiztypesPage implements OnInit {
   }
 
   datareader() {
-    this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
+    this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
+    this.schein = this.scheinJSON.license;
+
     this.scheinName = this.data.scheine[this.schein].scheinName;
     this.quote = this.data.scheine[this.schein].quote;
 
@@ -82,8 +85,15 @@ export class QuiztypesPage implements OnInit {
     }
   }
 
-  navigate(site: string) {
-    this.router.navigate([site + this.schein]);
+  navigate(site: string, quiztypIndex: number) {
+
+  this.scheinJSON = {
+    license: this.schein,
+    quiztype: quiztypIndex,
+    topic: null
+  };
+
+    this.router.navigate([site + JSON.stringify(this.scheinJSON)]);
   }
 
   navigateHome() {

@@ -1,7 +1,7 @@
 <app-custom-header></app-custom-header>
 
 <ion-content class="ion-padding">
-  <ion-item class="ion-margin-top" *ngFor="let course of courses; let i = index" (click)="navigate(course)">
+  <ion-item class="ion-margin-top" *ngFor="let course of courses; let i = index" (click)="navigate(i)">
     <ion-grid class="ion-no-padding">
       <ion-row>
         <ion-col>

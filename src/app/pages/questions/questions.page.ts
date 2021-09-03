@@ -23,10 +23,12 @@ export class QuestionsPage implements OnInit {
   themaindex = 0;
   answerschecker = [];
   schein: string;
+  scheinJSON: any = [];
+  quiztypeIndex: any;
   thema: string;
   questionsnumber = 0;
   currentQuestion = 0;
-  quizType = 0;
+  justOneTopic = false;
   image = [];
   progress: any = [];
   answerDisable = 'auto';
@@ -45,17 +47,23 @@ export class QuestionsPage implements OnInit {
   ngOnInit() {
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
+
+
+      this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
+      console.log(this.scheinJSON);
+      this.schein = this.scheinJSON.license;
+      this.quiztypeIndex = this.scheinJSON.quiztype;
+
+      if (this.scheinJSON.topic !== null) {
+        this.justOneTopic = true;
+        this.themaindex = this.scheinJSON.topic;
+        this.thema = String(this.themaindex);
+        console.log(this.thema);
+      }
+
       this.getJSON();
     });
 
-
-    this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
-    if (this.schein.length === 2) {
-      this.quizType = 1;
-      this.thema = this.schein.charAt(1);
-      this.schein = this.schein.charAt(0);
-      this.themaindex = Number(this.thema);
-    }
   }
 
   ionViewDidEnter() {
@@ -72,7 +80,7 @@ export class QuestionsPage implements OnInit {
 
   questionnumberfunction() {
     let qeustionnumbers = 0;
-    if (this.quizType === 0) {
+    if (this.justOneTopic === false) {
       for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
         for (const a of Object.keys(this.data.scheine[this.schein].Thema[i].questions)) {
           qeustionnumbers++;

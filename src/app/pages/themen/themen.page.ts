@@ -21,6 +21,7 @@ export class ThemenPage implements OnInit {
   transformProgressbar = [];
   userStats: any = [];
   schein: any;
+  scheinJSON: any = [];
 
   constructor(
     private httpClient: HttpClient,
@@ -38,8 +39,8 @@ export class ThemenPage implements OnInit {
       if (this.allQuestions === undefined) {
         this.allQuestions = data;
         this.datareader();
+        this.getJSON();
       }
-      this.getJSON();
     });
   }
 
@@ -70,8 +71,8 @@ export class ThemenPage implements OnInit {
   }
 
   datareader() {
-    this.schein = this.activatedRoute.snapshot.paramMap.get('schein');
-
+    this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
+    this.schein = this.scheinJSON.license;
 // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < this.allQuestions.scheine[this.schein].Thema.length; i++) {
       this.topicNames.push(this.allQuestions.scheine[this.schein].Thema[i].themaName);
@@ -81,18 +82,16 @@ export class ThemenPage implements OnInit {
     this.quote = this.allQuestions.scheine[this.schein].quote;
   }
 
-  navigate(theme: string) {
+  navigate(i: number) {
 
-    let scheinZahl: any;
+    this.scheinJSON = {
+    license: this.schein,
+    quiztype: this.scheinJSON.quiztype,
+    topic: i
+  };
 
-    for (const i in this.topicNames) {
-      if (this.topicNames[i] === theme) {
-        scheinZahl = i;
-      }
-    }
+    this.router.navigate(['questions/' + JSON.stringify(this.scheinJSON)]);
 
-    const schein = this.activatedRoute.snapshot.paramMap.get('schein');
-    this.router.navigate(['questions/' + schein + scheinZahl]);
   }
 
   navigateHome() {

@@ -9,11 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResultPage implements OnInit {
 
+  resultJSON: any;
+
   data: any;
   resultArray: Array<boolean> = [];
   resultArrayCounter = 0;
   result: any;
-  topicIndizes: Array<string> = [];
+  topicIndizes: Array<number> = [];
   trueInTheme: Array<any> = [];
   falseInTheme: Array<any> = [];
   topic: number;
@@ -41,17 +43,48 @@ export class ResultPage implements OnInit {
 
   ngOnInit() {
     const resultreceived = this.activatedRoute.snapshot.paramMap.get('result');
-    this.resultreceivedToArray(resultreceived);
-    this.getScheinAndTopic(resultreceived);
+    this.resultJSON = JSON.parse(resultreceived);
+
+    this.generateTopicsArray();
+
+    console.log(this.resultJSON);
+    console.log(this.topicIndizes);
+
+    //this.resultreceivedToArray(resultreceived);
+    //this.getScheinAndTopic(resultreceived);
 
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
-      this.fillClickedArray();
-      this.createTopicsJSON();
-      this.answersInTheme();
+      //this.fillClickedArray();
     });
 
   }
+
+
+  generateTopicsArray(){
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
+    for (let i = 0; i < this.resultJSON.length; i++) {
+      let found = false;
+      // eslint-disable-next-line @typescript-eslint/prefer-for-of
+      for (let j = 0; j < this.topicIndizes.length; j++) {
+        if(this.resultJSON[i].topic === this.topicIndizes[j]){
+          found = true;
+        }
+      }
+      if(!found){
+        this.topicIndizes.push(this.resultJSON[i].topic);
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
 
   getScheinAndTopic(resultreceived: string) {
     this.topic = Number(resultreceived.charAt(1));
@@ -85,7 +118,7 @@ export class ResultPage implements OnInit {
 
     if (isNaN(this.topic)) {
       for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
-        this.topicIndizes.push(i.toString());
+        this.topicIndizes.push(i);
         const trueAnzahl = this.countTrue(i);
         this.topics.push({
           thema: [
@@ -99,7 +132,7 @@ export class ResultPage implements OnInit {
       }
     }
     else {
-      this.topicIndizes.push(this.topic.toString());
+      this.topicIndizes.push(this.topic);
       const trueAnzahl = this.countTrue(this.topic);
       this.topics.push({
         thema: [
@@ -114,7 +147,7 @@ export class ResultPage implements OnInit {
   }
 
 
-  getPercent(topicIndex: number , themaIndex: number) {
+  getPercent(topicIndex: number, themaIndex: number) {
     const trueCount = this.topics[topicIndex].thema[0].trueCount;
     const answersNumber = Object.keys(this.data.scheine[this.schein].Thema[themaIndex].questions).length;
     const percent = trueCount / answersNumber * 100;
@@ -246,7 +279,7 @@ export class ResultPage implements OnInit {
 
   setPercentOfProgressCircle(percent: number) {
 
-    this.percentAusgabe.push( Math.ceil(percent) + '%');
+    this.percentAusgabe.push(Math.ceil(percent) + '%');
     let deg = percent * 3.6;
     if (percent >= 50) {
       this.backgroundProgressbar.push('var(--color-progress-bar)');
@@ -255,16 +288,15 @@ export class ResultPage implements OnInit {
     else {
       this.backgroundProgressbar.push('var(--color-progress-bar-dark)');
     }
-    this.transformProgressbar.push('rotate('+deg+'deg)');
+    this.transformProgressbar.push('rotate(' + deg + 'deg)');
   }
 
   applyStyles(thema: number) {
-    const styles = {'background-color' : this.backgroundProgressbar[thema],
-                    transform: this.transformProgressbar[thema]};
+    const styles = {
+      'background-color': this.backgroundProgressbar[thema],
+      transform: this.transformProgressbar[thema]
+    };
     return styles;
-}
+  }
 
 }
-
-
-

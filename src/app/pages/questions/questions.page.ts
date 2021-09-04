@@ -136,19 +136,24 @@ export class QuestionsPage implements OnInit {
         }
       }
 
+      let stateBool;
+
       if (countTrue === 4) {
-        this.answerschecker.push(true);
-        console.log(this.schein);
-        console.log(this.themaindex);
-        console.log(this.progress);
-        this.progress.scheine[this.schein].thema[this.themaindex].correctQuestion[this.questionindex] = true;
-        this.storageService.set('progress', this.progress);
+        stateBool = true;
       }
       else {
-        this.answerschecker.push(false);
-        this.progress.scheine[this.schein].thema[this.themaindex].correctQuestion[this.questionindex] = false;
-        this.storageService.set('progress', this.progress);
+        stateBool = false;
       }
+
+      const jason = {
+        topic: this.themaindex,
+        question: this.currentQuestion,
+        state: stateBool
+      };
+
+      this.answerschecker.push(jason);
+      this.progress.scheine[this.schein].thema[this.themaindex].correctQuestion[this.questionindex] = stateBool;
+      this.storageService.set('progress', this.progress);
 
       this.checkButtonText = 'Weiter';
       this.answerDisable = 'none';
@@ -162,12 +167,7 @@ export class QuestionsPage implements OnInit {
           this.currentQuestion = 0;
           this.questionindex = 0;
           this.themaindex = 0;
-          const answercheckerToResult = this.answerschecker;
-          this.answerschecker = [];
-
-          this.router.navigate(['result/' + this.schein.toString() + answercheckerToResult]);
-
-
+          this.navigate();
         }
         else {
           if (this.thema === undefined) {
@@ -177,7 +177,7 @@ export class QuestionsPage implements OnInit {
             this.currentQuestion = 0;
             this.questionindex = 0;
             this.themaindex = Number(this.thema);
-            this.router.navigate(['result/' + this.schein.toString() + this.thema.toString() + this.answerschecker]);
+            this.navigate();
           }
           this.questionindex = 0;
         }
@@ -193,7 +193,6 @@ export class QuestionsPage implements OnInit {
   }
 
   clearCheckboxes() {
-    //checkboxes wieder clearen
     this.answerBool = [false, false, false, false];
     for (let i = 0; i < 4; i++) {
       document.documentElement.style.setProperty(this.fields[i], 'var(--ion-color-button)');
@@ -203,5 +202,9 @@ export class QuestionsPage implements OnInit {
 
   navigateHome() {
     this.router.navigate(['tabs/home']);
+  }
+
+  navigate(){
+    this.router.navigate(['result/' + JSON.stringify(this.answerschecker)]);
   }
 }

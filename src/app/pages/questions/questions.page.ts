@@ -148,7 +148,8 @@ export class QuestionsPage implements OnInit {
       const jason = {
         topic: this.themaindex,
         question: this.currentQuestion,
-        state: stateBool
+        state: stateBool,
+        license: this.schein
       };
 
       this.answerschecker.push(jason);

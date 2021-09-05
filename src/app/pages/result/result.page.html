@@ -1,16 +1,19 @@
 <app-custom-header></app-custom-header>
 
 <ion-content class="ion-padding">
-
-  <ion-item class="ion-margin-top" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="buttonClicked(i)">
-    <ion-list style="width: 100%;">
-      <!-- <ion-grid>
+  <ion-item class="ion-margin-top" *ngFor="let topicIndex of topicIndizes; let i = index" (click)="toggleItemContent(i)">
+    <ion-list style="width: 100%">
+      <ion-grid>
         <ion-row>
           <ion-col>
-            <p class="underlined ion-text-wrap title">{{this.data.scheine[this.schein].Thema[topicIndex].themaName}}</p>
+            <p class="underlined ion-text-wrap title">
+              {{this.data.scheine[this.schein].Thema[topicIndex].themaName}}
+            </p>
             <div id="subtitle" *ngIf="!this.clicked[i];">
-              <p>True: {{this.topics[i].thema[0].trueCount}}<br>
-                False: {{this.topics[i].thema[0].falseCount}}</p>
+              <p>
+                True: {{this.trueQuestions[this.topicIndex]}}<br />
+                False: {{this.falseQuestions[this.topicIndex]}}
+              </p>
             </div>
           </ion-col>
           <ion-col size="auto">
@@ -48,10 +51,9 @@
             </div>
           </ion-col>
         </ion-row>
-      </ion-grid> -->
+      </ion-grid>
     </ion-list>
   </ion-item>
-
 </ion-content>
 
 <app-custom-footer></app-custom-footer>

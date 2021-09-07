@@ -64,6 +64,7 @@ export class QuestionsPage implements OnInit {
   }
 
   ionViewDidEnter() {
+    this.answerschecker = [];
     this.clearCheckboxes();
   }
 

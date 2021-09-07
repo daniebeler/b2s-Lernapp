@@ -15,6 +15,7 @@ export class KnotSliderPage implements OnInit {
   knotName: string;
   knotUsage: string;
   knotExplanation = [];
+  arrow = '../../../assets/icon/swipeRight.png';
 
   constructor(
     private activatedRoute: ActivatedRoute,

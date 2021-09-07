@@ -50,7 +50,6 @@ export class QuestionsPage implements OnInit {
 
 
       this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
-      console.log(this.scheinJSON);
       this.schein = this.scheinJSON.license;
       this.quiztypeIndex = this.scheinJSON.quiztype;
 
@@ -58,7 +57,6 @@ export class QuestionsPage implements OnInit {
         this.justOneTopic = true;
         this.themaindex = this.scheinJSON.topic;
         this.thema = String(this.themaindex);
-        console.log(this.thema);
       }
 
       this.getJSON();

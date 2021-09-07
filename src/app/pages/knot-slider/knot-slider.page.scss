@@ -7,15 +7,18 @@ ion-slides{
   background: var(--ion-color-button);
 }
 
-
-.icon {
-  top: 200px;
-  left: 0;
-}
-
 .arrow {
   position: absolute;
   height: 80px;
   width: 80px;
   bottom: 50px;
+}
+
+.back ion-icon{
+  color: white;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+  font-size: 25px;
 }

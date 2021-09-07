@@ -49,4 +49,8 @@ export class KnotSliderPage implements OnInit {
        this.knotExplanation.push(this.data.knots[this.knot].slideExplanation[i]);
      }
   }
+
+  navigateBack() {
+    this.router.navigate(['tabs/knots']);
+  }
 }

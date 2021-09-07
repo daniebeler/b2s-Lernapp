@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -12,10 +13,8 @@ export class QuestionsPage implements OnInit {
 
   question = '';
   data: any = [];
-  answer1 = '';
-  answer2 = '';
-  answer3 = '';
-  answer4 = '';
+  answerArray = [];
+  answerIndexArray = [];
   answerBool = [false, false, false, false];
   fields = ['--field1', '--field2', '--field3', '--field4'];
   infos = ['--info1'];
@@ -100,11 +99,12 @@ export class QuestionsPage implements OnInit {
     //frage und antworte wieder auslesen
     this.question = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].question;
 
-    this.answer1 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer1;
-    this.answer2 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer2;
-    this.answer3 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer3;
-    this.answer4 = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer4;
+    this.answerIndexArray = [];
 
+    this.answerArray[this.makeRandomNumber()] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer1;
+    this.answerArray[this.makeRandomNumber()] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer2;
+    this.answerArray[this.makeRandomNumber()] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer3;
+    this.answerArray[this.makeRandomNumber()] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].answer4;
     this.image[0] = this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].image;
 
     if (this.image[0] === undefined) {
@@ -118,6 +118,27 @@ export class QuestionsPage implements OnInit {
     this.currentQuestion++;
   }
 
+  makeRandomNumber() {
+
+    let randomNumber = Math.floor(Math.random() * (3 - 0 + 1)) + 0;
+
+    let wrong = 0;
+
+    do {
+      wrong = 0;
+      // eslint-disable-next-line @typescript-eslint/prefer-for-of
+      for (let i = 0; i < this.answerIndexArray.length; i++) {
+        if (randomNumber === this.answerIndexArray[i]) {
+          randomNumber = Math.floor(Math.random() * (3 - 0 + 1)) + 0;
+          wrong++;
+        }
+      }
+    }
+    while (wrong !== 0);
+    this.answerIndexArray.push(randomNumber);
+    return randomNumber;
+  }
+
 
   check() {
     //change color if is true or false
@@ -125,12 +146,16 @@ export class QuestionsPage implements OnInit {
       let countTrue = 0;
 
       for (let i = 0; i < this.answerBool.length; i++) {
-        if (this.answerBool[i] === this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].correctAnswer[i]) {
-          document.documentElement.style.setProperty(this.fields[i], '#00ff003f');
+        // console.log(this.answerIndexArray[i]);
+        // console.log(this.answerBool[this.answerIndexArray[i]] + '   ' + this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].correctAnswer[i]);
+        if (this.answerBool[this.answerIndexArray[i]] === this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].correctAnswer[i]) {
+          document.documentElement.style.setProperty(this.fields[this.answerIndexArray[i]], '#00ff003f');
           countTrue++;
+          console.log(this.answerIndexArray[i]);
         }
         else {
-          document.documentElement.style.setProperty(this.fields[i], '#ff00003f');
+          document.documentElement.style.setProperty(this.fields[this.answerIndexArray[i]], '#ff00003f');
+          console.log(this.answerIndexArray[i]);
         }
       }
 
@@ -203,7 +228,7 @@ export class QuestionsPage implements OnInit {
     this.router.navigate(['tabs/home']);
   }
 
-  navigate(){
+  navigate() {
     this.router.navigate(['result/' + JSON.stringify(this.answerschecker)]);
   }
 }

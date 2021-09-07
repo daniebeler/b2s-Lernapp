@@ -147,7 +147,14 @@ export class ResultPage implements OnInit {
     if (this.wrongQuestionsJSON.thema[topicIndex].question.length !== 0) {
       this.wrongQuestionsArray = [];
       this.wrongQuestionsJSONtoArray(topicIndex);
-      this.clicked[topicIndex] = !this.clicked[topicIndex];
+      if (this.clicked[topicIndex] === false || this.clicked[topicIndex] === undefined) {
+        this.clicked.fill(false);
+        this.clicked[topicIndex] = !this.clicked[topicIndex];
+      }
+      else {
+        this.clicked.fill(false);
+      }
+
     }
   }
 

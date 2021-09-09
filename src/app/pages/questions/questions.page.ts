@@ -31,6 +31,8 @@ export class QuestionsPage implements OnInit {
   image = [];
   progress: any = [];
   answerDisable = 'auto';
+  quizQuestionsArray = [];
+  quizQuestionsPerTopic = [5, 3, 2, 2, 2, 2, 2, 2, 2, 2];
 
   checkButtonText = 'Check';
 
@@ -44,6 +46,8 @@ export class QuestionsPage implements OnInit {
   }
 
   ngOnInit() {
+
+
     this.httpClient.get('./assets/data/questions.json').subscribe(data => {
       this.data = data;
 
@@ -57,6 +61,12 @@ export class QuestionsPage implements OnInit {
         this.themaindex = this.scheinJSON.topic;
         this.thema = String(this.themaindex);
       }
+
+      if (this.quiztypeIndex === 1) {
+        this.quizsimulation();
+      }
+
+      this.questionsnumber = this.questionnumberfunction();
 
       this.getJSON();
     });
@@ -78,17 +88,23 @@ export class QuestionsPage implements OnInit {
 
   questionnumberfunction() {
     let qeustionnumbers = 0;
-    if (this.justOneTopic === false) {
-      for (let i = 0; i < Object.keys(this.data.scheine[this.schein].Thema).length; i++) {
-        for (const a of Object.keys(this.data.scheine[this.schein].Thema[i].questions)) {
+    if (this.quiztypeIndex === 0) {
+      if (this.justOneTopic === false) {
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let i = 0; i < this.data.scheine[this.schein].Thema.length; i++) {
+          for (const a of this.data.scheine[this.schein].Thema[i].questions) {
+            qeustionnumbers++;
+          }
+        }
+      }
+      else {
+        for (const a of this.data.scheine[this.schein].Thema[this.themaindex].questions) {
           qeustionnumbers++;
         }
       }
     }
     else {
-      for (const a of Object.keys(this.data.scheine[this.schein].Thema[this.themaindex].questions)) {
-        qeustionnumbers++;
-      }
+      qeustionnumbers = this.quizQuestionsPerTopic.reduce((a,b) => a + b, 0);
     }
 
 
@@ -110,10 +126,6 @@ export class QuestionsPage implements OnInit {
 
     if (this.image[0] === undefined) {
       this.image = [];
-    }
-
-    if (this.questionsnumber === 0) {
-      this.questionsnumber = this.questionnumberfunction();
     }
 
     this.currentQuestion++;
@@ -152,11 +164,9 @@ export class QuestionsPage implements OnInit {
         if (this.answerBool[this.answerIndexArray[i]] === this.data.scheine[this.schein].Thema[this.themaindex].questions[this.questionindex].correctAnswer[i]) {
           document.documentElement.style.setProperty(this.fields[this.answerIndexArray[i]], '#00ff003f');
           countTrue++;
-          console.log(this.answerIndexArray[i]);
         }
         else {
           document.documentElement.style.setProperty(this.fields[this.answerIndexArray[i]], '#ff00003f');
-          console.log(this.answerIndexArray[i]);
         }
       }
 
@@ -171,7 +181,7 @@ export class QuestionsPage implements OnInit {
 
       const jason = {
         topic: this.themaindex,
-        question: this.currentQuestion,
+        question: this.questionindex,
         state: stateBool,
         license: this.schein
       };
@@ -187,8 +197,8 @@ export class QuestionsPage implements OnInit {
 
     else {
       //next Question or next Thema or fertig
-      if (Object.keys(this.data.scheine[this.schein].Thema[this.themaindex].questions).length === this.questionindex + 1) {
-        if (Object.keys(this.data.scheine[this.schein].Thema).length === this.themaindex + 1 && this.thema === undefined) {
+      if ((this.data.scheine[this.schein].Thema[this.themaindex].questions.length === this.questionindex + 1 && this.quiztypeIndex === 0)) {
+        if (this.data.scheine[this.schein].Thema.length === this.themaindex + 1 && this.thema === undefined) {
           this.currentQuestion = 0;
           this.questionindex = 0;
           this.themaindex = 0;
@@ -208,7 +218,12 @@ export class QuestionsPage implements OnInit {
         }
       }
       else {
-        this.questionindex++;
+        if (this.quiztypeIndex === 0) {
+          this.questionindex++;
+        }
+        else {
+          this.quizsimulation();
+        }
       }
       this.datareader();
       this.clearCheckboxes();
@@ -216,6 +231,48 @@ export class QuestionsPage implements OnInit {
       this.answerDisable = 'auto';
     }
   }
+
+
+  quizsimulation() {
+
+    if (this.quizQuestionsArray.length === this.quizQuestionsPerTopic[this.themaindex]) {
+      if (this.data.scheine[this.schein].Thema.length === this.themaindex + 1) {
+        this.currentQuestion = 0;
+        this.questionindex = 0;
+        this.themaindex = 0;
+        this.navigate();
+        return;
+      }
+      this.themaindex++;
+      this.quizQuestionsArray = [];
+    }
+
+    this.questionindex = this.randomQuestion();
+  }
+
+  randomQuestion() {
+
+    const max = this.data.scheine[this.schein].Thema[this.themaindex].questions.length - 1;
+    const min = 0;
+    let randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+
+    let wrong = 0;
+
+    do {
+      wrong = 0;
+      // eslint-disable-next-line @typescript-eslint/prefer-for-of
+      for (let i = 0; i < this.quizQuestionsArray.length; i++) {
+        if (randomNumber === this.quizQuestionsArray[i]) {
+          randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+          wrong++;
+        }
+      }
+    }
+    while (wrong !== 0);
+    this.quizQuestionsArray.push(randomNumber);
+    return randomNumber;
+  }
+
 
   clearCheckboxes() {
     this.answerBool = [false, false, false, false];

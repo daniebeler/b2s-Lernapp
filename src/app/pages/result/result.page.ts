@@ -34,6 +34,7 @@ export class ResultPage implements OnInit {
   falseQuestions = [];
   currentQuestion = [];
   lastclickedButton = 0;
+  questionCounter = -1;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -72,22 +73,15 @@ export class ResultPage implements OnInit {
       }
       if (!found) {
         this.topicIndizes.push(this.resultJSON[i].topic);
-        this.fillCurrentQuestionArray(this.resultJSON[i].topic);
         this.wrongQuestionsJSON.thema.push({
           question: []
         });
+        console.log(this.wrongQuestionsJSON);
         this.getquestions(this.resultJSON[i].topic);
         this.getPercent(this.resultJSON[i].topic);
       }
     }
   }
-
-  fillCurrentQuestionArray(topic: number) {
-    for (let i = 0; i < topic + 1; i++) {
-      this.currentQuestion.push(0);
-    }
-  }
-
 
   getquestions(topic: any) {
     let countTrue = 0;
@@ -96,7 +90,7 @@ export class ResultPage implements OnInit {
     // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < this.resultJSON.length; i++) {
       if (this.resultJSON[i].topic === topic) {
-        this.currentQuestion[topic] = this.currentQuestion[topic] + 1;
+        this.questionCounter++;
 
         if (this.resultJSON[i].state === true) {
           countTrue++;
@@ -114,7 +108,8 @@ export class ResultPage implements OnInit {
 
   getPercent(topicIndex: number) {
     const trueCount = this.trueQuestions[topicIndex];
-    const answersNumber = Object.keys(this.data.scheine[this.schein].Thema[topicIndex].questions).length;
+    console.log(this.wrongQuestionsJSON.thema[topicIndex].question.length);
+    const answersNumber = trueCount + this.wrongQuestionsJSON.thema[topicIndex].question.length;
     const percent = trueCount / answersNumber * 100;
     this.setPercentOfProgressCircle(percent);
   }
@@ -129,11 +124,12 @@ export class ResultPage implements OnInit {
     }
 
     this.wrongQuestionsJSON.thema[jsonposition].question.push({
-      id: this.data.scheine[this.schein].Thema[topic].questions[this.currentQuestion[topic] - 1].id,
-      question: this.data.scheine[this.schein].Thema[topic].questions[this.currentQuestion[topic] - 1].question,
-      trueAnswers: this.getTrueAnswers(topic, this.currentQuestion[topic] - 1),
-      wrongAnswers: this.getWrongAnswers(topic, this.currentQuestion[topic] - 1)
+      id: this.data.scheine[this.schein].Thema[topic].questions[this.resultJSON[this.questionCounter].question].id,
+      question: this.data.scheine[this.schein].Thema[topic].questions[this.resultJSON[this.questionCounter].question].question,
+      trueAnswers: this.getTrueAnswers(topic, this.resultJSON[this.questionCounter].question),
+      wrongAnswers: this.getWrongAnswers(topic, this.resultJSON[this.questionCounter].question)
     });
+
   }
 
   wrongQuestionsJSONtoArray(topic: number) {

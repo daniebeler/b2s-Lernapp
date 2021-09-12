@@ -35,6 +35,7 @@ export class ResultPage implements OnInit {
   currentQuestion = [];
   lastclickedButton = 0;
   questionCounter = -1;
+  topicCounter = 0;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -108,10 +109,10 @@ export class ResultPage implements OnInit {
 
   getPercent(topicIndex: number) {
     const trueCount = this.trueQuestions[topicIndex];
-    console.log(this.wrongQuestionsJSON.thema[topicIndex].question.length);
-    const answersNumber = trueCount + this.wrongQuestionsJSON.thema[topicIndex].question.length;
+    const answersNumber = trueCount + this.wrongQuestionsJSON.thema[this.topicCounter].question.length;
     const percent = trueCount / answersNumber * 100;
     this.setPercentOfProgressCircle(percent);
+    this.topicCounter++;
   }
 
   addWrongQuestions(topic: any) {

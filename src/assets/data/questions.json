@@ -490,7 +490,7 @@
           ]
         },
         {
-          "id": 1,
+          "id": 2,
           "indicator": "B",
           "themaName": "Segeltheorie",
           "questions": [
@@ -779,16 +779,17 @@
           ]
         },
         {
-          "id": 1,
+          "id": 3,
           "indicator": "C",
           "themaName": "Bootskunde und Tauwerk",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Was wird den Spieren zugeordnet?",
+              "answer1": "Großbaum",
+              "answer2": "Mast",
+              "answer3": "Saling",
+              "answer4": "Spinnakerbaum",
               "correctAnswer": [
                 false,
                 true,
@@ -797,11 +798,269 @@
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "Wie wird das stehende Gut zur Abstützung des Mastes in Schiffslängsachsenrichtung bezeichnet?",
+              "answer1": "Wanten",
+              "answer2": "Stage",
+              "answer3": "Saling",
+              "answer4": "Dirk",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 3,
+              "question": "Was kann dem stehenden Gut zugeordnet werden?",
+              "answer1": "Ankertrosse",
+              "answer2": "Vorstag",
+              "answer3": "Schoten",
+              "answer4": "Wanten",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 4,
+              "question": "Mit welcher Vorrichtung verändert der Rudergänger die Stellung des Ruderblattes?",
+              "answer1": "Saling",
+              "answer2": "Pinne",
+              "answer3": "Spriet",
+              "answer4": "Spill",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Was wird als Kiel bezeichnet?",
+              "answer1": "Das auf Jollen absenkbare Schwert in Mittschiffsebene",
+              "answer2": "Ein baulicher Querverband zur Aufnahme der Planken",
+              "answer3": "Ein fester Rahmen über der Wasserlinie zur Aufnahme des Schwerts",
+              "answer4": "Der unterste Längsverband des Bootsrumpfes",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 6,
+              "question": "Welche der hier genannten Boote haben zwei Rümpfe?",
+              "answer1": "Katamarane",
+              "answer2": "Trimarane",
+              "answer3": "Skiffs",
+              "answer4": "Dinghis",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Wo kann am Großsegel ein Liektau angebracht werden?",
+              "answer1": "Vorliek",
+              "answer2": "Unterliek",
+              "answer3": "Achterliek",
+              "answer4": "Am Schothorn, um das Unterliek zur Baumnock zu spannen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Welche der aufgezählten Segel können von einem katgetakelten Boot geführt werden?",
+              "answer1": "Genua",
+              "answer2": "Besansegel",
+              "answer3": "Großsegel",
+              "answer4": "Sturmfock",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 9,
+              "question": "In welche der angeführten Kategorien von Segeln fällt eine Sturmfock?",
+              "answer1": "Beisegel",
+              "answer2": "Schratsegel",
+              "answer3": "Sprietsegel",
+              "answer4": "Stagsegel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 10,
+              "question": "Welche Art von Segel ist hier abgebildet?",
+              "answer1": "Lateinersegel",
+              "answer2": "Gaffelsegel",
+              "answer3": "Rahsegel",
+              "answer4": "Hochsegel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 11,
+              "question": "Welche der folgenden Ausdrücke benennen Ecken eines Hochsegels?",
+              "answer1": "Kopf",
+              "answer2": "Wirbel",
+              "answer3": "Fuß",
+              "answer4": "Schothorn",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Welches der angeführten Segel wird in der Regel aus besonders schwerem Tuch gefertigt?",
+              "answer1": "Sturmfock",
+              "answer2": "Genua",
+              "answer3": "Großsegel",
+              "answer4": "Spinnaker",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 13,
+              "question": "Was ist hier abgebildet?",
+              "answer1": "Winsch",
+              "answer2": "Block",
+              "answer3": "Klampe",
+              "answer4": "Schäkel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 14,
+              "question": "Was ist hier abgebildet?",
+              "answer1": "Winsch",
+              "answer2": "Block",
+              "answer3": "Klampe",
+              "answer4": "Schäkel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 15,
+              "question": "Was ist hier abgebildet?",
+              "answer1": "Winsch",
+              "answer2": "Block",
+              "answer3": "Klampe",
+              "answer4": "Schäkel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 16,
+              "question": "Was ist hier abgebildet?",
+              "answer1": "Winsch",
+              "answer2": "Block",
+              "answer3": "Klampe",
+              "answer4": "Schäkel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 17,
+              "question": "Was kann dem laufenden Gut zugeordnet werden?",
+              "answer1": "Unterliekstrecker",
+              "answer2": "Baumniederholer",
+              "answer3": "Holepunkt",
+              "answer4": "Wanten",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 18,
+              "question": "Wie wird eine Konstruktion zur Kraftübersetzung bezeichnet, die aus einer Leine und mehreren Blöcken besteht?",
+              "answer1": "Talje",
+              "answer2": "Klüse",
+              "answer3": "Stander",
+              "answer4": "Saling",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 19,
+              "question": "Für welche Anwendungen ist Tauwerk mit hohem Reck gut geeignet?",
+              "answer1": "Fallen",
+              "answer2": "Ankertrosse",
+              "answer3": "Festmacher",
+              "answer4": "Baumniederholer",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 20,
+              "question": "Für welche Anwendungen ist Tauwerk mit geringem Reck geeignet?",
+              "answer1": "Fallen",
+              "answer2": "Ankertrosse",
+              "answer3": "Festmacher",
+              "answer4": "Baumniederholer",
               "correctAnswer": [
                 false,
                 true,
@@ -812,29 +1071,283 @@
           ]
         },
         {
-          "id": 1,
+          "id": 4,
           "indicator": "D",
           "themaName": "Sicherheit und Sondermanöver",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Welche der folgenden Gegenstände können zur Sicherheitsausrüstung auf einer Jacht gezählt werden?",
+              "answer1": "Verbandskasten",
+              "answer2": "Messer",
+              "answer3": "Anker",
+              "answer4": "Rettungswesten",
               "correctAnswer": [
                 false,
                 true,
-                false,
-                true
+                true,
+                false
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "Welche der folgenden Gegenstände können zur Sicherheitsausrüstung einer Jolle gezählt werden?",
+              "answer1": "Pütz",
+              "answer2": "Messer",
+              "answer3": "Rettungsinsel",
+              "answer4": "Lifebelts",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 3,
+              "question": "Warum gehört der Anker auf Jachten zur Sicherheitsausrüstung?",
+              "answer1": "Weil er in schwerem Wetter als Treibanker verwendet werden kann",
+              "answer2": "Weil er bei havariertem, manövrierunfähigem Schiff und auflandigem Wind eine der wenigen Möglichkeiten bietet das Stranden zu verhindern",
+              "answer3": "Weil man sich notfalls am Anker in tieferes Wasser verholen kann, wenn das Schiff auf Grund gekommen ist (verwarpen)",
+              "answer4": "Der Anker gehört nicht zur eigentlichen Sicherheitsausrüstung; er wird nur benötigt, wenn man tatsächlich beabsichtigt zu ankern",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 4,
+              "question": "Welche der folgenden konstruktiven Merkmale sind charakteristisch für eine ohnmachtssichere Rettungsweste?",
+              "answer1": "Es ist eine gepolsterte Kapuze integriert, um den Kopf des Trägers zu schützen",
+              "answer2": "Im Bereich des Nackens befinden sich Auftriebskörper",
+              "answer3": "Die Auftriebskörper sind gleichmäßig um den Oberkörper verteilt, damit der Überbordgegangene möglichst aufrecht schwimmt",
+              "answer4": "Die Auftriebskörper sind hauptsächlich vorne angebracht, damit der über Bord gefallene auf den Rücken gedreht wird",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Welche Aussagen treffen auf das \"Beiliegen\" mit einer Jacht bei schwerem Wetter zu?",
+              "answer1": "Aufgrund der hohen Bootsgeschwindigkeit ist viel Seeraum nach Lee notwendig",
+              "answer2": "Das Ruder wird in Luv fixiert und das Boot treibt nach Lee",
+              "answer3": "Das Großsegel ist angeholt und das Vorsegel steht back",
+              "answer4": "Ein Treibanker muss ausgebracht werden, um den Bug im Wind zu halten",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 6,
+              "question": " Welche Aussagen treffen auf das Manöver \"Ablaufen vor dem Wind\" mit einer Jacht bei schwerem Wetter zu?",
+              "answer1": "Das Boot treibt vor dem Wind mit geborgenen Segeln",
+              "answer2": "Aufgrund der geringen Fahrt bleibt die Position des Bootes auch bei starkem Wind praktisch unverändert",
+              "answer3": "Der Rudergänger steuert das Boot in Laufrichtung der Wellen, um ein Querschlagen zu vermeiden",
+              "answer4": "Das Ruder wird in Mittschiffsstellung fixiert und das Boot segelt autonom; lediglich ein Ausguck muss an Deck bleiben, um auf mögliche Kollisionsgegner reagieren zu können",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Welche Maßnahmen sind nach dem Kentern und vor dem Wiederaufrichten einer Jolle zu treffen?",
+              "answer1": "Andere Boote mit Seenotsignalen auf sich und seine Situation aufmerksam machen",
+              "answer2": "Überprüfen ob die Crew vollzählig und unversehrt ist",
+              "answer3": "Versuchen ein Durchkentern zu vermeiden",
+              "answer4": "Vor dem Aufrichten eventuell in Klemmen fixierte Schoten lösen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Bei schwerem Wetter kentert die Jolle, ein Wiederaufrichten aus eigener Kraft gelingt nicht. Welche Maßnahmen sind in dieser Situation sinnvoll?",
+              "answer1": "Unbedingt vom Boot entfernen, um bei dessen Sinken nicht unter Wasser gezogen zu werden",
+              "answer2": "Beim gekenterten Boot bleiben, da es noch über ausreichenden Auftrieb verfügt",
+              "answer3": "Ölzeug ausziehen",
+              "answer4": "Notsignale abgeben",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 9,
+              "question": "Welche Maßnahmen sind unter anderem zu treffen, wenn während der Fahrt ein Sturm aufkommt?",
+              "answer1": "Lose Gegenstände gut verstauen und Crew adäquat adjustieren (lassen)",
+              "answer2": "Segelfläche verkleinern",
+              "answer3": "Wenn möglich vor dem Eintreffen des schlechten Wetters einen sicheren Hafen anlaufen",
+              "answer4": "Rettungskräfte über Position und Art des Bootes, Anzahl der Personen an Bord und geplantes Reiseziel informieren",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 10,
+              "question": "Ein Kielboot läuft auf einem Raumwindkurs auf Grund. Welche Maßnahmen sind unmittelbar nach der Grundberührung zu treffen?",
+              "answer1": "Segel bergen",
+              "answer2": "Treibanker ausbringen",
+              "answer3": "Andere Boote mit Notsignalen auf sich und seine Situation aufmerksam machen",
+              "answer4": "Bootsrumpf auf substantielle Schäden überprüfen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 11,
+              "question": "Welche Maßnahmen sind unter anderem beim Sinken eines Kielbootes zu treffen?",
+              "answer1": "Mit dem sinkenden Boot, wenn möglich, zu einer seichten Stelle fahren",
+              "answer2": "Andere Boote mit Notsignalen auf sich und seine Situation aufmerksam machen",
+              "answer3": "Aufblasbare Auftriebskörper füllen, um das Sinken zu vermeiden oder zumindest hinauszuzögern",
+              "answer4": "Luken und Steckschott schließen und das Boot durchkentern",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Was gehört zum richtigen Ankermanöver unter Segel?",
+              "answer1": "Den Anker stets auf Vorwindkurs fallen lassen",
+              "answer2": "Den Anker gleich zu Beginn des Aufschießers fallen lassen",
+              "answer3": "Den Anker erst in Fahrt achteraus fallen lassen",
+              "answer4": "Das Großsegel erst bergen, wenn man sich vergewissert hat, dass der Anker hält",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 13,
+              "question": "Welche der nachstehenden Maßnahmen sind geeignet, um eine über Bord gegangene Person wieder an Bord einer Jacht mit hohem Freibord zu bringen, wenn nur ein Helfer zur Verfügung steht?",
+              "answer1": "Badeleiter anbringen",
+              "answer2": "Trittschlingen ausbringen",
+              "answer3": "Den Überbordgegangenen einfach herausziehen",
+              "answer4": "Rettungstalje improvisieren",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 14,
+              "question": "Das Boot segelt einen Raumwindkurs bei frischem Wind, plötzlich bricht das Achterstag. Welche Maßnahmen sind zu treffen, um einen Mastbruch zu verhindern und das Achterstag in Ruhe mit Bordmitteln reparieren zu können?",
+              "answer1": "Großschot dicht holen",
+              "answer2": "Den Mast mit Hilfe von Leinen behelfsmäßig stützen",
+              "answer3": "Großsegel bergen",
+              "answer4": "Fockschot dichtholen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 15,
+              "question": "Das Boot segelt einen Hart-am-Wind-Kurs bei frischem Wind, plötzlich bricht das Vorstag. Welche Maßnahmen sind unter anderem zu treffen?",
+              "answer1": "Schoten rasch und kontrolliert fieren, abfallen und auf Vorwindkurs gehen",
+              "answer2": "Sofort wenden",
+              "answer3": "Vorsegel bergen",
+              "answer4": "Den Mast mit einer Leine behelfsmäßig nach vorne stützen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 16,
+              "question": "Das Boot segelt einen Hart-am-Wind-Kurs bei frischem Wind. Ein Crewmitglied entdeckt mehrere gebrochene Litzen am Want in Luv. Welche Maßnahmen sind unter anderem zu treffen?",
+              "answer1": "Sofort wenden",
+              "answer2": "Auf Raumwindkurs abfallen und Schoten fieren",
+              "answer3": "Beschädigtes Want durch Anbringung zusätzlicher Leinen entlasten",
+              "answer4": "Segel bergen und Schlepphilfe anfordern; ein Weitersegeln ist unter keinen Umständen möglich",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 17,
+              "question": "Welche Maßnahmen sind nach einer Fahrt bei schwerem Wetter an Booten durchzuführen?",
+              "answer1": "Unterwasserschiff von Bewuchs befreien",
+              "answer2": "Laufendes und stehendes Gut auf Schäden überprüfen",
+              "answer3": "Splinte, Bolzen, Schrauben und Muttern des Riggs auf ihren festen Sitz überprüfen",
+              "answer4": "Stagreiter von Stagsegeln schmieren",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 18,
+              "question": "Welche Revierinformationen hat ein Schiffsführer in Erfahrung zu bringen, bevor er auf einem ihm unbekannten Gewässer ablegt?",
+              "answer1": "Die Art und das Aussehen der örtlichen Sturmwarnsignale",
+              "answer2": "Die Öffnungszeiten der Hafeneinfahrt",
+              "answer3": "Navigatorisch relevante Informationen, wie z.B. die Positionen von Untiefen",
+              "answer4": "Spezielle Windverhältnisse und Wetterecken",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 19,
+              "question": "Welche Maßnahmen sind unter anderem vor dem ersten Auslaufen mit einem unbekannten Boot und unerfahrener Crew zu treffen?",
+              "answer1": "Überprüfung der Seetüchtigkeit und der Ausrüstung des Bootes",
+              "answer2": "Überprüfung der ordnungsgemäßen Zulassung des Bootes",
+              "answer3": "Überprüfung der Seetauglichkeit jedes einzelnen Crewmitglieds",
+              "answer4": "Sicherheitseinweisung der Crew",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 20,
+              "question": "Welche akustischen und optischen Sturmwarnsignale sind an jedem österreichischen See zu finden?",
+              "answer1": "Gelbe Funkellichter und/oder ein permanenter Ton mit wechselnder Tonhöhe",
+              "answer2": "Rote Flaggen und/oder eine permanente Folge kurzer Töne",
+              "answer3": "Rote Laternen und/oder eine permanente Folge von Pfeiftönen",
+              "answer4": "Die Sturmwarnsignale in Österreich sind nicht einheitlich; ein Schiffsführer hat sich vor dem Auslaufen über die Art der vorhandenen Sturmwarnsignale zu informieren",
               "correctAnswer": [
                 false,
                 true,
@@ -845,16 +1358,17 @@
           ]
         },
         {
-          "id": 1,
+          "id": 5,
           "indicator": "E",
           "themaName": "Trimmen und Trimmeinrichtungen",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Wozu dient der Großbaumniederholer?",
+              "answer1": "Um den Twist des Großsegels zu verändern",
+              "answer2": "Um den Großbaum zu halten, wenn kein Segel gesetzt ist",
+              "answer3": "Um auf Vorwindkurs ein Aufsteigen des Großbaums zu verhindern",
+              "answer4": "Um nach dem Reffen des Großsegels überschüssiges Segeltuch zu versorgen",
               "correctAnswer": [
                 false,
                 true,
@@ -863,11 +1377,96 @@
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "Wozu dient die Cunningham?",
+              "answer1": "Um unkontrolliertes Aufsteigen des Großbaums zu verhindern",
+              "answer2": "Zum Strecken des Vorlieks des Großsegels",
+              "answer3": "Zum Halten des Spinnakerbaums",
+              "answer4": "Zum Ein- und Ausrollen eines Rollsegels",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 3,
+              "question": "Wo soll die Crew bei sehr leichtem Wind an Bord einer Jolle sitzen?",
+              "answer1": "So weit achtern, dass der Bug aus dem Wasser kommt",
+              "answer2": "Zumindest so weit vorne, dass der Spiegel aus dem Wasser kommt",
+              "answer3": "Am Wind so, dass das Boot nach Luv krängt",
+              "answer4": "Am Wind so, dass das Boot nach Lee krängt",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 4,
+              "question": "Welche Aussagen bezüglich des Trimmens mit dem Schwert treffen zu?",
+              "answer1": "Bei vorlich einfallenden Winden ist das Schwert abgesenkt, um der Abdrift entgegen zu wirken",
+              "answer2": "Bei achterlich einfallenden Winden ist das Schwert abgesenkt, um die Formstabilität zu erhöhen",
+              "answer3": "Auf Halbwindkurs ist das Schwert ganz aufgeholt, um den Strömungswiderstand zu verringern",
+              "answer4": "Bei vorlich einfallenden Winden ist das Schwert aufgeholt, um den Lateraldruckpunkt nach vorne zu verschieben",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Welche Aussagen bezüglich des Trimms der Fock mit dem Holepunkt treffen zu?",
+              "answer1": "Das Versetzen des Holepunkts nach achtern entlastet das Achterliek",
+              "answer2": "Das Versetzen des Holepunkts nach vorne verstärkt den Twist",
+              "answer3": "Durch Versetzen des Holepunkts wird die Profiltiefe (\"Bauchigkeit\") verändert",
+              "answer4": "Durch Versetzen des Holepunkts wird die Zugrichtung der Schot verändert",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 6,
+              "question": "Welche Aussagen bezüglich des Trimms der Fock mit dem Fall treffen zu?",
+              "answer1": "Senkrechte Falten im Vorlieksbereich werden durch höhere Fallspannung reduziert",
+              "answer2": "Waagrechte Falten im Vorlieksbereich werden durch höhere Fallspannung reduziert",
+              "answer3": "Mit zunehmender Windstärke sollte die Fallspannung erhöht werden",
+              "answer4": "Mit zunehmender Windstärke sollte die Fallspannung vermindert werden",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "In der Fock liegen alle leeseitigen Trimmfäden schön am Segel an, an der Luvseite nicht. Welche Maßnahmen können zur Verbesserung des Trimms getroffen werden?",
+              "answer1": "Auf Hart-am-Wind-Kurs: Abfallen",
+              "answer2": "Auf Halbwindkurs: Fockschot dichter nehmen",
+              "answer3": "Auf Raumwindkurs: Liektaue durchsetzen",
+              "answer4": "Auf Vorwindkurs: Großsegel und Fock auf der gleichen Seite führen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "In der Fock liegen alle luvseitigen Trimmfäden schön am Segel an, an der Leeseite nicht. Welche Maßnahmen tragen zur Verbesserung des Trimms bei?",
+              "answer1": "Fockfall stärker durchsetzen",
+              "answer2": "Holepunkt nach achtern versetzen",
+              "answer3": "Anluven",
+              "answer4": "Fockschot fieren",
               "correctAnswer": [
                 false,
                 true,
@@ -878,7 +1477,7 @@
           ]
         },
         {
-          "id": 1,
+          "id": 6,
           "indicator": "F",
           "themaName": "Regatta",
           "questions": [
@@ -998,40 +1597,189 @@
           ]
         },
         {
-          "id": 1,
+          "id": 7,
           "indicator": "G",
           "themaName": "Knoten und seemännische Arbeiten",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Welcher Knoten ist hier abgebildet?",
+              "answer1": "Kreuzknoten",
+              "answer2": "Webeleinstek",
+              "answer3": "Palstek",
+              "answer4": "Stopperstek",
               "correctAnswer": [
                 false,
                 true,
                 false,
                 true
-              ]
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "Welcher Knoten ist hier abgebildet?",
+              "answer1": "Schotstek",
+              "answer2": "Webeleinstek",
+              "answer3": "Palstek",
+              "answer4": "Stopperstek",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 3,
+              "question": "Welcher Knoten ist hier abgebildet?",
+              "answer1": "Achterknoten",
+              "answer2": "Webeleinstek",
+              "answer3": "Eineinhalb Rundtörns mit zwei halben Schlägen",
+              "answer4": "Klampenschlag (Rundtörn, Kreuzschlag und Kopfschlag)",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 4,
+              "question": "Welcher Knoten ist hier abgebildet?",
+              "answer1": "Kreuzknoten",
+              "answer2": "Stopperstek",
+              "answer3": "Webeleinstek",
+              "answer4": "Rückspleiß",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 5,
+              "question": "Welcher Knoten ist hier abgebildet?",
+              "answer1": "Schotstek",
+              "answer2": "Webeleinstek",
+              "answer3": "Palstek",
+              "answer4": "Stopperstek",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 6,
+              "question": "Welche der angeführten Knoten können unter Last gelöst werden?",
+              "answer1": "Roringstek",
+              "answer2": "Eineinhalb Rundtörns mit zwei halben Schlägen",
+              "answer3": "Palstek",
+              "answer4": "Slipstek",
               "correctAnswer": [
                 false,
                 true,
                 true,
                 false
               ]
+            },
+            {
+              "id": 7,
+              "question": "Welcher der angeführten Knoten ist auch für das Verbinden zweier Tampen mit unterschiedlichem Durchmesser geeignet?",
+              "answer1": "Schotstek",
+              "answer2": "Kreuzknoten",
+              "answer3": "Roringstek",
+              "answer4": "Webeleinstek",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Welche der angeführten Knoten sind für das Entlasten einer unklaren Leine unter Zug (z.B. bei einem Überläufer an einer Winsch) geeignet?",
+              "answer1": "Eineinhalb Rundtörns mit zwei halben Schlägen",
+              "answer2": "Stopperstek",
+              "answer3": "Palstek",
+              "answer4": "Schotstek",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 9,
+              "question": "Welche der angeführten Knoten sind für das Auftuchen von Segeln mit kurzen Bändseln und das Zusammenhalten von losem Segeltuch nach dem Reffen mit Reffbändseln geeignet?",
+              "answer1": "Schotstek",
+              "answer2": "Kreuzknoten",
+              "answer3": "Palstek",
+              "answer4": "Webeleinstek",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 10,
+              "question": "Was ist hier abgebildet? ",
+              "answer1": "Kurzspleiß",
+              "answer2": "Bunsch",
+              "answer3": "Takling",
+              "answer4": "Rückspleiß",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 11,
+              "question": "Was ist der Vorteil von Spleißen gegenüber Knoten?",
+              "answer1": "Der Spleiß ist schneller zu lösen",
+              "answer2": "Der Spleiß ist leichter herzustellen",
+              "answer3": "Bei Spleißen wird die Bruchlast der Leine deutlich weniger verringert",
+              "answer4": "Mit Spleißen kann geschlagenes mit geflochtenem Tauwerk verbunden werden",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Was ist hier abgebildet?",
+              "answer1": "Kurzspleiß",
+              "answer2": "Bunsch",
+              "answer3": "Takling",
+              "answer4": "Rückspleiß",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             }
           ]
         },
         {
-          "id": 1,
+          "id": 8,
           "indicator": "H",
           "themaName": "Seemannschaft und seemännische Sprache",
           "questions": [
@@ -1150,16 +1898,17 @@
           ]
         },
         {
-          "id": 1,
+          "id": 9,
           "indicator": "I",
           "themaName": "Wetter",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "In welcher Jahreszeit ist die Gewitterhäufigkeit in Österreich am höchsten?",
+              "answer1": "Frühling",
+              "answer2": "Sommer",
+              "answer3": "Herbst",
+              "answer4": "Winter",
               "correctAnswer": [
                 false,
                 true,
@@ -1168,11 +1917,154 @@
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 2,
+              "question": "Welches Wolkenbild lässt auf ein herannahendes Hitzegewitter schließen?",
+              "answer1": "Großflächig niedrig hängende Schichtwolken mit langsam, aber stetig abnehmender Höhe",
+              "answer2": "Hoch auftürmende Haufenwolken",
+              "answer3": "In großer Höhe aus Westen aufziehende Cirruswolken, gefolgt von Bänken mittelhoher Schäfchenwolken",
+              "answer4": "Viele, aber lokal deutlich abgegrenzte Gruppen von Mischbewölkung (Schicht- und Haufenwolken) am gesamten Himmel",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 3,
+              "question": "Womit beginnen sommerliche Hitzegewitter?",
+              "answer1": "Relativ warme und feuchte Luft wird einen Berghang hinaufgedrückt, dehnt sich beim Aufstieg aus und kühlt dabei ab",
+              "answer2": "In einem Tiefdruckgebiet wird relativ warme und feuchte Luft von der nachfolgenden Kaltluft nach oben verdrängt, dehnt sich beim Aufstieg aus und kühlt ab",
+              "answer3": "An schwülen, flautigen Sommertagen wird Luft in Bodennähe erwärmt, dehnt sich beim Aufstieg aus und kühlt ab",
+              "answer4": "Zwei relativ warme und feuchte Luftmassen treffen aufeinander und drücken sich gegenseitig in die Höhe, dehnen sich beim Aufstieg aus und kühlen ab",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 4,
+              "question": "Was ist im Zusammenhang mit Gewittern zu beachten?",
+              "answer1": "Bei einem Wärmegewitter ist Hagel auszuschließen",
+              "answer2": "Es kann durch Starkregen zu Sichtbehinderungen kommen",
+              "answer3": "Der Wind weht immer zur Gewitterwolke",
+              "answer4": "Es kann zu Fallböen mit extremen Windgeschwindigkeiten kommen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 5,
+              "question": "Welche der abgebildeten Wolkenbilder zeigen Gewitterwolken?",
+              "answer1": "A",
+              "answer2": "B",
+              "answer3": "C",
+              "answer4": "D",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 6,
+              "question": "Welcher Wind ist bei Schönwetterlage in Ufernähe eines großen Sees tagsüber zu erwarten?",
+              "answer1": "Ablandiger Wind",
+              "answer2": "Auflandiger Wind",
+              "answer3": "Seewind",
+              "answer4": "Landwind",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 7,
+              "question": "Wann ist bei Schönwetterlage in Ufernähe eines großen Sees Landwind zu erwarten?",
+              "answer1": "Vormittags nach Sonnenaufgang",
+              "answer2": "Nachmittags bei sinkendem Sonnenstand",
+              "answer3": "Nachts nach Sonnenuntergang",
+              "answer4": "Früh morgens vor Sonnenaufgang",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 8,
+              "question": "Wann erreicht bei Schönwetterlage in Ufernähe eines großen Sees der Seewind seine größte Stärke?",
+              "answer1": "Am Morgen",
+              "answer2": "Am Nachmittag",
+              "answer3": "Bei Sonnenuntergang",
+              "answer4": "Kurz vor Sonnenaufgang",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 9,
+              "question": "Welcher Ausgleichswind ist hier abgebildet?",
+              "answer1": "Seewind",
+              "answer2": "Landwind",
+              "answer3": "auflandiger Wind",
+              "answer4": "ablandiger Wind",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 10,
+              "question": "Wie wird in Österreich der warme und trockene Wind an der Leeseite eines Berges genannt?",
+              "answer1": "Schirokko",
+              "answer2": "Brüscha",
+              "answer3": "Föhn",
+              "answer4": "Himmelsbesen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 11,
+              "question": "Welche der folgenden Aussagen bezüglich Isobaren treffen zu?",
+              "answer1": "Isobaren sind Linien gleichen Luftdrucks",
+              "answer2": "Isobaren verbinden Orte gleichen Luftdruckgradients",
+              "answer3": "Je weiter die Isobaren auseinander liegen, desto stärker ist der Wind",
+              "answer4": "Je enger die Isobaren beieinander liegen, desto stärker ist der Wind",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Unter welchen Umständen muss mit Nebel gerechnet werden?",
+              "answer1": "Wenn die Temperatur von feuchter Luft sinkt",
+              "answer2": "Wenn die Temperatur von feuchter Luft steigt",
+              "answer3": "Wenn der Druck von trockener Luft sinkt",
+              "answer4": "Wenn der Druck von trockener Luft steigt",
               "correctAnswer": [
                 false,
                 true,
@@ -1183,29 +2075,349 @@
           ]
         },
         {
-          "id": 1,
+          "id": 10,
           "indicator": "J",
           "themaName": "Recht",
           "questions": [
             {
-              "question": "frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
+              "id": 1,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer2": "Boot A / das leeseitige Boot hat auszuweichen",
+              "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "answer4": "Boot B / das luvseitige Boot hat auszuweichen",
               "correctAnswer": [
                 false,
                 true,
                 false,
                 true
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 2,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer2": "Boot A / das leeseitige Boot hat auszuweichen",
+              "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "answer4": "Boot B / das luvseitige Boot hat auszuweichen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 3,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer2": "Boot A / das luvseitige Boot hat auszuweichen",
+              "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "answer4": "Boot B / das leeseitige Boot hat auszuweichen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 4,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer2": "Boot A / das luvseitige Boot hat auszuweichen",
+              "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "answer4": "Boot B / das leeseitige Boot hat auszuweichen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 5,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer2": "Boot A / das leeseitige Boot hat auszuweichen",
+              "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "answer4": "Boot B / das luvseitige Boot hat auszuweichen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 6,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das leeseitige Boot hat auszuweichen",
+              "answer2": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer3": "Boot B / das luvseitige Boot hat auszuweichen",
+              "answer4": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 7,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Beide Boote / Beim Begegnen: Ausweichen nach Steuerbord",
+              "answer2": "Beide Boote / Beim Begegnen: Ausweichen nach Backbord",
+              "answer3": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer4": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 8,
+              "question": "Welches Kleinfahrzeug unter Segel ist ausweichpflichtig und warum?",
+              "answer1": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
+              "answer2": "Boot B / das luvseitige Boot hat auszuweichen",
+              "answer3": "Beide Boote / Beim Begegnen: Ausweichen nach Steuerbord",
+              "answer4": "Beide Boote / Beim Begegnen: Ausweichen nach Backbord",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 9,
+              "question": "Gegenüber welchen Verkehrsteilnehmern ist ein unter Segel fahrendes Kleinfahrzeug auf einem österreichischen Gewässer ausweichpflichtig?",
+              "answer1": "Fahrgastschiffen, die einen grünen Ball führen",
+              "answer2": "Fahrgastschiffen, die einen gelben Doppelkegel führen",
+              "answer3": "Fahrzeugen mit Maschinenantrieb und einer Länge über Alles von weniger als 20 m",
+              "answer4": "Fahrzeugen mit Maschinenantrieb und einer Länge über Alles von mehr als 20 m",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
               ]
             },
             {
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
+              "id": 10,
+              "question": "Welche der folgenden Fahrregeln gelten für Kleinfahrzeuge auf kreuzenden Kursen auf österreichischen Seen?",
+              "answer1": "Kleinfahrzeuge sind ausweichpflichtig gegenüber Fahrzeugen, die keine Kleinfahrzeuge sind",
+              "answer2": "Kleinfahrzeuge unter Maschine sind ausweichpflichtig gegenüber Kleinfahrzeugen unter Segel",
+              "answer3": "Kleinfahrzeuge unter Segel sind ausweichpflichtig gegenüber Tretbooten",
+              "answer4": "Kleinfahrzeuge unter Segel sind ausweichpflichtig gegenüber Fahrzeugen, die einen grünen Ball führen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 11,
+              "question": "Gegenüber welchen Verkehrsteilnehmern ist ein unter Segel fahrendes Kleinfahrzeug auf einem österreichischen See unter allen Umständen ausweichpflichtig?",
+              "answer1": "Fahrgastschiffen, die einen grünen Ball führen",
+              "answer2": "Fahrzeugen, die keine Kleinfahrzeuge sind",
+              "answer3": "Fahrzeugen mit Maschinenantrieb, unabhängig von deren Länge",
+              "answer4": "Fahrzeugen der Feuerwehr oder Wasserrettung, die ein blaues Funkellicht führen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 12,
+              "question": "Welchen Mindestabstand muss, sofern möglich, ein unter Segel fahrendes Kleinfahrzeug auf einem österreichischen See von einem Fahrzeug halten, das einen weißen Ball führt?",
+              "answer1": "50 m",
+              "answer2": "100 m",
+              "answer3": "200 m",
+              "answer4": "300 m",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 13,
+              "question": "Welche Möglichkeiten der Bezeichnung bei Nacht sind für Kleinfahrzeuge unter Segel mit einer Länge von weniger als 7 m in der Seen- und Fluss-Verkehrsordnung festgelegt?",
+              "answer1": "Ein weißes von allen Seiten sichtbares Licht (ein zweites weißes Licht muss bei Annäherung an ein anderes Fahrzeug gezeigt werden)",
+              "answer2": "Hecklicht, Seitenlichter und im Masttopp zwei von allen Seiten sichtbare Lichter (das obere rot, das untere grün)",
+              "answer3": "Hecklicht, Seitenlichter und Topplicht",
+              "answer4": "Hecklicht und Seitenlichter",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 14,
+              "question": "Welche Tagzeichen sind für ein fischendes Fahrzeug auf einem österreichischen See vorgesehen, das für die gewerbsmäßige Ausübung des Fischereirechts zugelassen ist?",
+              "answer1": "Es darf einen weißen Ball führen",
+              "answer2": "Es muss einen schwarzen Kegel mit der Spitze nach oben führen",
+              "answer3": "Es darf einen grünen Ball führen",
+              "answer4": "Es muss zwei schwarze Kegel mit den Spitzen zueinander (Stundenglas) führen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 15,
+              "question": "Welche Tagzeichen führt ein Fahrgastschiff auf österreichischen Seen?",
+              "answer1": "Einen grünen Ball",
+              "answer2": "Einen roten Wimpel",
+              "answer3": "Einen gelben Doppelkegel",
+              "answer4": "Einen schwarzen Zylinder",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 16,
+              "question": "In der Nacht tauchen auf einem österreichischem See die hier dargestellten Lichter auf. Um welche Fahrzeuge könnte es sich handeln?",
+              "answer1": "Fahrgastschiff",
+              "answer2": "Schleppzug",
+              "answer3": "Fahrzeug unter Segel",
+              "answer4": "Stilllieger",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 17,
+              "question": "Welche Bedeutungen hat unter anderem das Schallsignal \"ein kurzer Ton\"?",
+              "answer1": "Ich richte meinen Kurs nach Steuerbord",
+              "answer2": "Ich richte meinen Kurs nach Backbord",
+              "answer3": "Maschine geht rückwärts",
+              "answer4": "Hafenausfahrtsignal",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 18,
+              "question": "Welche Dauer ist für die Schallsignale \"ein kurzer Ton\" und \"ein langer Ton\" vorgeschrieben?",
+              "answer1": "Ein kurzer Ton: etwa 1 Sekunde",
+              "answer2": "Ein kurzer Ton: etwa 2 Sekunden",
+              "answer3": "Ein langer Ton: etwa 2 Sekunden",
+              "answer4": "Ein langer Ton: etwa 4 Sekunden",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 19,
+              "question": "Welche der aufgezählten Notzeichen sind im österreichischen Gesetz definiert?",
+              "answer1": "Langsames und wiederholtes Heben und Senken der seitlich ausgestreckten Arme",
+              "answer2": "Ein Licht, das im Kreis geschwenkt wird",
+              "answer3": "Ein Lichtzeichen, zusammengesetzt aus dem Morsezeichen für SOS",
+              "answer4": "Ein Schallzeichen, zusammengesetzt aus einer Folge langer Töne",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 20,
+              "question": "Was bedeutet das abgebildete Schifffahrtszeichen?",
+              "answer1": "Überholverbot",
+              "answer2": "Ankündigung einer Schleuse",
+              "answer3": "Stillliegeverbot",
+              "answer4": "Verbot der Durchfahrt",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ],
+              "image": "../../../../assets/img/questionimgs/VCBC.jpg"
+            },
+            {
+              "id": 21,
+              "question": "Welche der folgenden Gesetzestexte sind für das Befahren von österreichischen Seen mit einem Segelfahrzeug von Relevanz?",
+              "answer1": "Jachtzulassungsverordnung",
+              "answer2": "Schifffahrtsgesetz",
+              "answer3": "Seen- und Fluss-Verkehrsordnung",
+              "answer4": "Wasserstraßen-Verkehrsordnung",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 22,
+              "question": "Welche Bestimmungen gelten für das Führen von Segelfahrzeugen am Bodensee?",
+              "answer1": "Mindestalter 10 Jahre",
+              "answer2": "Mindestalter 16 Jahre",
+              "answer3": "Schifferpatentpflicht ab einer Länge von 10 m",
+              "answer4": "Schifferpatentpflicht ab einer Segelfläche von 12 m2",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 23,
+              "question": "Ab welchem Alter ist es laut Gesetz erlaubt ein Segelfahrzeug auf einem österreichischem See zu führen?",
+              "answer1": "Ab dem vollendeten 10. Lebensjahr, sofern alle an Bord befindlichen Personen Schwimmwesten tragen",
+              "answer2": "Ab dem vollendeten 12. Lebensjahr, sofern alle an Bord befindlichen Personen Schwimmwesten tragen",
+              "answer3": "Ab dem vollendeten 14. Lebensjahr, ohne Schwimmwestenpflicht für alle an Bord befindlichen Personen",
+              "answer4": "Ab dem vollendeten 16. Lebensjahr, ohne Schwimmwestenpflicht für alle an Bord befindlichen Personen",
+              "correctAnswer": [
+                false,
+                true,
+                true,
+                false
+              ]
+            },
+            {
+              "id": 24,
+              "question": "Welche der angegebenen Punkte gehören zu den gesetzlichen Pflichten eines Schiffsführers?",
+              "answer1": "Hilfeleistung bei Unfällen und bei sich in Gefahr befindenden Personen und Fahrzeugen",
+              "answer2": "Besitz eines Erste-Hilfe-Zertifikats",
+              "answer3": "Vermeidung der Behinderung der Schifffahrt",
+              "answer4": "Meldung von unbekannten Hindernissen, die eine Gefahr für die Schifffahrt darstellen könnten",
               "correctAnswer": [
                 false,
                 true,

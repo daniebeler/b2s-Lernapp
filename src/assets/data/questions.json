@@ -1,87 +1,6 @@
 {
   "scheine": [
     {
-      "id": 1,
-      "scheinName": "Grundkurs",
-      "quote": "Lerne die Basics",
-      "Thema": [
-        {
-          "id": 1,
-          "themaName": "Thema1",
-          "questions": [
-            {
-              "id": 1,
-              "question": "Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
-              "correctAnswer": [
-                false,
-                true,
-                false,
-                true
-              ],
-              "image": "../../../../assets/img/questionimgs/VCBC.jpg",
-              "correctGesamt": false
-            },
-            {
-              "id": 2,
-              "question": "frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
-              "correctAnswer": [
-                false,
-                true,
-                true,
-                false
-              ],
-              "image": "../../../../assets/img/questionimgs/VCBC.jpg",
-              "correctGesamt": false
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "themaName": "Thema2",
-          "questions": [
-            {
-              "id": 1,
-              "question": "Thema2 Frage 1",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "falsch",
-              "answer4": "richtig",
-              "correctAnswer": [
-                false,
-                true,
-                false,
-                true
-              ],
-              "correctGesamt": false
-            },
-            {
-              "id": 2,
-              "question": "Frage 2",
-              "answer1": "falsch",
-              "answer2": "richtig",
-              "answer3": "richtig",
-              "answer4": "falsch",
-              "correctAnswer": [
-                false,
-                true,
-                true,
-                false
-              ],
-              "correctGesamt": false
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": 2,
       "scheinName": "BFA-Binnen (A-Schein)",
       "quote": "Fortgeschritten",
@@ -100,8 +19,8 @@
               "answer4": "D",
               "correctAnswer": [
                 false,
-                true,
                 false,
+                true,
                 true
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -130,7 +49,7 @@
               "answer4": "D",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 false,
                 true
               ],
@@ -144,10 +63,10 @@
               "answer3": "C",
               "answer4": "D",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                false,
+                false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
@@ -159,10 +78,10 @@
               "answer3": "Hart-am-Wind-Kurs - Boot dreht mit dem Bug durch den Wind - Vorsegelschot bleibt gelegt und Vorsegel steht back - Ruder in Luv fixiert",
               "answer4": "Halbwindkurs - Boot geht auf Kurs im Wind - Schoten loswerfen",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                false,
+                false
               ]
             },
             {
@@ -176,7 +95,7 @@
                 false,
                 true,
                 false,
-                true
+                false
               ]
             },
             {
@@ -190,7 +109,7 @@
                 false,
                 true,
                 false,
-                true
+                false
               ]
             },
             {
@@ -202,9 +121,9 @@
               "answer4": "Fock backhalten",
               "correctAnswer": [
                 false,
-                true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -215,10 +134,10 @@
               "answer3": "Der Baumniederholer muss während des Setzens des Großsegel gefiehert sein",
               "answer4": "Der Baumniederholer muss während des Setzens des Großsegels dicht genommen werden",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -231,8 +150,8 @@
               "correctAnswer": [
                 false,
                 true,
-                false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -244,9 +163,9 @@
               "answer4": "Hart-am-Wind-Kurs - Großschot fieren und Dirk durchsetzen - Großfall fieren - Arretierung am Lümmelbeschlag lösen und Großsegeltuch auf Großbaum wickeln - Arretierung am Lümmelbeschlag fixieren - Großfall dicht - Dirk fieren und Großschot dicht",
               "correctAnswer": [
                 false,
-                true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -257,8 +176,8 @@
               "answer3": "Bootsgeschwindigkeiten größer als die Rumpfgeschwindigkeiten werden erreicht",
               "answer4": "Sehr starke Kränkung des Bootes",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 false,
                 true
               ]
@@ -271,10 +190,10 @@
               "answer3": "Hart-am-Wind-Kurs - Boot dreht mit dem Bug durch den Wind - Vorsegelschot bleibt belegt und Vorsegel steht back - Ruder in Luv fixiert",
               "answer4": "Halbwindkurs - Boot schießt in den Wind - Schoten loswerden",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                false,
+                false
               ]
             },
             {
@@ -286,9 +205,9 @@
               "answer4": "Wende - abfallen auf Vorwindkurs - Schoten loswerden - auf Überbordgegangenen zutreiben",
               "correctAnswer": [
                 false,
-                true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -299,10 +218,10 @@
               "answer3": "Nach der Q-Wende muss sich das Boot in Luv des Überbordgegangenen befinden",
               "answer4": "Zumindest eine Halse ist notwendig zwischen dem Über-Bord-Gehen und dem Aufnehmen des Crewmitglieds",
               "correctAnswer": [
-                false,
+                true,
                 true,
                 false,
-                true
+                false
               ]
             },
             {
@@ -329,7 +248,7 @@
               "correctAnswer": [
                 false,
                 true,
-                false,
+                true,
                 true
               ]
             },
@@ -341,8 +260,8 @@
               "answer3": "Die Vorspring läuft vom Bug schräg nach vorne",
               "answer4": "Die Vorspring läuft vom Heck schräg nach vorne",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 false,
                 true
               ]
@@ -356,7 +275,7 @@
               "answer4": "Vorleine vorbereiten - auf Halbwindkurs in Luv der Boje segeln - Schoten lose und zur Boje hin aufschießen - Vorleine an der Boje festmachen - Segel bergen",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -369,7 +288,7 @@
               "answer3": "Vorleine möglichst weit vorne am Boot festmahcen und mit einem geeigneten Knoten an der Boje befestigen",
               "answer4": "Fender ausbringen und, wenn vorhanden, zusätzlich den Anker ausbringen",
               "correctAnswer": [
-                false,
+                true,
                 true,
                 true,
                 false
@@ -383,8 +302,8 @@
               "answer3": "Für die Dauer der Bö kann angeluvt werden, da der scheinbare Wind achterlicher einfällt",
               "answer4": "Für die Dauer der Bö muss abgefallen werden, da der scheinbare Wind vorlicher einfällt",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 true,
                 false
               ]
@@ -397,10 +316,10 @@
               "answer3": "Schwert absenken",
               "answer4": "Großschot fieren",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -412,7 +331,7 @@
               "answer4": "Beim Einfallen der Bö wird die Großschot dicht geholt, nach dem Ende der Bö wieder gefiert",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -425,10 +344,10 @@
               "answer3": "Unterschneiden",
               "answer4": "Unbeabsichtigtes in den Wind Schießen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -439,10 +358,10 @@
               "answer3": "Wassertiefe",
               "answer4": "Schutz vor Welle",
               "correctAnswer": [
-                false,
                 true,
                 true,
-                false
+                true,
+                true
               ]
             },
             {
@@ -453,10 +372,10 @@
               "answer3": "Seegras",
               "answer4": "feiner Kies",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -469,7 +388,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -481,8 +400,8 @@
               "answer3": "Die Geschwindigkeit des Schleppzuges darf die Rumpfgeschwindigkeit des Geschleppten nicht überschreiten",
               "answer4": "Die Segel müssen gesetzt bleiben, um den Schlepper zu unterstützen und die Belastung der Beschläge zu verringern",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 true,
                 false
               ]
@@ -502,8 +421,8 @@
               "answer3": "C",
               "answer4": "D",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 false,
                 true
               ],
@@ -532,10 +451,10 @@
               "answer3": "Gewicht über die Wasserlinie",
               "answer4": "Gewicht unter die Wasserlinie",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -546,10 +465,10 @@
               "answer3": "Ausreiten",
               "answer4": "Vorschoter ins Trapez",
               "correctAnswer": [
+                true,
                 false,
                 true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -561,9 +480,9 @@
               "answer4": "Aus Fahrtwind und wahrem Wind",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ]
             },
             {
@@ -576,7 +495,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -602,10 +521,10 @@
               "answer3": "Er wird stärker",
               "answer4": "Er wird schwächer",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -616,10 +535,10 @@
               "answer3": "Mit zunehmender Fahrt fällt der scheinbare Wind achterlicher ein",
               "answer4": "Mit zunehmender Fahrt fällt der scheinbare Wind vorlicher ein",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -630,10 +549,10 @@
               "answer3": "Querkraft und Kraft im Lateraldruckpunkt erzeugen ein aufrichtendes Moment",
               "answer4": "Querkraft und Kraft im Lateraldruckpunkt erzeugen ein krängendes Moment",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -644,9 +563,9 @@
               "answer3": "Windangriffspunkt",
               "answer4": "Bernoullischer Punkt",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -659,7 +578,7 @@
               "answer4": "Die Summe aller durch das verdrängte Wasser wirkenden Auftriebskräfte",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -686,10 +605,10 @@
               "answer3": "Die Querkraft wirkt nach Luv",
               "answer4": "Die Querkraft wirkt quer zur Fahrtrichtung nach Lee",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -700,10 +619,10 @@
               "answer3": "Verstärktes Ausreiten",
               "answer4": "Vorschoter ins Trapez",
               "correctAnswer": [
-                false,
                 true,
                 true,
-                false
+                true,
+                true
               ]
             },
             {
@@ -714,10 +633,10 @@
               "answer3": "Slupgetakelte Jacht auf der Kreuz bei starkem Wind",
               "answer4": "Slupgetakelte Jacht mit erheblicher Leekrängung",
               "correctAnswer": [
-                false,
                 true,
                 true,
-                false
+                true,
+                true
               ]
             },
             {
@@ -728,9 +647,9 @@
               "answer3": "Die Verlagerung des Mannschaftsgewichts nach Luv verstärkt die Luvgierigkeit",
               "answer4": "Nach dem Aufholen des Schwertes tendiert das Boot zu einer höheren Luvgierigkeit",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -756,9 +675,9 @@
               "answer3": "Dass der Wind möglichst im rechten Winkel auf das Segel trifft",
               "answer4": "Dass möglichst starke Turbulenzen erzeugt werden",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -772,7 +691,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             }
@@ -791,9 +710,9 @@
               "answer3": "Saling",
               "answer4": "Spinnakerbaum",
               "correctAnswer": [
-                false,
                 true,
                 false,
+                true,
                 true
               ]
             },
@@ -807,7 +726,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -821,8 +740,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -835,7 +754,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -848,9 +767,9 @@
               "answer4": "Der unterste Längsverband des Bootsrumpfes",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ]
             },
             {
@@ -861,9 +780,9 @@
               "answer3": "Skiffs",
               "answer4": "Dinghis",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -875,9 +794,9 @@
               "answer3": "Achterliek",
               "answer4": "Am Schothorn, um das Unterliek zur Baumnock zu spannen",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -890,7 +809,7 @@
               "answer4": "Sturmfock",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -903,10 +822,10 @@
               "answer3": "Sprietsegel",
               "answer4": "Stagsegel",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -919,7 +838,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/C10.png"
@@ -932,10 +851,10 @@
               "answer3": "Fuß",
               "answer4": "Schothorn",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -946,9 +865,9 @@
               "answer3": "Großsegel",
               "answer4": "Spinnaker",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -960,9 +879,9 @@
               "answer3": "Klampe",
               "answer4": "Schäkel",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/C13.png"
@@ -977,7 +896,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/C14.png"
@@ -991,7 +910,7 @@
               "answer4": "Schäkel",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ],
@@ -1006,9 +925,9 @@
               "answer4": "Schäkel",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ],
               "image": "../../../../assets/img/questionimgs/C16.png"
             },
@@ -1020,9 +939,9 @@
               "answer3": "Holepunkt",
               "answer4": "Wanten",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -1034,9 +953,9 @@
               "answer3": "Stander",
               "answer4": "Saling",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -1062,10 +981,10 @@
               "answer3": "Festmacher",
               "answer4": "Baumniederholer",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             }
           ]
@@ -1083,10 +1002,10 @@
               "answer3": "Anker",
               "answer4": "Rettungswesten",
               "correctAnswer": [
-                false,
                 true,
                 true,
-                false
+                true,
+                true
               ]
             },
             {
@@ -1097,9 +1016,9 @@
               "answer3": "Rettungsinsel",
               "answer4": "Lifebelts",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -1127,8 +1046,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1153,8 +1072,8 @@
               "answer3": "Der Rudergänger steuert das Boot in Laufrichtung der Wellen, um ein Querschlagen zu vermeiden",
               "answer4": "Das Ruder wird in Mittschiffsstellung fixiert und das Boot segelt autonom; lediglich ein Ausguck muss an Deck bleiben, um auf mögliche Kollisionsgegner reagieren zu können",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 true,
                 false
               ]
@@ -1170,7 +1089,7 @@
                 false,
                 true,
                 true,
-                false
+                true
               ]
             },
             {
@@ -1183,8 +1102,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1195,7 +1114,7 @@
               "answer3": "Wenn möglich vor dem Eintreffen des schlechten Wetters einen sicheren Hafen anlaufen",
               "answer4": "Rettungskräfte über Position und Art des Bootes, Anzahl der Personen an Bord und geplantes Reiseziel informieren",
               "correctAnswer": [
-                false,
+                true,
                 true,
                 true,
                 false
@@ -1209,10 +1128,10 @@
               "answer3": "Andere Boote mit Notsignalen auf sich und seine Situation aufmerksam machen",
               "answer4": "Bootsrumpf auf substantielle Schäden überprüfen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1223,9 +1142,9 @@
               "answer3": "Aufblasbare Auftriebskörper füllen, um das Sinken zu vermeiden oder zumindest hinauszuzögern",
               "answer4": "Luken und Steckschott schließen und das Boot durchkentern",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -1238,9 +1157,9 @@
               "answer4": "Das Großsegel erst bergen, wenn man sich vergewissert hat, dass der Anker hält",
               "correctAnswer": [
                 false,
+                false,
                 true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -1251,10 +1170,10 @@
               "answer3": "Den Überbordgegangenen einfach herausziehen",
               "answer4": "Rettungstalje improvisieren",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -1265,9 +1184,9 @@
               "answer3": "Großsegel bergen",
               "answer4": "Fockschot dichtholen",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -1279,10 +1198,10 @@
               "answer3": "Vorsegel bergen",
               "answer4": "Den Mast mit einer Leine behelfsmäßig nach vorne stützen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1293,8 +1212,8 @@
               "answer3": "Beschädigtes Want durch Anbringung zusätzlicher Leinen entlasten",
               "answer4": "Segel bergen und Schlepphilfe anfordern; ein Weitersegeln ist unter keinen Umständen möglich",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 true,
                 false
               ]
@@ -1321,10 +1240,10 @@
               "answer3": "Navigatorisch relevante Informationen, wie z.B. die Positionen von Untiefen",
               "answer4": "Spezielle Windverhältnisse und Wetterecken",
               "correctAnswer": [
+                true,
                 false,
                 true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -1335,10 +1254,10 @@
               "answer3": "Überprüfung der Seetauglichkeit jedes einzelnen Crewmitglieds",
               "answer4": "Sicherheitseinweisung der Crew",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1350,9 +1269,9 @@
               "answer4": "Die Sturmwarnsignale in Österreich sind nicht einheitlich; ein Schiffsführer hat sich vor dem Auslaufen über die Art der vorhandenen Sturmwarnsignale zu informieren",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ]
             }
           ]
@@ -1370,10 +1289,10 @@
               "answer3": "Um auf Vorwindkurs ein Aufsteigen des Großbaums zu verhindern",
               "answer4": "Um nach dem Reffen des Großsegels überschüssiges Segeltuch zu versorgen",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -1386,7 +1305,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1400,8 +1319,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1412,9 +1331,9 @@
               "answer3": "Auf Halbwindkurs ist das Schwert ganz aufgeholt, um den Strömungswiderstand zu verringern",
               "answer4": "Bei vorlich einfallenden Winden ist das Schwert aufgeholt, um den Lateraldruckpunkt nach vorne zu verschieben",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -1426,10 +1345,10 @@
               "answer3": "Durch Versetzen des Holepunkts wird die Profiltiefe (\"Bauchigkeit\") verändert",
               "answer4": "Durch Versetzen des Holepunkts wird die Zugrichtung der Schot verändert",
               "correctAnswer": [
+                true,
                 false,
                 true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -1454,9 +1373,9 @@
               "answer3": "Auf Raumwindkurs: Liektaue durchsetzen",
               "answer4": "Auf Vorwindkurs: Großsegel und Fock auf der gleichen Seite führen",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -1469,9 +1388,9 @@
               "answer4": "Fockschot fieren",
               "correctAnswer": [
                 false,
+                false,
                 true,
-                true,
-                false
+                true
               ]
             }
           ]
@@ -1489,10 +1408,10 @@
               "answer3": "Die Mitgliedschaft beim Österreichischen Segel-Verband (OeSV) oder einem anderen nationalen Mitgliedsverband von World Sailing",
               "answer4": "Amateurstatus und Leumdungszeugnis",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -1503,9 +1422,9 @@
               "answer3": "Es sollte in der Mitte gestartet werden",
               "answer4": "Es sollte immer nahe beim Startschiff gestartet werden",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -1519,9 +1438,9 @@
               "answer4": "Ab einer Rumpflänge von 6 Metern die Protestflagge setzen",
               "correctAnswer": [
                 false,
+                false,
                 true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -1532,10 +1451,10 @@
               "answer3": "Bei einer Wegerechtsverletzung mit einer Ein-Drehung-Strafe",
               "answer4": "Bei einer Wegerechtsverletzung mit einer Zwei-Drehungen-Strafe",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1548,7 +1467,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1560,9 +1479,9 @@
               "answer3": "Die an der Regatta teilnehmenden Boote sind gegenüber nicht teilnehmenden Booten grundsätzlich ausweichpflichtig",
               "answer4": "Die an der Regatta teilnehmenden Boote müssen sich gegenüber allen anderen Verkehrsteilnehmern an die Fahrregeln der Wettfahrtregeln halten",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -1576,8 +1495,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1589,7 +1508,7 @@
               "answer4": "Bei Unmöglichkeit der Hilfeleistung muss die Wettfahrtleitung beim Zieleinlauf informiert werden",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -1609,10 +1528,10 @@
               "answer3": "Palstek",
               "answer4": "Stopperstek",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                false,
+                false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
@@ -1625,7 +1544,7 @@
               "answer4": "Stopperstek",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ],
@@ -1640,9 +1559,9 @@
               "answer4": "Klampenschlag (Rundtörn, Kreuzschlag und Kopfschlag)",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
@@ -1656,7 +1575,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -1671,7 +1590,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -1686,8 +1605,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1698,9 +1617,9 @@
               "answer3": "Roringstek",
               "answer4": "Webeleinstek",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -1714,7 +1633,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1728,7 +1647,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1741,7 +1660,7 @@
               "answer4": "Rückspleiß",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ],
@@ -1756,7 +1675,7 @@
               "answer4": "Mit Spleißen kann geschlagenes mit geflochtenem Tauwerk verbunden werden",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -1771,7 +1690,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -1791,10 +1710,10 @@
               "answer3": "Bei kreuzenden Kursen sollte das ausweichpflichtige Fahrzeug möglichst hinter dem anderen Fahrzeug vorbeifahren",
               "answer4": "Der Passierabstand sollte, unabhängig von den Bootsgrößen der beteiligten Fahzeuge, zumindest 50m betragen",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                true,
+                false
               ]
             },
             {
@@ -1807,8 +1726,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1833,9 +1752,9 @@
               "answer3": "Um das Überschreiten der Rumpfgeschwindigkeit zu verhindern",
               "answer4": "Um die Größe der Segelfläche der im Gleitzustand verringerten Fläche des Lateralplans anzupassen",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
                 false
               ]
             },
@@ -1848,9 +1767,9 @@
               "answer4": "Nock",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ]
             },
             {
@@ -1863,7 +1782,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1875,9 +1794,9 @@
               "answer3": "Spion",
               "answer4": "Schummler",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -1890,7 +1809,7 @@
               "answer4": "Die Böenwalze an der Vorderseite von Gewittern in denen der Wind kurzzeitig Sturmstärke erreichen kann",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -1913,7 +1832,7 @@
                 false,
                 true,
                 false,
-                true
+                false
               ]
             },
             {
@@ -1926,7 +1845,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1939,7 +1858,7 @@
               "answer4": "Zwei relativ warme und feuchte Luftmassen treffen aufeinander und drücken sich gegenseitig in die Höhe, dehnen sich beim Aufstieg aus und kühlen ab",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -1954,8 +1873,8 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -1967,7 +1886,7 @@
               "answer4": "D",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ],
@@ -1983,7 +1902,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -1996,9 +1915,9 @@
               "answer4": "Früh morgens vor Sonnenaufgang",
               "correctAnswer": [
                 false,
+                false,
                 true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -2011,7 +1930,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ]
             },
@@ -2023,8 +1942,8 @@
               "answer3": "auflandiger Wind",
               "answer4": "ablandiger Wind",
               "correctAnswer": [
-                false,
                 true,
+                false,
                 true,
                 false
               ],
@@ -2039,7 +1958,7 @@
               "answer4": "Himmelsbesen",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ]
@@ -2052,10 +1971,10 @@
               "answer3": "Je weiter die Isobaren auseinander liegen, desto stärker ist der Wind",
               "answer4": "Je enger die Isobaren beieinander liegen, desto stärker ist der Wind",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -2066,9 +1985,9 @@
               "answer3": "Wenn der Druck von trockener Luft sinkt",
               "answer4": "Wenn der Druck von trockener Luft steigt",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             }
@@ -2087,10 +2006,10 @@
               "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
               "answer4": "Boot B / das luvseitige Boot hat auszuweichen",
               "correctAnswer": [
-                false,
                 true,
                 false,
-                true
+                false,
+                false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
@@ -2102,9 +2021,9 @@
               "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
               "answer4": "Boot B / das luvseitige Boot hat auszuweichen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -2119,7 +2038,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -2134,7 +2053,7 @@
               "correctAnswer": [
                 false,
                 true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -2147,9 +2066,9 @@
               "answer3": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
               "answer4": "Boot B / das luvseitige Boot hat auszuweichen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -2163,7 +2082,7 @@
               "answer4": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ],
@@ -2177,9 +2096,9 @@
               "answer3": "Boot A / das Boot mit Wind von Backbord hat auszuweichen",
               "answer4": "Boot B / das Boot mit Wind von Steuerbord hat auszuweichen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -2193,7 +2112,7 @@
               "answer4": "Beide Boote / Beim Begegnen: Ausweichen nach Backbord",
               "correctAnswer": [
                 false,
-                true,
+                false,
                 true,
                 false
               ],
@@ -2207,10 +2126,10 @@
               "answer3": "Fahrzeugen mit Maschinenantrieb und einer Länge über Alles von weniger als 20 m",
               "answer4": "Fahrzeugen mit Maschinenantrieb und einer Länge über Alles von mehr als 20 m",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -2221,10 +2140,10 @@
               "answer3": "Kleinfahrzeuge unter Segel sind ausweichpflichtig gegenüber Tretbooten",
               "answer4": "Kleinfahrzeuge unter Segel sind ausweichpflichtig gegenüber Fahrzeugen, die einen grünen Ball führen",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -2235,10 +2154,10 @@
               "answer3": "Fahrzeugen mit Maschinenantrieb, unabhängig von deren Länge",
               "answer4": "Fahrzeugen der Feuerwehr oder Wasserrettung, die ein blaues Funkellicht führen",
               "correctAnswer": [
+                true,
+                true,
                 false,
-                true,
-                true,
-                false
+                true
               ]
             },
             {
@@ -2249,9 +2168,9 @@
               "answer3": "200 m",
               "answer4": "300 m",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -2263,10 +2182,10 @@
               "answer3": "Hecklicht, Seitenlichter und Topplicht",
               "answer4": "Hecklicht und Seitenlichter",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -2277,9 +2196,9 @@
               "answer3": "Es darf einen grünen Ball führen",
               "answer4": "Es muss zwei schwarze Kegel mit den Spitzen zueinander (Stundenglas) führen",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -2291,9 +2210,9 @@
               "answer3": "Einen gelben Doppelkegel",
               "answer4": "Einen schwarzen Zylinder",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -2305,9 +2224,9 @@
               "answer3": "Fahrzeug unter Segel",
               "answer4": "Stilllieger",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
@@ -2320,9 +2239,9 @@
               "answer3": "Maschine geht rückwärts",
               "answer4": "Hafenausfahrtsignal",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
+                false,
                 false
               ]
             },
@@ -2334,10 +2253,10 @@
               "answer3": "Ein langer Ton: etwa 2 Sekunden",
               "answer4": "Ein langer Ton: etwa 4 Sekunden",
               "correctAnswer": [
+                true,
                 false,
-                true,
-                true,
-                false
+                false,
+                true
               ]
             },
             {
@@ -2348,10 +2267,10 @@
               "answer3": "Ein Lichtzeichen, zusammengesetzt aus dem Morsezeichen für SOS",
               "answer4": "Ein Schallzeichen, zusammengesetzt aus einer Folge langer Töne",
               "correctAnswer": [
-                false,
                 true,
                 true,
-                false
+                true,
+                true
               ]
             },
             {
@@ -2363,9 +2282,9 @@
               "answer4": "Verbot der Durchfahrt",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ],
               "image": "../../../../assets/img/questionimgs/VCBC.jpg"
             },
@@ -2392,9 +2311,9 @@
               "answer4": "Schifferpatentpflicht ab einer Segelfläche von 12 m2",
               "correctAnswer": [
                 false,
-                true,
-                true,
-                false
+                false,
+                false,
+                true
               ]
             },
             {
@@ -2419,10 +2338,10 @@
               "answer3": "Vermeidung der Behinderung der Schifffahrt",
               "answer4": "Meldung von unbekannten Hindernissen, die eine Gefahr für die Schifffahrt darstellen könnten",
               "correctAnswer": [
+                true,
                 false,
                 true,
-                true,
-                false
+                true
               ]
             }
           ]

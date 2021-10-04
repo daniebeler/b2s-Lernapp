@@ -1,31 +1,12 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-  <div class="back" (click) = 'navigateBack()'>
+  <div class="back" (click)='navigateBack()'>
     <ion-icon src='../../../assets/icon/knotsBack.svg'></ion-icon>
   </div>
-  <ion-slides class="slide-item">
-    <ion-slide class="ion-padding">
-      <ion-list>
-        <h1>{{this.knotName}}</h1>
-        <h5>{{this.knotUsage}}</h5>
 
-        
-
-      </ion-list>
-      <img class="arrow" [src]="arrow">
-    </ion-slide>
-
-    <ion-slide class="ion-padding" *ngFor="let slide of slides; let i = index">
-      <ion-list>
-        <h2>Schritt {{i + 1}}</h2>
-        <img
-          class="slide-img"
-          [src]="slide"
-          alt="Bilder zur erklärung von Knoten"
-        />
-        <p>{{this.knotExplanation[i]}}</p>
-      </ion-list>
-    </ion-slide>
-  </ion-slides>
+  <div class="video">
+      <iframe class="video_iframe" width="100%" height="auto" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      </iframe>
+  </div>
 </ion-content>

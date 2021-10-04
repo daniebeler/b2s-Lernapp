@@ -1,12 +1,3 @@
-.slide-item{
-  height: 100%;
-  color: white;
-}
-
-ion-slides{
-  background: var(--ion-color-button);
-}
-
 .arrow {
   position: absolute;
   height: 80px;
@@ -14,11 +5,25 @@ ion-slides{
   bottom: 50px;
 }
 
-.back ion-icon{
+.back ion-icon {
   color: white;
   position: absolute;
   z-index: 2;
   top: 20px;
   left: 20px;
   font-size: 25px;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &_iframe {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }

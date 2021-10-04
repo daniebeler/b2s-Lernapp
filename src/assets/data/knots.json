@@ -1,27 +1,135 @@
 {
   "knots": [
     {
-      "name": "Palstek",
-      "usage": "Dieser knoten wird überall verwendet",
-      "pictures": [
-        "../../../assets/img/knots/VCBC.jpg",
-        "../../../assets/img/knots/VCBC.jpg",
-        "../../../assets/img/knots/VCBC.jpg"
-      ],
+      "name": "Webleinstek",
+      "usage": "Dies ist ein Knoten zum schnellen Belegen eines Endes an einem runden Gegenstand.",
+      "videoURL": "https://www.youtube.com/embed/1QsVdqb_kuE",
       "slideExplanation": [
-        "ende dort durch",
-        "ende da durch",
-        "festziehen"
+        "Rundtörn legen",
+        "Einen zweiten Rundtörn hinten überkreuzen",
+        "Vorne einfädeln"
+      ]
+    },
+    {
+      "name": "Stopperstek",
+      "usage": "Der Stopperstek dient zum seitlichen bis parallelen Festmachen einer Leine auf einer anderen unter Zug stehenden Trosse (Schleppleine) oder stärkeren Leine, wobei die Last ganz oder teilweise von dieser Leine bzw. Trosse übernommen werden kann.",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Zwei Rundtörns legen",
+        "Achtern unten nach vorne kreuzen",
+        "Halben Schlag auf die Schleppleine"
+      ]
+    },
+    {
+      "name": "Schotstek",
+      "usage": "",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Herstellen eines Kreuzknotens",
+        "Ausfädeln des Endes der dünneren Leine",
+        "Einfädeln dieses losen Endes unter die Zugseite der dünneren Leine"
+      ]
+    },
+    {
+      "name": "Roringstek",
+      "usage": "Befestigung einer Leine an einem Ring",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "Palstek",
+      "usage": "Herstellen eines festen Auges das sich nicht zusammenzieht. Der Universalknoten, leicht zu lösen auch nach Belastung.",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Durch den Ring fädeln",
+        "Die rechte Hand auf die Schot legen - mit Daumen zum Ende - Hand in Uhrzeigerrichtung drehen um eine Schlaufe zu erzeugen",
+        "Loses Ende mit der linken Hand von unten durch die Bucht einfädeln.",
+        "Um die Zugleine herumgehen",
+        "Von oben wieder in die Bucht einfädeln",
+        "Knoten festziehen"
+      ]
+    },
+    {
+      "name": "Luftmasche",
+      "usage": "Verwendung zum Aufklarieren von Fallen",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Durch Drehen eine Bucht erzeugen",
+        "Auf der Seite der Zugleine von unten durch die Bucht ziehen",
+        "Festknoten, festziehen"
       ]
     },
     {
       "name": "Kreuzknoten",
-      "usage": "Dieser knoten wird überall verwendet.",
-      "pictures": [
-        "../../../assets/img/knots/VCBC.jpg"
-      ],
+      "usage": "Verbinden zweier gleich starker, gleich steifer Leinen.",
+      "videoURL": "placeholder",
       "slideExplanation": [
-        "ende dort durch"
+        "Leinen überkreuzen",
+        "Ein weiteres Mal überkreuzen sodass die abgehenden Enden jeweils parallel sind"
+      ]
+    },
+    {
+      "name": "Klampenschlag",
+      "usage": "Befestigung jeder Art von Leine auf einer Klampe, auch nach starker Belastung leicht lösbar.",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Die Leine an dem entferntesten Punkt der Klampe, aus Zugrichtung gesehen, herumlegen",
+        "Eine weitere halbe Umdrehung unten an der Klampe, hochziehen und oben über Kreuz legen.",
+        "Um das Klapmenende herum ein weiteres Mal über Kreuz legen",
+        " Das nächste Auge, in sich verdreht, über das Klampenende legen",
+        "WICHTIG: die zwei unteren Lagen müssen parallel liegen"
+      ]
+    },
+    {
+      "name": "Hunterstek",
+      "usage": "Dauerhafte Verbindung zweier gleichartiger Leinen",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Beide Leinen nehmen und eine Bucht erzeugen die aus vier Ringen besteht.",
+        "Die entfernte lose Leine von innen durch alle Buchten stecken",
+        "Die nahe lose Leine von aussen durch alle Buchten stecken",
+        "An allen vier Enden den Knoten festziehen"
+      ]
+    },
+    {
+      "name": "boats2sail-stek",
+      "usage": "Für die schnelle Befestigung einer langen Leine durch einen Ring oder um eine Spiere.",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        " Leine an der Stelle die fest sein soll durch den Ring ziehen. Mit der durchgezogenen doppelten Leine eine halben Schlag um die Zugleine machen.",
+        "Mit der doppelten Leine einen weiteren halben Schlag um die Zugleine machen",
+        "Vorteile: Es ist nicht notwendig die gesamt Leine durch das Auge durchzuziehen (ich kann sofort Zug auf Leine bringen), der Knoten ist auch nach starker Belastung leicht lösbar"
+      ]
+    },
+    {
+      "name": "Aufschießen zu Bunsch",
+      "usage": "Aufklarieren (Aufräumen), nicht im Einsatz befindlicher Leinen an Board, ist die wesentliche Voraussetzung um Problemfälle zu verhindern. Eine Methode davon ist es, Leinen aufzuschießen.",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Ausdrehen der Leine und Herstellen von sauberen Buchten",
+        "Mit dem letzten Teil der Leine, werden im oberen Drittel des Bunsches drei feste Umdrehungen hergestellt",
+        "Der letzte Teil der Leine wird durch den oberen Teil des Bunsches durchgezogen und als Bucht oben drüber gelegt"
+      ]
+    },
+    {
+      "name": "Achterknoten",
+      "usage": "Das Ende eines Tampen (Schot oder Fall) wird mit einem Achtknoten versehen um das Herausrutschen der Leine aus der Öse oder Rolle zu sichern.",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Das lose Ende in Achterform um die Zugleine schlingen"
+      ]
+    },
+    {
+      "name": "Achterknoten doppelt",
+      "usage": "Das Ende eines Tampen (Schot oder Fall) wird mit einem Achtknoten versehen um das Herausrutschen der Leine aus der Öse oder Rolle zu sichern. Im Gegensatz zum normalen Achterknoten verwendet man den doppelten Achterknoten bei größeren Ösen oder Rollen",
+      "videoURL": "placeholder",
+      "slideExplanation": [
+        "Das lose Ende in Achterform um die Zugleine schlingen",
+        "Das lose Ende ein zusätzliches Mal um die Zugleine schlingen"
       ]
     }
   ]

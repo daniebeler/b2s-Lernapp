@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { KnotSliderPageRoutingModule } from './knot-slider-routing.module';
-
+import { YoutubePipe } from '../../pipes/youtube.pipe';
 import { KnotSliderPage } from './knot-slider.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
@@ -17,6 +17,6 @@ import { ComponentsModule } from 'src/app/components/components.module';
     KnotSliderPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [KnotSliderPage]
+  declarations: [KnotSliderPage, YoutubePipe]
 })
 export class KnotSliderPageModule {}

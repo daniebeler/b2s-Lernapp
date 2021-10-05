@@ -14,6 +14,7 @@ export class KnotSliderPage implements OnInit {
   data: any;
   knotName: string;
   knotUsage: string;
+  knotVideoURL: string;
   knotExplanation = [];
   arrow = '../../../assets/icon/swipeRight2.png';
 
@@ -30,7 +31,7 @@ export class KnotSliderPage implements OnInit {
         this.knot = this.router.getCurrentNavigation().extras.state.knotindex;
         this.httpClient.get('./assets/data/knots.json').subscribe(data => {
           this.data = data;
-          this.getSlidePictures();
+          //this.getSlidePictures();
           this.knotFirstSlide();
         });
       }
@@ -40,6 +41,7 @@ export class KnotSliderPage implements OnInit {
   knotFirstSlide() {
     this.knotName = this.data.knots[this.knot].name;
     this.knotUsage = this.data.knots[this.knot].usage;
+    this.knotVideoURL = this.data.knots[this.knot].videoURL;
   }
 
   getSlidePictures() {

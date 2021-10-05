@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
+import { SwiperModule } from 'swiper/angular';
 
 import { KnotSliderPageRoutingModule } from './knot-slider-routing.module';
 import { YoutubePipe } from '../../pipes/youtube.pipe';
@@ -15,7 +15,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     KnotSliderPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    SwiperModule
   ],
   declarations: [KnotSliderPage, YoutubePipe]
 })

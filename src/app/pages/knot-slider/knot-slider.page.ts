@@ -1,13 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { SwiperComponent } from 'swiper/angular';
 
 @Component({
   selector: 'app-knot-slider',
   templateUrl: './knot-slider.page.html',
-  styleUrls: ['./knot-slider.page.scss'],
+  styleUrls: ['./knot-slider.page.scss']
 })
-export class KnotSliderPage implements OnInit {
+export class KnotSliderPage implements OnInit, AfterContentChecked {
+  @ViewChild('swiper') swiper: SwiperComponent;
 
   knot: any;
   slides: Array <string> = [];
@@ -23,6 +25,12 @@ export class KnotSliderPage implements OnInit {
     private httpClient: HttpClient,
     private router: Router
   ) { }
+
+  ngAfterContentChecked() {
+    if(this.swiper){
+      this.swiper.updateSwiper({});
+    }
+  }
 
   ngOnInit() {
 

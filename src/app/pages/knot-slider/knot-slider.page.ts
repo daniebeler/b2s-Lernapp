@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterContentChecked, Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterContentChecked, Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -39,7 +39,7 @@ export class KnotSliderPage implements OnInit, AfterContentChecked {
         this.knot = this.router.getCurrentNavigation().extras.state.knotindex;
         this.httpClient.get('./assets/data/knots.json').subscribe(data => {
           this.data = data;
-          //this.getSlidePictures();
+          this.getSlideExplanations();
           this.knotFirstSlide();
         });
       }
@@ -52,10 +52,9 @@ export class KnotSliderPage implements OnInit, AfterContentChecked {
     this.knotVideoURL = this.data.knots[this.knot].videoURL;
   }
 
-  getSlidePictures() {
-     for (let i = 0; i < Object.keys(this.data.knots[this.knot].pictures).length; i++) {
-       this.slides.push(this.data.knots[this.knot].pictures[i]);
-       console.log(this.data.knots[this.knot].knotExplanation);
+  getSlideExplanations() {
+    this.knotExplanation = [];
+     for (let i = 0; i < Object.keys(this.data.knots[this.knot].slideExplanation).length; i++) {
        this.knotExplanation.push(this.data.knots[this.knot].slideExplanation[i]);
      }
   }

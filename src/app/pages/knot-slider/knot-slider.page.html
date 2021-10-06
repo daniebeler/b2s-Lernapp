@@ -1,20 +1,23 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-  <div class="back" (click)='navigateBack()'>
-    <ion-icon src='../../../assets/icon/knotsBack.svg'></ion-icon>
+  <div (click)='navigateBack()'>
+    <ion-grid class="ion-padding">
+      <ion-row>
+        <ion-col size="auto">
+          <ion-icon class="icon-back" src='../../../assets/icon/knotsBack.svg'></ion-icon>
+        </ion-col>
+        <ion-col class="header-holder">
+          <h3 class="ion-text-wrap header-text m-0"><strong>{{knotName}}</strong></h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 
   <swiper #swiper>
     <ng-template swiperSlide>
       <div class="ion-padding swiperSlide" style="width: 100%;">
         <ion-grid style="width: 100%;">
-          <ion-row>
-            <ion-col>
-              <h3 class="ion-text-wrap"><strong>{{knotName}}</strong></h3>
-            </ion-col>
-          </ion-row>
-
           <ion-row style="width: 100%;">
             <ion-col style="width: 100%; height: 300px;">
               <div class="video">
@@ -34,11 +37,9 @@
       </div>
     </ng-template>
 
-    <ng-template swiperSlide>
+    <ng-template swiperSlide class="ion-padding">
       <ol>
-        <li>Schritt 1</li>
-        <li>Schritt 2</li>
-        <li>Schritt 3</li>
+        <li *ngFor="let explanation of knotExplanation; let i = index">{{explanation}}</li>
       </ol>
     </ng-template>
   </swiper>

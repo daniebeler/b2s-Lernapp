@@ -14,9 +14,9 @@
     </ion-grid>
   </div>
 
-  <swiper #swiper>
+  <swiper #swiper class="my-swiper">
     <ng-template swiperSlide>
-      <div class="ion-padding swiper-slide" style="width: 100%;">
+      <div class="ion-padding" style="width: 100%;">
         <ion-grid style="width: 100%;">
           <ion-row style="width: 100%;">
             <ion-col>
@@ -39,7 +39,9 @@
 
     <ng-template swiperSlide class="ion-padding">
       <ol>
-        <li *ngFor="let explanation of knotExplanation; let i = index"><p>{{explanation}}</p></li>
+        <li *ngFor="let explanation of knotExplanation; let i = index">
+          <p>{{explanation}}</p>
+        </li>
       </ol>
     </ng-template>
   </swiper>

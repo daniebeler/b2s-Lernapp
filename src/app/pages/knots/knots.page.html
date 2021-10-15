@@ -1,8 +1,35 @@
 <app-custom-header></app-custom-header>
 
-<ion-content class="ion-padding">
-  <ion-item class="ion-margin-top" *ngFor="let knot of knotsArray; let i = index" (click)="navigate(i)">
-    <ion-label color="light" class="ion-text-wrap">{{knot.name}}</ion-label>
-    <ion-icon color="light" name="play"></ion-icon>
-  </ion-item>
+<ion-content>
+  <div class="top"   (click)= "navigate(0)">
+    <img src="../../../assets/img/knots/VCBC.jpg" alt="">
+    <div class="thumbnail_text">
+      <h5>Titel</h5>
+      <hr>
+      <p>kurze Erklärung</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="bottom_left">
+      <div class="bottom_left_thumbnail" *ngFor="let i of leftPictures;"  (click)= "navigate(i)">
+        <img [src]="data.knots[i].thumbnail" alt="">
+        <div class="thumbnail_text">
+          <h5>{{data.knots[i].name}}</h5>
+          <hr>
+          <p>kurze Erklärung</p>
+        </div>
+      </div>
+    </div>
+    <div class="bottom_right">
+      <div class="bottom_right_thumbnail" *ngFor="let i of rightPictures;"   (click)= "navigate(i)">
+        <img class="firstThumbnail" [src]="data.knots[i].thumbnail" alt="">
+        <div class="thumbnail_text">
+          <h5>{{data.knots[i].name}}</h5>
+          <hr>
+          <p>kurze Erklärung</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

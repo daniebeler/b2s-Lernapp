@@ -48,7 +48,7 @@
     {
       "name": "Palstek",
       "usage": "Herstellen eines festen Auges das sich nicht zusammenzieht. Der Universalknoten, leicht zu lösen auch nach Belastung.",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Palstek.jpg",
       "videoURL": "https://www.youtube.com/embed/93HN5Sck3RU",
       "slideExplanation": [
         "Durch den Ring fädeln",
@@ -62,7 +62,7 @@
     {
       "name": "Luftmasche",
       "usage": "Verwendung zum Aufklarieren von Fallen",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Luftmasche.jpg",
       "videoURL": "https://www.youtube.com/embed/Ob0Xs3KDDdQ",
       "slideExplanation": [
         "Durch Drehen eine Bucht erzeugen",
@@ -73,7 +73,7 @@
     {
       "name": "Kreuzknoten",
       "usage": "Verbinden zweier gleich starker, gleich steifer Leinen.",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Kreuzknoten.jpg",
       "videoURL": "https://www.youtube.com/embed/_aqxkH3A6XI",
       "slideExplanation": [
         "Leinen überkreuzen",
@@ -83,7 +83,7 @@
     {
       "name": "Klampenschlag",
       "usage": "Befestigung jeder Art von Leine auf einer Klampe, auch nach starker Belastung leicht lösbar.",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Klampenschlag.jpg",
       "videoURL": "https://www.youtube.com/embed/3B3pgkBSy_Y",
       "slideExplanation": [
         "Die Leine an dem entferntesten Punkt der Klampe, aus Zugrichtung gesehen, herumlegen",
@@ -96,7 +96,7 @@
     {
       "name": "Hunterstek",
       "usage": "Dauerhafte Verbindung zweier gleichartiger Leinen",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Hunterstek.jpg",
       "videoURL": "https://www.youtube.com/embed/_mWG-h3eZDo",
       "slideExplanation": [
         "Beide Leinen nehmen und eine Bucht erzeugen die aus vier Ringen besteht.",
@@ -108,7 +108,7 @@
     {
       "name": "boats2sail-stek",
       "usage": "Für die schnelle Befestigung einer langen Leine durch einen Ring oder um eine Spiere.",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_boats2sailstek.jpg",
       "videoURL": "https://www.youtube.com/embed/MjkDNlXuzCI",
       "slideExplanation": [
         "Leine an der Stelle die fest sein soll durch den Ring ziehen. Mit der durchgezogenen doppelten Leine eine halben Schlag um die Zugleine machen.",
@@ -119,7 +119,7 @@
     {
       "name": "Aufschießen zu Bunsch",
       "usage": "Aufklarieren (Aufräumen), nicht im Einsatz befindlicher Leinen an Board, ist die wesentliche Voraussetzung um Problemfälle zu verhindern. Eine Methode davon ist es, Leinen aufzuschießen.",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Aufschießen.jpg",
       "videoURL": "https://www.youtube.com/embed/slumu7vMaG8",
       "slideExplanation": [
         "Ausdrehen der Leine und Herstellen von sauberen Buchten",
@@ -130,7 +130,7 @@
     {
       "name": "Achterknoten",
       "usage": "Das Ende eines Tampen (Schot oder Fall) wird mit einem Achtknoten versehen um das Herausrutschen der Leine aus der Öse oder Rolle zu sichern.",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Achterknoten_einfach.jpg",
       "videoURL": "https://www.youtube.com/embed/acrQ5R-Ozb4",
       "slideExplanation": [
         "Das lose Ende in Achterform um die Zugleine schlingen"
@@ -139,7 +139,7 @@
     {
       "name": "Achterknoten doppelt",
       "usage": "Das Ende eines Tampen (Schot oder Fall) wird mit einem Achtknoten versehen um das Herausrutschen der Leine aus der Öse oder Rolle zu sichern. Im Gegensatz zum normalen Achterknoten verwendet man den doppelten Achterknoten bei größeren Ösen oder Rollen",
-      "thumbnail": "../../../assets/img/knots/VCBC.jpg",
+      "thumbnail": "../../../assets/img/knots/thumbnails/Knotenvideos_Thumbnails_Achterknoten_doppelt.jpg",
       "videoURL": "https://www.youtube.com/embed/GP0lXWYo1Ik",
       "slideExplanation": [
         "Das lose Ende in Achterform um die Zugleine schlingen",

@@ -1,47 +1,71 @@
-.my-swiper {
-  height: calc(100% - 100px);
-}
-
 ion-content {
-  --background: var(--ion-background-color);
+  --background: url(../../../assets/img/knots/VCBC.jpg);
 }
 
-.header-col {
-  display: flex;
-  flex-direction: row;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "playButton"
+    "knotInfoPosition";
 }
 
-p,
-h3,
-li {
+.knotInfoPosition {
+  grid-area: knotInfoPosition;
+  padding: 10px;
   color: white;
+
+  .knotInfoContent {
+    border-radius: 5px;
+    grid-area: playButton;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.763);
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0;
+      font-weight: lighter;
+    }
+
+    hr {
+      margin-bottom: 8px;
+    }
+  }
+
 }
 
-.icon-back {
+.playButton {
+  grid-area: playButton;
   position: relative;
-  font-size: 25px;
+    button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: transparent;
+      padding: 0;
+      ion-icon {
+        height: 100px;
+        width: 100px;
+      }
+
+  }
 }
 
-.header-text {
-  padding: 0;
+
+html,
+body,
+.container {
+  height: 100%;
   margin: 0;
-}
-
-.header-holder {
-  display: flex;
-  align-items: center;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-}
-
-.video-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }

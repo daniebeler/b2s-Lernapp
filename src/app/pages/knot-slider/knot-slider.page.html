@@ -1,48 +1,29 @@
 <app-custom-header></app-custom-header>
 
-<ion-content style="height: 100%;">
-  <div (click)='navigateBack()'>
-    <ion-grid class="ion-padding">
-      <ion-row>
-        <ion-col size="auto">
-          <ion-icon class="icon-back" src='../../../assets/icon/knotsBack.svg'></ion-icon>
-        </ion-col>
-        <ion-col class="header-holder">
-          <h3 class="ion-text-wrap header-text m-0"><strong>{{knotName}}</strong></h3>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<ion-content>
+<div class="container">
+
+  <div class="playButton">
+    <button>
+      <ion-icon name="play-circle"></ion-icon>
+    </button>
   </div>
 
-  <swiper #swiper class="my-swiper">
-    <ng-template swiperSlide>
-      <div class="ion-padding" style="width: 100%;">
-        <ion-grid style="width: 100%;">
-          <ion-row style="width: 100%;">
-            <ion-col>
-              <div class="video-container">
-                <iframe class="video-iframe" width="100%" height="100%" [src]="knotVideoURL | youtube">
-                </iframe>
-              </div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <p>
-                {{knotUsage}}
-              </p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </div>
-    </ng-template>
+  <div class="knotInfoPosition">
+    <div class="knotInfoContent">
+      <h1>{{data.knots[0].name}}</h1>
+      <hr>
+      <strong>Einsatzgebiet:</strong>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+        molestiae quas velm labor</p>
+      <strong>Schritt 1:</strong>
+      <p>Lorem ipsum dolor</p>
+      <strong>Schritt 2:</strong>
+      <p>Lorem ipsum dolorit amet co</p>
+      <strong>Schritt 4:</strong>
+      <p>Lorem dolorit amet co</p>
 
-    <ng-template swiperSlide class="ion-padding">
-      <ol>
-        <li *ngFor="let explanation of knotExplanation; let i = index">
-          <p>{{explanation}}</p>
-        </li>
-      </ol>
-    </ng-template>
-  </swiper>
+    </div>
+  </div>
+</div>
 </ion-content>

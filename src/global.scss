@@ -133,3 +133,14 @@ ion-list {
     }
   }
 }
+
+
+.my-custom-class {
+  --width: 100%;
+  --height: auto;
+  --backdrop-opacity: 0.5;
+}
+
+.popover-content {
+  left: 0 !important;
+}

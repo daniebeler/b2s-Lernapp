@@ -1,5 +1,6 @@
 ion-content {
-  --background: url(../../../assets/img/knots/VCBC.jpg);
+  --background: url(../../../assets/img/knots/VCBC.jpg) no-repeat center/cover
+  fixed;
 }
 
 .container {

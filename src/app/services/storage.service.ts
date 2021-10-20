@@ -7,17 +7,19 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class StorageService {
 
-  private currentKnot = 0;
-  private knotData: any;
+  private license = 0;
+  private quiztype = 0;
+  private topic = 0;
+
+  private questions: any;
 
   constructor(
     private storage: Storage,
     private httpClient: HttpClient
   ) {
     this.storage.create();
-
-    this.httpClient.get('./assets/data/knots.json').subscribe(data => {
-      this.knotData = data;
+    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
+      this.questions = data;
     });
   }
 
@@ -37,15 +39,31 @@ export class StorageService {
     this.storage.clear();
   }
 
-  setCurrentKnotIndex(knot) {
-    this.currentKnot = knot;
+  setLicense(index) {
+    this.license = index;
   }
 
-  getCurrentKnotIndex() {
-    return this.currentKnot;
+  getLicense() {
+    return this.license;
   }
 
-  getCurrentKnotData() {
-    return this.knotData.knots[this.getCurrentKnotIndex()];
+  setQuiztype(index) {
+    this.quiztype = index;
+  }
+
+  getQuiztype() {
+    return this.quiztype;
+  }
+
+  setTopic(index) {
+    this.topic = index;
+  }
+
+  getTopic() {
+    return this.topic;
+  }
+
+  getQuestions() {
+    return this.questions;
   }
 }

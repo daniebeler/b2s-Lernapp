@@ -3,6 +3,7 @@ import { Router, NavigationExtras } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
 import { StorageService } from 'src/app/services/storage.service';
+import { KnotsService } from 'src/app/services/knots.service';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,8 @@ export class HomePage {
     private httpClient: HttpClient,
     private router: Router,
     private screenOrientation: ScreenOrientation,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private knotsService: KnotsService
   ) {
     this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
   }
@@ -98,7 +100,7 @@ export class HomePage {
     this.completeTopics();
     this.completeQuestions();
     this.storageService.set('progress', this.userStats).then(value => {
-    this.getPercent();
+      this.getPercent();
     });
   }
 
@@ -160,7 +162,7 @@ export class HomePage {
     for (let schein = 0; schein < Object.keys(this.questionsJSON.scheine).length; schein++) {
       for (let thema = 0; thema < Object.keys(this.questionsJSON.scheine[schein].Thema).length; thema++) {
         for (let i = Object.keys(this.userStats.scheine[schein].thema[thema].correctQuestion).length;
-         i < Object.keys(this.questionsJSON.scheine[schein].Thema[thema].questions).length; i++) {
+          i < Object.keys(this.questionsJSON.scheine[schein].Thema[thema].questions).length; i++) {
           this.userStats.scheine[schein].thema[thema].correctQuestion.push(false);
         }
       }
@@ -195,10 +197,8 @@ export class HomePage {
   }
 
   navigate(index: any) {
-    const test = {
-        license: index
-      };
-    this.router.navigate(['tabs/home/quiztypes/' + JSON.stringify(test)]);
+    this.storageService.setLicense(index);
+    this.router.navigate(['tabs/home/quiztypes']);
   }
 
   nav() {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
-import { StorageService } from 'src/app/services/storage.service';
+import { KnotsService } from 'src/app/services/knots.service';
 import { KnotsPopoverComponent } from '../../components/knots-popover/knots-popover.component';
 
 @Component({
@@ -16,11 +16,11 @@ export class KnotSliderPage implements OnInit {
   constructor(
     private router: Router,
     private popover: PopoverController,
-    private storageService: StorageService
+    private knotService: KnotsService
   ) { }
 
   ngOnInit() {
-    this.knotData = this.storageService.getCurrentKnotData();
+    this.knotData = this.knotService.getCurrentKnotData();
   }
 
   navigateBack() {

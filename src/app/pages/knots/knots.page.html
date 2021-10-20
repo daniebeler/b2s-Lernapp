@@ -4,7 +4,7 @@
   <div class="top" (click)="navigate(0)">
     <img src="../../../assets/img/knots/VCBC.jpg" alt="">
     <div class="thumbnail_text">
-      <h5>{{data?.knots[0]?.name}}</h5>
+      <h5>{{knots[0]?.name}}</h5>
       <hr>
       <p>kurze Erklärung</p>
     </div>
@@ -13,9 +13,9 @@
   <div class="bottom">
     <div class="bottom_left">
       <div class="bottom_left_thumbnail" *ngFor="let i of leftPictures;" (click)="navigate(i)">
-        <img [src]="data.knots[i].thumbnail" alt="">
+        <img [src]="knots[i].thumbnail" alt="">
         <div class="thumbnail_text">
-          <h5>{{data.knots[i].name}}</h5>
+          <h5>{{knots[i].name}}</h5>
           <hr>
           <p>kurze Erklärung</p>
         </div>
@@ -23,10 +23,10 @@
     </div>
     <div class="bottom_right">
       <div class="bottom_right_thumbnail" *ngFor="let i of rightPictures;" (click)="navigate(i)">
-        <img *ngIf="i === 1; else elseBlock" class="firstThumbnail" [src]="data.knots[i].thumbnail" alt="">
-        <ng-template #elseBlock><img [src]="data.knots[i].thumbnail" alt=""></ng-template>
+        <img *ngIf="i === 1; else elseBlock" class="firstThumbnail" [src]="knots[i].thumbnail" alt="">
+        <ng-template #elseBlock><img [src]="knots[i].thumbnail" alt=""></ng-template>
         <div class="thumbnail_text">
-          <h5>{{data.knots[i].name}}</h5>
+          <h5>{{knots[i].name}}</h5>
           <hr>
           <p>kurze Erklärung</p>
         </div>

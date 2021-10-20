@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { StorageService } from 'src/app/services/storage.service';
 
 
@@ -21,12 +20,9 @@ export class QuiztypesPage implements OnInit {
   backgroundProgressbar = [];
   transformProgressbar = [];
   userStats: any = [];
-  scheinJSON: any = [];
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient,
     private storageService: StorageService
   ) { }
 
@@ -36,13 +32,10 @@ export class QuiztypesPage implements OnInit {
 
 
   ionViewDidEnter() {
-    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      if (this.data === undefined) {
-        this.data = data;
-        this.datareader();
-      }
-      this.getJSON();
-    });
+    this.schein = this.storageService.getLicense();
+    this.data = this.storageService.getQuestions();
+    this.datareader();
+    this.getJSON();
   }
 
   async getJSON() {
@@ -72,9 +65,6 @@ export class QuiztypesPage implements OnInit {
   }
 
   datareader() {
-    this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
-    this.schein = this.scheinJSON.license;
-
     this.scheinName = this.data.scheine[this.schein].scheinName;
     this.quote = this.data.scheine[this.schein].quote;
 
@@ -86,14 +76,8 @@ export class QuiztypesPage implements OnInit {
   }
 
   navigate(site: string, quiztypIndex: number) {
-
-  this.scheinJSON = {
-    license: this.schein,
-    quiztype: quiztypIndex,
-    topic: null
-  };
-
-    this.router.navigate([site + JSON.stringify(this.scheinJSON)]);
+    this.storageService.setQuiztype(quiztypIndex);
+    this.router.navigate([site]);
   }
 
   navigateHome() {

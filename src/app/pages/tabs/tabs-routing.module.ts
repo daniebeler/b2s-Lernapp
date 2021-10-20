@@ -13,11 +13,11 @@ const routes: Routes = [
         loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: 'home/quiztypes/:schein',
+        path: 'home/quiztypes',
         loadChildren: () => import('../quiztypes/quiztypes.module').then( m => m.QuiztypesPageModule)
       },
       {
-        path: 'home/themen/:schein',
+        path: 'home/themen',
         loadChildren: () => import('../themen/themen.module').then( m => m.ThemenPageModule)
       },
       {

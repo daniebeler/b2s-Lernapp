@@ -7,15 +7,15 @@ const routes: Routes = [
     loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
-    path: 'questions/:schein',
+    path: 'questions',
     loadChildren: () => import('./pages/questions/questions.module').then( m => m.QuestionsPageModule)
   },
   {
-    path: 'result/:result',
+    path: 'result',
     loadChildren: () => import('./pages/result/result.module').then( m => m.ResultPageModule)
   },
   {
-    path: 'themen/:schein',
+    path: 'themen',
     loadChildren: () => import('./pages/themen/themen.module').then( m => m.ThemenPageModule)
   },
   {

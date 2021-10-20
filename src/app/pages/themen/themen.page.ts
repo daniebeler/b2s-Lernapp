@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
@@ -10,8 +9,8 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class ThemenPage implements OnInit {
 
-  topicNames: Array <string> = [];
-  numberOfQuestionsPerTopic: Array <number> = [];
+  topicNames: Array<string> = [];
+  numberOfQuestionsPerTopic: Array<number> = [];
   allQuestions: any;
   licenseName = '';
   quote = '';
@@ -21,12 +20,9 @@ export class ThemenPage implements OnInit {
   transformProgressbar = [];
   userStats: any = [];
   schein: any;
-  scheinJSON: any = [];
 
   constructor(
-    private httpClient: HttpClient,
     private router: Router,
-    private activatedRoute: ActivatedRoute,
     private storageService: StorageService
   ) { }
 
@@ -35,13 +31,11 @@ export class ThemenPage implements OnInit {
   }
 
   ionViewDidEnter() {
-    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      if (this.allQuestions === undefined) {
-        this.allQuestions = data;
-        this.datareader();
-        this.getJSON();
-      }
-    });
+    if (this.allQuestions === undefined) {
+      this.allQuestions = this.storageService.getQuestions();
+      this.datareader();
+      this.getJSON();
+    }
   }
 
   async getJSON() {
@@ -71,9 +65,8 @@ export class ThemenPage implements OnInit {
   }
 
   datareader() {
-    this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
-    this.schein = this.scheinJSON.license;
-// eslint-disable-next-line @typescript-eslint/prefer-for-of
+    this.schein = this.storageService.getLicense();
+    // eslint-disable-next-line @typescript-eslint/prefer-for-of
     for (let i = 0; i < this.allQuestions.scheine[this.schein].Thema.length; i++) {
       this.topicNames.push(this.allQuestions.scheine[this.schein].Thema[i].themaName);
       this.numberOfQuestionsPerTopic.push(this.allQuestions.scheine[this.schein].Thema[i].questions.length);
@@ -83,15 +76,8 @@ export class ThemenPage implements OnInit {
   }
 
   navigate(i: number) {
-
-    this.scheinJSON = {
-    license: this.schein,
-    quiztype: this.scheinJSON.quiztype,
-    topic: i
-  };
-
-    this.router.navigate(['questions/' + JSON.stringify(this.scheinJSON)]);
-
+    this.storageService.setTopic(i);
+    this.router.navigate(['questions']);
   }
 
   navigateHome() {

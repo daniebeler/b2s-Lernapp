@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { StorageService } from 'src/app/services/storage.service';
-
+import { KnotsService } from 'src/app/services/knots.service';
 
 @Component({
   selector: 'app-knots',
@@ -11,28 +9,22 @@ import { StorageService } from 'src/app/services/storage.service';
 })
 export class KnotsPage implements OnInit {
 
-  knotsArray: Array<any> = [];
-  data: any;
+  knots: any;
   leftPictures = [];
   rightPictures = [];
 
   constructor(
-    private httpClient: HttpClient,
     private router: Router,
-    private storageService: StorageService
+    private knotsService: KnotsService
   ) { }
 
   ngOnInit() {
-    this.httpClient.get('./assets/data/knots.json').subscribe(data => {
-      const knotsJSON: any = data;
-      this.data = data;
-      this.knotsArray = knotsJSON.knots;
-      this.fillPicutesArray();
-    });
+    this.knots = this.knotsService.getKnotData();
+    this.fillPicutesArray();
   }
 
   fillPicutesArray() {
-    for (let i = 1; i < this.data.knots.length; i++) {
+    for (let i = 1; i < this.knots.length; i++) {
       if (i % 2 === 0) {
         this.leftPictures.push(i);
       }
@@ -40,13 +32,10 @@ export class KnotsPage implements OnInit {
         this.rightPictures.push(i);
       }
     }
-    console.log(this.leftPictures);
-    console.log(this.rightPictures);
-    console.log(this.data);
   }
 
   navigate(knotIndex: any) {
-    this.storageService.setCurrentKnotIndex(knotIndex);
+    this.knotsService.setCurrentKnotIndex(knotIndex);
     this.router.navigate(['tabs/knots/knot-slider']);
   }
 }

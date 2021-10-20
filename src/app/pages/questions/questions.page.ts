@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
@@ -21,9 +20,9 @@ export class QuestionsPage implements OnInit {
   questionindex = 0;
   themaindex = 0;
   answerschecker = [];
-  schein: string;
+  schein: number;
   scheinJSON: any = [];
-  quiztypeIndex: any;
+  quiztype: any;
   thema: string;
   questionsnumber = 0;
   currentQuestion = 0;
@@ -37,9 +36,7 @@ export class QuestionsPage implements OnInit {
   checkButtonText = 'Check';
 
   constructor(
-    private httpClient: HttpClient,
     private router: Router,
-    private activatedRoute: ActivatedRoute,
     private storageService: StorageService
   ) {
 
@@ -47,29 +44,21 @@ export class QuestionsPage implements OnInit {
 
   ngOnInit() {
 
+    this.data = this.storageService.getQuestions();
+    this.schein = this.storageService.getLicense();
+    this.quiztype = this.storageService.getQuiztype();
+    this.themaindex = this.storageService.getTopic();
+    this.thema = String(this.themaindex);
 
-    this.httpClient.get('./assets/data/questions.json').subscribe(data => {
-      this.data = data;
+    this.justOneTopic = (this.quiztype === -1);
 
+    if (this.quiztype === 2) {
+      this.quizsimulation();
+    }
 
-      this.scheinJSON = JSON.parse(this.activatedRoute.snapshot.paramMap.get('schein'));
-      this.schein = this.scheinJSON.license;
-      this.quiztypeIndex = this.scheinJSON.quiztype;
+    this.questionsnumber = this.questionnumberfunction();
 
-      if (this.scheinJSON.topic !== null) {
-        this.justOneTopic = true;
-        this.themaindex = this.scheinJSON.topic;
-        this.thema = String(this.themaindex);
-      }
-
-      if (this.quiztypeIndex === 1) {
-        this.quizsimulation();
-      }
-
-      this.questionsnumber = this.questionnumberfunction();
-
-      this.getJSON();
-    });
+    this.getJSON();
 
   }
 
@@ -88,25 +77,22 @@ export class QuestionsPage implements OnInit {
 
   questionnumberfunction() {
     let qeustionnumbers = 0;
-    if (this.quiztypeIndex === 0) {
-      if (this.justOneTopic === false) {
-        // eslint-disable-next-line @typescript-eslint/prefer-for-of
-        for (let i = 0; i < this.data.scheine[this.schein].Thema.length; i++) {
-          for (const a of this.data.scheine[this.schein].Thema[i].questions) {
-            qeustionnumbers++;
-          }
-        }
-      }
-      else {
-        for (const a of this.data.scheine[this.schein].Thema[this.themaindex].questions) {
+    if (this.quiztype === 0) {
+      // eslint-disable-next-line @typescript-eslint/prefer-for-of
+      for (let i = 0; i < this.data.scheine[this.schein].Thema.length; i++) {
+        for (const a of this.data.scheine[this.schein].Thema[i].questions) {
           qeustionnumbers++;
         }
       }
     }
-    else {
-      qeustionnumbers = this.quizQuestionsPerTopic.reduce((a,b) => a + b, 0);
+    else if (this.quiztype === 1) {
+      for (const a of this.data.scheine[this.schein].Thema[this.themaindex].questions) {
+        qeustionnumbers++;
+      }
     }
-
+    else {
+      qeustionnumbers = this.quizQuestionsPerTopic.reduce((a, b) => a + b, 0);
+    }
 
     return qeustionnumbers;
   }
@@ -197,7 +183,7 @@ export class QuestionsPage implements OnInit {
 
     else {
       //next Question or next Thema or fertig
-      if ((this.data.scheine[this.schein].Thema[this.themaindex].questions.length === this.questionindex + 1 && this.quiztypeIndex === 0)) {
+      if ((this.data.scheine[this.schein].Thema[this.themaindex].questions.length === this.questionindex + 1 && this.quiztype === 0)) {
         if (this.data.scheine[this.schein].Thema.length === this.themaindex + 1 && this.thema === undefined) {
           this.currentQuestion = 0;
           this.questionindex = 0;
@@ -218,7 +204,7 @@ export class QuestionsPage implements OnInit {
         }
       }
       else {
-        if (this.quiztypeIndex === 0) {
+        if (this.quiztype === 0) {
           this.questionindex++;
         }
         else {
@@ -254,7 +240,7 @@ export class QuestionsPage implements OnInit {
 
     const max = this.data.scheine[this.schein].Thema[this.themaindex].questions.length - 1;
     const min = 0;
-    let randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+    let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
     let wrong = 0;
 
@@ -263,7 +249,7 @@ export class QuestionsPage implements OnInit {
       // eslint-disable-next-line @typescript-eslint/prefer-for-of
       for (let i = 0; i < this.quizQuestionsArray.length; i++) {
         if (randomNumber === this.quizQuestionsArray[i]) {
-          randomNumber =  Math.floor(Math.random() * (max - min + 1)) + min;
+          randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
           wrong++;
         }
       }

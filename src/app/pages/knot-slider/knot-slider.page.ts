@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { PopoverController } from '@ionic/angular';
+import { StorageService } from 'src/app/services/storage.service';
 import { KnotsPopoverComponent } from '../../components/knots-popover/knots-popover.component';
 
 @Component({
@@ -11,31 +11,17 @@ import { KnotsPopoverComponent } from '../../components/knots-popover/knots-popo
 })
 export class KnotSliderPage implements OnInit {
 
-  knot: any;
-  data: any;
+  knotData: any;
 
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient,
     private router: Router,
-    private popover: PopoverController
+    private popover: PopoverController,
+    private storageService: StorageService
   ) { }
 
-
   ngOnInit() {
-    this.httpClient.get('./assets/data/knots.json').subscribe(data => {
-      this.data = data;
-      console.log(data);
-    });
-
-    this.activatedRoute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.knot = this.router.getCurrentNavigation().extras.state.knotindex;
-
-      }
-    });
+    this.knotData = this.storageService.getCurrentKnotData();
   }
-
 
   navigateBack() {
     this.router.navigate(['tabs/knots']);
@@ -48,7 +34,7 @@ export class KnotSliderPage implements OnInit {
       event: ev,
       translucent: true,
       mode: 'ios',
-      componentProps: {key1: this.data.knots[this.knot].videoURL},
+      componentProps: {key1: this.knotData.videoURL},
     });
     return await pop.present();
   }

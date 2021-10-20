@@ -1,29 +1,27 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-<div class="container">
+  <div class="container">
 
-  <div class="playButton">
-    <button (click) = "createPopover($event)">
-      <ion-icon name="play-circle"></ion-icon>
-    </button>
-  </div>
+    <div class="playButton">
+      <button (click)="createPopover($event)">
+        <ion-icon name="play-circle"></ion-icon>
+      </button>
+    </div>
 
-  <div class="knotInfoPosition">
-    <div class="knotInfoContent">
-      <h1>{{data.knots[0].name}}</h1>
-      <hr>
-      <strong>Einsatzgebiet:</strong>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-        molestiae quas velm labor</p>
-      <strong>Schritt 1:</strong>
-      <p>Lorem ipsum dolor</p>
-      <strong>Schritt 2:</strong>
-      <p>Lorem ipsum dolorit amet co</p>
-      <strong>Schritt 4:</strong>
-      <p>Lorem dolorit amet co</p>
+    <div class="knotInfoPosition">
+      <div class="knotInfoContent">
+        <h1>{{knotData?.name}}</h1>
+        <hr>
+        <strong>Einsatzgebiet:</strong>
+        <p>{{knotData.usage}}</p>
 
+        <div *ngFor="let explanation of knotData.slideExplanation; let i = index">
+          <strong>Schritt {{i+1}}:</strong>
+          <p>{{explanation}}</p>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
 </ion-content>

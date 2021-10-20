@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router, NavigationExtras } from '@angular/router';
+import { Router } from '@angular/router';
+import { StorageService } from 'src/app/services/storage.service';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class KnotsPage implements OnInit {
 
   constructor(
     private httpClient: HttpClient,
-    private router: Router
+    private router: Router,
+    private storageService: StorageService
   ) { }
 
   ngOnInit() {
@@ -44,11 +46,7 @@ export class KnotsPage implements OnInit {
   }
 
   navigate(knotIndex: any) {
-    const navigationExtras: NavigationExtras = {
-      state: {
-        knotindex: knotIndex
-      }
-    };
-    this.router.navigate(['tabs/knots/knot-slider'], navigationExtras);
+    this.storageService.setCurrentKnotIndex(knotIndex);
+    this.router.navigate(['tabs/knots/knot-slider']);
   }
 }

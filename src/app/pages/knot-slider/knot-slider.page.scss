@@ -47,6 +47,7 @@ ion-content {
 .playButton {
   grid-area: playButton;
   position: relative;
+  min-height: 200px;
     button {
       position: absolute;
       top: 50%;

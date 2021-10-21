@@ -13,12 +13,12 @@
       <div class="knotInfoContent">
         <h1>{{knotData?.name}}</h1>
         <hr>
-        <strong>Einsatzgebiet:</strong>
+        <h4>Einsatzgebiet:</h4>
         <p>{{knotData.usage}}</p>
 
         <div *ngFor="let explanation of knotData.slideExplanation; let i = index">
-          <strong>Schritt {{i+1}}:</strong>
-          <p>{{explanation}}</p>
+          <h4 class="explanation-step">Schritt {{i+1}}:</h4>
+          <p class="explanation">{{explanation}}</p>
         </div>
 
       </div>

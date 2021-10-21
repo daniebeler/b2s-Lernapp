@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
@@ -26,7 +27,6 @@ export class QuestionsPage implements OnInit {
   thema: string;
   questionsnumber = 0;
   currentQuestion = 0;
-  justOneTopic = false;
   image = [];
   progress: any = [];
   answerDisable = 'auto';
@@ -37,7 +37,8 @@ export class QuestionsPage implements OnInit {
 
   constructor(
     private router: Router,
-    private storageService: StorageService
+    private storageService: StorageService,
+    private alertController: AlertController
   ) {
 
   }
@@ -49,8 +50,6 @@ export class QuestionsPage implements OnInit {
     this.quiztype = this.storageService.getQuiztype();
     this.themaindex = this.storageService.getTopic();
     this.thema = String(this.themaindex);
-
-    this.justOneTopic = (this.quiztype === -1);
 
     if (this.quiztype === 2) {
       this.quizsimulation();
@@ -268,8 +267,24 @@ export class QuestionsPage implements OnInit {
     }
   }
 
-  navigateHome() {
-    this.router.navigate(['tabs/home']);
+  async navigateHome() {
+    const alert = await this.alertController.create({
+      cssClass: 'customalert',
+      backdropDismiss: false,
+      header: 'Achtung!',
+      message: 'Bist du dir sicher?',
+      buttons: [
+        {
+          text: 'Abbrechen'
+        }, {
+          text: 'Okay',
+          handler: () => {
+            this.router.navigate(['tabs/home']);
+          }
+        }]
+    });
+
+    await alert.present();
   }
 
   navigate() {

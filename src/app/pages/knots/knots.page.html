@@ -3,8 +3,9 @@
 <ion-content>
   <div class="top" (click)="navigate(0)">
     <img src="../../../assets/img/knots/VCBC.jpg" alt="">
+    <ion-icon class="playButton" style="height: 100px; width: 100px;" name="play-circle"></ion-icon>
     <div class="thumbnail_text">
-      <h5>{{knots[0]?.name}}</h5>
+      <h3>{{knots[0]?.name}}</h3>
       <hr>
       <p>kurze Erklärung</p>
     </div>
@@ -14,6 +15,7 @@
     <div class="bottom_left">
       <div class="bottom_left_thumbnail" *ngFor="let i of leftPictures;" (click)="navigate(i)">
         <img [src]="knots[i].thumbnail" alt="">
+        <ion-icon class="playButton" name="play-circle"></ion-icon>
         <div class="thumbnail_text">
           <h5>{{knots[i].name}}</h5>
           <hr>
@@ -25,6 +27,7 @@
       <div class="bottom_right_thumbnail" *ngFor="let i of rightPictures;" (click)="navigate(i)">
         <img *ngIf="i === 1; else elseBlock" class="firstThumbnail" [src]="knots[i].thumbnail" alt="">
         <ng-template #elseBlock><img [src]="knots[i].thumbnail" alt=""></ng-template>
+        <ion-icon class="playButton" name="play-circle"></ion-icon>
         <div class="thumbnail_text">
           <h5>{{knots[i].name}}</h5>
           <hr>

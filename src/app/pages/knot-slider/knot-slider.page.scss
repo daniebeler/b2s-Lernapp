@@ -1,5 +1,5 @@
 ion-content {
-  --background: url(../../../assets/img/knots/VCBC.jpg) no-repeat center/cover
+  --background: url(../../../assets/img/background/boje.jpg) no-repeat center/cover
   fixed;
 }
 
@@ -20,13 +20,13 @@ ion-content {
   color: white;
 
   .knotInfoContent {
-    border-radius: 5px;
+    border-radius: 15px;
     grid-area: playButton;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.763);
     position: relative;
     bottom: 0;
-    padding: 10px;
+    padding: 20px;
 
     h1 {
       margin: 0;
@@ -70,4 +70,13 @@ body,
 .container {
   height: 100%;
   margin: 0;
+}
+
+h4{
+  margin-bottom: 5px;
+}
+
+p{
+  margin-top: 5px;
+  margin-bottom: 0;
 }

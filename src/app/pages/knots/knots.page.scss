@@ -2,102 +2,16 @@ $thumbnail-margin: 20px;
 $thumbnail-text-size: 0.9rem;
 
 ion-content {
-  --background: rgb(48, 48, 48) !important;
+  --background: var(--ion-background-color);
 }
 
-.top {
-  height: 35vh;
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  img {
-    object-fit: cover;
-    height: inherit;
-    min-width: 100vw;
-  }
-
-  .thumbnail_text {
-    color: white;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    width: 70%;
-
-    p {
-      margin: 0;
-      margin-top: 5px;
-      font-size: $thumbnail-text-size;
-    }
-  }
+.heading{
+  color: white;
+  padding-top: 30px;
 }
 
-.bottom {
-  margin-top: 10px;
-
-  &_left {
-    width: 50%;
-    float: left;
-
-    &_thumbnail {
-      position: relative;
-      margin: $thumbnail-margin $thumbnail-margin/2 0 $thumbnail-margin;
-      img {
-        object-fit: cover;
-        height: 250px;
-        min-width: 100%;
-      }
-
-      .thumbnail_text {
-        color: white;
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        width: 90%;
-
-        p {
-          margin: 0;
-          margin-top: 5px;
-          font-size: $thumbnail-text-size;
-        }
-      }
-    }
-  }
-
-  &_right {
-    width: 50%;
-    float: right;
-
-    &_thumbnail {
-      position: relative;
-      margin: $thumbnail-margin $thumbnail-margin 0 $thumbnail-margin/2;
-      img {
-        object-fit: cover;
-        height: 250px;
-        min-width: 100%;
-      }
-
-      .thumbnail_text {
-        color: white;
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        width: 90%;
-
-        p {
-          margin: 0;
-          margin-top: 5px;
-          font-size: $thumbnail-text-size;
-        }
-      }
-
-      .firstThumbnail {
-        object-fit: cover;
-        height: 200px;
-      }
-    }
-  }
+.thumbnail-col{
+  padding: 10px;
 }
 
 .playButton {

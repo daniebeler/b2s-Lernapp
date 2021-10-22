@@ -1,27 +1,30 @@
 <app-custom-header></app-custom-header>
-
 <ion-content>
-  <div class="container">
+  <div (click)="createPopover($event)">
+    <img [src]="knotData.thumbnail">
+    <ion-icon class="playButton" name="play-circle"></ion-icon>
+  </div>
 
-    <div class="playButton">
-      <button (click)="createPopover($event)">
-        <ion-icon name="play-circle"></ion-icon>
-      </button>
-    </div>
-
-    <div class="knotInfoPosition">
-      <div class="knotInfoContent">
-        <h1>{{knotData?.name}}</h1>
-        <hr>
-        <h4>Einsatzgebiet:</h4>
-        <p>{{knotData.usage}}</p>
-
-        <div *ngFor="let explanation of knotData.slideExplanation; let i = index">
-          <h4 class="explanation-step">Schritt {{i+1}}:</h4>
-          <p class="explanation">{{explanation}}</p>
-        </div>
-
-      </div>
-    </div>
+  <div class="description-holder">
+    <ion-grid class="description-grid">
+      <ion-row>
+        <ion-col>
+          <h1 style="margin-top: 0;">{{knotData?.name}}</h1>
+          <hr>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h4>Einsatzgebiet:</h4>
+          <p>{{knotData.usage}}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngFor="let explanation of knotData.slideExplanation; let i = index">
+        <ion-col>
+          <h4>Schritt {{i+1}}:</h4>
+          <p>{{explanation}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

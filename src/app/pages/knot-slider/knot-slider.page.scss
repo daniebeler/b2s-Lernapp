@@ -1,69 +1,30 @@
 ion-content {
-  --background: url(../../../assets/img/background/boje.jpg) no-repeat center/cover
-  fixed;
+  /* --background: url(../../../assets/img/background/bg-knots.jpg) no-repeat center/cover
+  fixed; */
+  --background: var(--ion-background-color);
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "playButton"
-    "knotInfoPosition";
-}
-
-.knotInfoPosition {
-  grid-area: knotInfoPosition;
-  padding: 10px;
+.description-holder{
+  padding: 20px;
   color: white;
+}
 
-  .knotInfoContent {
-    border-radius: 15px;
-    grid-area: playButton;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.763);
-    position: relative;
-    bottom: 0;
-    padding: 20px;
-
-    h1 {
-      margin: 0;
-    }
-
-    p {
-      margin-top: 0;
-      font-weight: lighter;
-    }
-
-    hr {
-      margin-bottom: 8px;
-    }
-  }
-
+.description-grid{
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  padding: 15px;
 }
 
 .playButton {
-  grid-area: playButton;
-  position: relative;
-  min-height: 200px;
-    button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      background-color: transparent;
-      padding: 0;
-      ion-icon {
-        height: 100px;
-        width: 100px;
-      }
-
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: 60px;
+  width: 60px;
+  color: white;
 }
-
 
 html,
 body,

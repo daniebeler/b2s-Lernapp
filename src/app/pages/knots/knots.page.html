@@ -1,39 +1,23 @@
 <app-custom-header></app-custom-header>
 
 <ion-content>
-  <div class="top" (click)="navigate(0)">
-    <img src="../../../assets/img/knots/VCBC.jpg" alt="">
-    <ion-icon class="playButton" style="height: 100px; width: 100px;" name="play-circle"></ion-icon>
-    <div class="thumbnail_text">
-      <h3>{{knots[0]?.name}}</h3>
-      <hr>
-      <p>kurze Erklärung</p>
-    </div>
-  </div>
 
-  <div class="bottom">
-    <div class="bottom_left">
-      <div class="bottom_left_thumbnail" *ngFor="let i of leftPictures;" (click)="navigate(i)">
-        <img [src]="knots[i].thumbnail" alt="">
-        <ion-icon class="playButton" name="play-circle"></ion-icon>
-        <div class="thumbnail_text">
-          <h5>{{knots[i].name}}</h5>
-          <hr>
-          <p>kurze Erklärung</p>
+  <ion-grid class="pt-3">
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h2 class="heading"><strong>KNOTENKUNDE</strong></h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row style="padding: 5px;">
+      <ion-col size="6" class="thumbnail-col" *ngFor="let knot of knots; let i = index" (click)="navigate(i)">
+        <div>
+          <img [src]="knot.thumbnailwithname" alt="">
+          <ion-icon class="playButton" name="play-circle"></ion-icon>
         </div>
-      </div>
-    </div>
-    <div class="bottom_right">
-      <div class="bottom_right_thumbnail" *ngFor="let i of rightPictures;" (click)="navigate(i)">
-        <img *ngIf="i === 1; else elseBlock" class="firstThumbnail" [src]="knots[i].thumbnail" alt="">
-        <ng-template #elseBlock><img [src]="knots[i].thumbnail" alt=""></ng-template>
-        <ion-icon class="playButton" name="play-circle"></ion-icon>
-        <div class="thumbnail_text">
-          <h5>{{knots[i].name}}</h5>
-          <hr>
-          <p>kurze Erklärung</p>
-        </div>
-      </div>
-    </div>
-  </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

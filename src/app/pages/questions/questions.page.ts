@@ -272,7 +272,7 @@ export class QuestionsPage implements OnInit {
       cssClass: 'customalert',
       backdropDismiss: false,
       header: 'Achtung!',
-      message: 'Bist du dir sicher?',
+      message: 'Dein Fortschritt wird nicht gespeichert, wenn Du die Übung verlässt.',
       buttons: [
         {
           text: 'Abbrechen'

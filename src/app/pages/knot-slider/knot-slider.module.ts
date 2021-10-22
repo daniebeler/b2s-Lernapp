@@ -8,7 +8,6 @@ import { KnotSliderPageRoutingModule } from './knot-slider-routing.module';
 import { YoutubePipe } from '../../pipes/youtube.pipe';
 import { KnotSliderPage } from './knot-slider.page';
 import { ComponentsModule } from 'src/app/components/components.module';
-import { KnotsPopoverComponent } from '../../components/knots-popover/knots-popover.component';
 
 @NgModule({
   imports: [
@@ -19,7 +18,6 @@ import { KnotsPopoverComponent } from '../../components/knots-popover/knots-popo
     ComponentsModule,
     SwiperModule
   ],
-  declarations: [KnotSliderPage, YoutubePipe, KnotsPopoverComponent],
-  entryComponents: [KnotsPopoverComponent]
+  declarations: [KnotSliderPage, YoutubePipe]
 })
 export class KnotSliderPageModule {}

@@ -26,6 +26,14 @@ ion-content {
   color: white;
 }
 
+.video {
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+  height: 100%;
+  width: 100%;
+}
+
 html,
 body,
 .container {

@@ -26,3 +26,10 @@ span {
   padding: 0 5px;
   box-shadow: inset 0 -17px 0 0 #e76010;
 }
+
+.pictureDiv {
+  position: relative;
+  .picture {
+    width: 100%;
+  }
+}

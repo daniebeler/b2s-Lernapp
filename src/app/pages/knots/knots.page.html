@@ -13,8 +13,8 @@
   <ion-grid>
     <ion-row style="padding: 5px;">
       <ion-col size="6" class="thumbnail-col" *ngFor="let knot of knots; let i = index" (click)="navigate(i)">
-        <div>
-          <img [src]="knot.thumbnailwithname" alt="">
+        <div class="pictureDiv">
+          <img class="picture" [src]="knot.thumbnailwithname" alt="">
           <ion-icon class="playButton" name="play-circle"></ion-icon>
         </div>
       </ion-col>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { StorageService } from 'src/app/services/storage.service';
+
 
 @Component({
   selector: 'app-result',
@@ -39,14 +41,14 @@ export class ResultPage implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private storageService: StorageService,
   ) {
 
   }
 
   ngOnInit() {
-    const resultreceived = this.activatedRoute.snapshot.paramMap.get('result');
-    this.resultJSON = JSON.parse(resultreceived);
+    this.resultJSON = this.storageService.getErgebnisJSON();
     console.log(this.resultJSON);
     this.schein = this.resultJSON[0].license;
 

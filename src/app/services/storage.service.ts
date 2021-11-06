@@ -10,6 +10,7 @@ export class StorageService {
   private license = 0;
   private quiztype = 0;
   private topic = 0;
+  private ergebnisJSON = [];
 
   private questions: any;
 
@@ -65,5 +66,13 @@ export class StorageService {
 
   getQuestions() {
     return this.questions;
+  }
+
+  setErgebnisJSON(ergebenisJSON) {
+    this.ergebnisJSON = ergebenisJSON;
+  }
+
+  getErgebnisJSON() {
+    return this.ergebnisJSON;
   }
 }

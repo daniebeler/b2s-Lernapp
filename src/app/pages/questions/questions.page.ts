@@ -50,6 +50,9 @@ export class QuestionsPage implements OnInit {
     this.quiztype = this.storageService.getQuiztype();
     this.themaindex = this.storageService.getTopic();
     this.thema = String(this.themaindex);
+    console.log(this.thema);
+    console.log(this.quiztype);
+    console.log(this.themaindex);
 
     if (this.quiztype === 2) {
       this.quizsimulation();
@@ -87,6 +90,7 @@ export class QuestionsPage implements OnInit {
     else if (this.quiztype === 1) {
       for (const a of this.data.scheine[this.schein].Thema[this.themaindex].questions) {
         qeustionnumbers++;
+        console.log(qeustionnumbers);
       }
     }
     else {
@@ -182,18 +186,24 @@ export class QuestionsPage implements OnInit {
 
     else {
       //next Question or next Thema or fertig
-      if ((this.data.scheine[this.schein].Thema[this.themaindex].questions.length === this.questionindex + 1 && this.quiztype === 0)) {
-        if (this.data.scheine[this.schein].Thema.length === this.themaindex + 1 && this.thema === undefined) {
+      console.log(' Themaindex ' + this.thema);
+      if ((this.data.scheine[this.schein].Thema[this.themaindex].questions.length === this.questionindex + 1 && (this.quiztype === 0 || this.quiztype === 1))) {
+        console.log(1);
+        if (this.data.scheine[this.schein].Thema.length === this.themaindex + 1 && this.quiztype === 0) {
+          console.log(2);
           this.currentQuestion = 0;
           this.questionindex = 0;
           this.themaindex = 0;
           this.navigate();
         }
         else {
-          if (this.thema === undefined) {
+          console.log(3);
+          if (this.quiztype === 0) {
+            console.log(4);
             this.themaindex++;
           }
           else {
+            console.log(5);
             this.currentQuestion = 0;
             this.questionindex = 0;
             this.themaindex = Number(this.thema);
@@ -203,10 +213,10 @@ export class QuestionsPage implements OnInit {
         }
       }
       else {
-        if (this.quiztype === 0) {
-          this.questionindex++;
-        }
-        else {
+        this.questionindex++;
+
+        if (this.quiztype === 2) {
+          console.log(6);
           this.quizsimulation();
         }
       }
@@ -288,6 +298,7 @@ export class QuestionsPage implements OnInit {
   }
 
   navigate() {
-    this.router.navigate(['result/' + JSON.stringify(this.answerschecker)]);
+    this.storageService.setErgebnisJSON(this.answerschecker);
+    this.router.navigate(['result/']);
   }
 }
